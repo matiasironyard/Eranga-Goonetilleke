@@ -10,12 +10,16 @@ var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 
 var HeaderContainer = React.createClass({
   render: function(){
+    $( document ).ready(function(){
+      $('.parallax').parallax();
+    });
 
     return (
-      <div>
+      <div classname="parallax-container">{/*wrapper div*/}
 
         <div id="header" className="row">
-          <div id="header-image" className="col-md-12">
+          <div className="parallax-container">
+            <div className="parallax"><img src="./images/headshot-2.jpg"/></div>
             <div id="social-icons-pane"className="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
               <ul id="social-icons" className="col-md-1 pull-right">
                 <li><a className="btn-floating btn-large waves-effect waves-light red"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -42,36 +46,46 @@ var HeaderContainer = React.createClass({
             </div>{/*end about*/}
 
             <div id="link-cards-pane" className="row">
-              <div  id="link-cards" className="left col s12 m4">
-                <div className="card blue-grey darken-1">
-                  <div className="card-content white-text">
+
+              <div id="link-cards" className="left col s12 m4">
+                <div className="card">
+                  <div className="card-image">
+                    <img src="./images/performing-1.jpg"/>
                     <span className="card-title">Resume</span>
+                  </div>
+                  <div className="card-content">
                     <p>I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
                   </div>
                   <div className="card-action">
-                    <a href="#">See Resume</a>
+                    <a href="#">Learn More</a>
                   </div>
                 </div>
               </div>
 
               <div id="link-cards" className="middle col s12 m4">
-                <div className="card blue-grey darken-1">
-                  <div className="card-content white-text">
-                    <span className="card-title">Announcements</span>
+                <div className="card">
+                  <div className="card-image">
+                    <img src="./images/studio.jpg"/>
+                    <span className="card-title">Studio</span>
+                  </div>
+                  <div className="card-content">
                     <p>I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
                   </div>
                   <div className="card-action">
-                    <a href="#">See Announcements</a>
+                    <a href="#">Learn More</a>
                   </div>
                 </div>
               </div>
 
               <div id="link-cards" className="right col s12 m4">
-                <div className="card blue-grey darken-1">
-                  <div className="card-content white-text">
-                    <span className="card-title">My Studio</span>
+                <div className="card">
+                  <div className="card-image">
+                    <img src="./images/announcements-2.jpg"/>
+                    <span className="card-title">Announcements</span>
+                  </div>
+                  <div className="card-content">
                     <p>I am a very simple card. I am good at containing small bits of information.
                     I am convenient because I require little markup to use effectively.</p>
                   </div>
@@ -85,8 +99,8 @@ var HeaderContainer = React.createClass({
             <div id="about-video" className="responsive-video row">
               <Youtube code="B9FiiY2Xkuk"/>
             </div>
-          </div>
-        </div>{/*end artist-content*/}
+          </div>{/*end artist-content*/}
+        </div>{/*end main*/}
       </div>
 
     )
@@ -105,6 +119,7 @@ var Youtube = React.createClass({
                         allowFullScreen>
                 </iframe>
                 </div>
+
             </div>
         );
     }

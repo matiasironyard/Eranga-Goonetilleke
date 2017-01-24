@@ -17,8 +17,11 @@ img {
 }
 
 #header{
-  .parallax-container{
-    height: 600px;
+  #header-image{
+    height: 500px;
+    background-image: url('../images/headshot-2.jpg');
+    background-position: center;
+    background-size: cover;
   }
 }
 
@@ -58,6 +61,10 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -20px;
+}
+.row{
+  margin-bottom: 0px;
+
 }
 
 /******** ARTIST PAGE CONTENT **********/

@@ -8,15 +8,13 @@ var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 
 //############ CONTAINERS #########################/
 
-var HeaderContainer = React.createClass({
+var Studio= React.createClass({
   render: function(){
-    $(document).on('pageinit', function(){
-      $('.parallax').parallax();
-    });
 
 
     return (
       <div>{/*wrapper div*/}
+
         <div id="header" className="row">
           <div className="parallax-container">
             <div className="parallax"><img  className="parallax-img" src="./images/headshot-2.jpg"/></div>
@@ -35,8 +33,7 @@ var HeaderContainer = React.createClass({
         <div  className="main row">
           <div id="content" className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 z-depth-4">
             <div id="title" className="col-md-12 hidden-xs">
-              <h2>Eranga Goonetilleke</h2>
-              <span>Soprano</span>
+              <h2>Studio Eranga</h2>
             </div>
             <div id="about" className="col-md-12 col-sm-12 col-xs-12">
               <div id="about-par" className="col-md-12 col-sm-12">
@@ -96,10 +93,6 @@ var HeaderContainer = React.createClass({
                 </div>
               </div>
             </div>
-
-            <div id="about-video" className="responsive-video col-md-12 col-sm-12 col-xs-12">
-              <Youtube code="B9FiiY2Xkuk"/>
-            </div>
           </div>{/*end artist-content*/}
         </div>{/*end main*/}
       </div>
@@ -108,35 +101,18 @@ var HeaderContainer = React.createClass({
   }
 });
 
-var Youtube = React.createClass({
-    render: function() {
-        return (
-            <div className="videoWrapper">
-              <div className="video row">
-                <iframe src={"http://www.youtube.com/embed/" + this.props.code}
-                        width="100%"
-                        height="500px"
-                        frameBorder="0"
-                        allowFullScreen>
-                </iframe>
-                </div>
-
-            </div>
-        );
-    }
-});
 
 
-var ArtistContainer = React.createClass({
+var StudioContainer = React.createClass({
     render: function() {
         return (
           <NavFooter>
-            <HeaderContainer/>
+            <Studio/>
           </NavFooter>
         );
     }
 });
 
 module.exports = {
-  ArtistContainer: ArtistContainer
+  StudioContainer: StudioContainer
 }

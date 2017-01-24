@@ -12,10 +12,14 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
+//********* GENERAL ***************/
+p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  line-height: 2;
 }
 
+/********** HEADER ****************/
 #header{
   .parallax-container{
     height: 600px;
@@ -29,12 +33,11 @@ img {
 // }
 /******** NAV **********/
 .nav-wrapper{
-  background: #fff;
+  // background: #fff;
   .brand-logo{
     color: #000;
     font-family: 'Great Vibes', cursive;
     padding-left: 15px;
-
   }
   a{
     color: #000;
@@ -50,6 +53,9 @@ img {
     color: #fff;
     font-size: 30px;
     margin-bottom: 20px;
+    a{
+      background-color: #DD2C00;
+    }
   }
 }
 /******** MAIN ***************/
@@ -61,29 +67,34 @@ img {
 }
 
 /******** ARTIST PAGE CONTENT **********/
-#artist-content{
+#content{
   position: relative;
   bottom: 100px;
   background-color: #fff;
-  #artist-title{
+  #title{
     // text-transform: uppercase;
     font-size: 70px;
     font-family: 'Great Vibes', cursive;
     text-align: center;
     background-color: #fff;
     height: 100px;
+    span{
+      font-size: 25px;
+      position: relative;
+      bottom: 80px;
+      left: 130px;
+      font-family: 'Raleway', sans-serif;
+    }
   }
   #about{
     margin-top: 50px;
-    #about-img{
-      height: 300px;
-      background-image: url('../images/headshot-1.jpg');
-      background-position: top;
-      background-size: cover;
-    }
     #about-par{
-      p{
-        line-height: 2;
+      #about-img{
+        height: 300px;
+        background-image: url('../images/headshot-1.jpg');
+        background-position: top;
+        background-size: cover;
+        margin: 10px;
       }
     }
   }
@@ -91,8 +102,8 @@ img {
   /************LINK CARDS PANE **************/
 
   #link-cards-pane{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     #link-cards{
       padding: 5px;
       background-size: cover;
@@ -114,4 +125,15 @@ img {
   //   margin-right: -30px;
   //   margin-bottom: -25px;
   // }
+}
+/********** FOOTER ****************/
+
+.page-footer{
+  color: #000;
+  #social-icons-footer{
+    margin-top: 20px;
+    a{
+      background-color: #DD2C00;
+    }
+  }
 }

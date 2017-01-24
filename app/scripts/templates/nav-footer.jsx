@@ -12,24 +12,22 @@ var NavFooter = React.createClass({
 
     return (
       <div className="content">
-        <div className="navbar-fixed">
-          <nav className="nav">
-              <div className="nav-wrapper">
-                <a href="#" className="brand-logo">Eranga Goonetilleke</a>
-                <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
-                <ul id="nav-mobile" className="right hide-on-med-and-down">
-                  <li><a href="sass.html">Artist</a></li>
-                  <li><a href="badges.html">Studio</a></li>
-                  <li><a href="collapsible.html">Media</a></li>
-                </ul>
-                <ul className="side-nav" id="mobile-demo">
-                  <li><a href="sass.html">Artist</a></li>
-                  <li><a href="badges.html">Studio</a></li>
-                  <li><a href="collapsible.html">Media</a></li>
-                </ul>
-              </div>
-            </nav>
+        <nav>
+          <div className="nav-wrapper">
+            <a href="#!" className="brand-logo">Eranga Goonetilleke</a>
+            <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+            <ul className="right hide-on-med-and-down">
+              <li><a href="sass.html">Artist</a></li>
+              <li><a href="badges.html">Studio</a></li>
+              <li><a href="collapsible.html">Media</a></li>
+            </ul>
+            <ul className="side-nav" id="mobile-demo">
+              <li><a href="sass.html">Artist</a></li>
+              <li><a href="badges.html">Studio</a></li>
+              <li><a href="collapsible.html">Media</a></li>
+            </ul>
           </div>
+        </nav>
 
         <main className="row">
           {this.props.children}

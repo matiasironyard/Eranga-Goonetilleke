@@ -24,12 +24,48 @@ img {
     background-size: cover;
   }
 }
+
+body{
+  background-image: url('../images/water.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/******** NAV **********/
+.nav-wrapper{
+  background: #fff;
+  .brand-logo{
+    color: #000;
+    font-family: 'Great Vibes', cursive;
+    padding-left: 15px;
+
+  }
+  a{
+    color: #000;
+  }
+}
+
+/******** SOCIAL **********/
+
+#social-icons-pane{
+  position: relative;
+  top: 15%;
+  li{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+/******** ARTIST PAGE CONTENT **********/
+
 #artist-content{
   position: relative;
   bottom: 100px;
   background-color: #fff;
   #artist-title{
-    text-transform: uppercase;
+    // text-transform: uppercase;
+    font-size: 70px;
+    font-family: 'Great Vibes', cursive;
     text-align: center;
     background-color: #fff;
     height: 100px;
@@ -48,9 +84,31 @@ img {
       }
     }
   }
-  .video{
-    margin-left: -30px;
-    margin-right: -30px;
-    margin-bottom: -25px;
+
+  /************LINK CARDS PANE **************/
+
+  #link-cards-pane{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    #link-cards{
+      padding: 5px;
+      background-size: cover;
+      background-position: center top;
+    }
+    // .left{
+    //   background-image: url('../images/performing-1.jpg');
+    // }
+    // .middle{
+    //   background-image: url('../images/performing-2.jpg');
+    // }
+    // .right{
+    //   background-image: url('../images/studio.jpg');
+    // }
+
   }
+  // .video{
+  //   margin-left: -30px;
+  //   margin-right: -30px;
+  //   margin-bottom: -25px;
+  // }
 }

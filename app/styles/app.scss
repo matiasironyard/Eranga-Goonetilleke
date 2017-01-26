@@ -24,6 +24,12 @@ p{
   color: #DD2C00;
 }
 
+.divider{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+}
+
 /********** HEADER ****************/
 #header{
   .parallax-container{
@@ -97,27 +103,44 @@ body{
       font-family: 'Raleway', sans-serif;
     }
   }
+  /*ABOUT SECTION*/
   #about{
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+    #about-img{
+      border-radius: 100%;
+      height: 300px;
+      width: 300px;
+      // height: 300px;
+      background-image: url('../images/headshot-1.jpg');
+      background-position: top;
+      background-size: cover;
+      margin-right: 35px;
+      margin-top: 80px;
+      margin-bottom: 20px;
+    }
     #about-par{
-      #about-img{
-        height: 300px;
-        background-image: url('../images/headshot-1.jpg');
-        background-position: top;
-        background-size: cover;
-        margin: 10px;
-      }
+
     }
     #about-reviews{
       // top: -150px;
     }
   }
+  /*PERFORMANCE PICS SECTION*/
+  #perfomance-imgs{
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+/*VIDEO SECTION*/
+#artist-video{
+  margin-top: 100px;
+}
 
   /************LINK CARDS PANE **************/
-
   #link-cards-pane{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 100px;
+    margin-bottom: 30px;
     #link-cards{
       padding: 5px;
       background-size: cover;

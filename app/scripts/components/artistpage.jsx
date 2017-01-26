@@ -34,15 +34,36 @@ var HeaderContainer = React.createClass({
             <div id="title" className="row">
               <h1>Eranga Goonetilleke</h1>
             </div>
-            <div id="about" className="col-md-12 col-sm-12 col-xs-12">
-              <div id="about-par" className="col-md-12 col-sm-12">
-                <div id="about-img" className="col-md-5 col-sm-4 hidden-xs"/>
-                <p>Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others.</p>
-                <p>Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire.</p>
-                <p>She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London.
-                </p>
+            <div id="about" className="row">
+              <div id="about-par" className="col-md-10 col-md-offset-1  col-sm-11">
+                <div id="about-img" className="responsive-img col-md-6 col-sm-3 hidden-xs"/>
+                  <h3 id="headings">About Eranga</h3>
+                  <p>Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others.</p>
+                  <p>Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire.</p>
+                  <p>She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London.
+                  </p>
               </div>{/*end about-par*/}
             </div>{/*end about*/}
+
+            <div className="divider"/>
+
+            <div id="perfomance-imgs" className="row">
+              <div id="performance-card left" className="col-md-4 col-sm-4">
+                <img className="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees" src="./images/performance-1.jpg"/>
+              </div>
+              <div id="performance-card middle" className="col-md-4 col-sm-4">
+                <img className="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees"  src="./images/performance-2.jpg"/>
+              </div>
+              <div id="performance-card right" className="col-md-4 col-sm-4">
+                <img className="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees"  src="./images/performance-3.jpg"/>
+              </div>
+            </div>
+
+            <div id="artist-video" className="row">
+              <div className="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/B9FiiY2Xkuk" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
 
             <div id="link-cards-pane" className="row">
               <div id="link-cards" className="left col s12 m4">
@@ -90,12 +111,6 @@ var HeaderContainer = React.createClass({
                 </div>
               </div>
             </div>{/*end card pane*/}
-
-            <div id="artist-video" className="row">
-              <div className="video-container">
-                <iframe width="853" height="480" src="https://www.youtube.com/embed/B9FiiY2Xkuk" frameborder="0" allowfullscreen></iframe>
-              </div>
-            </div>
 
           </div>{/*end artist-content*/}
         </div>{/*end main*/}

@@ -25,12 +25,12 @@ var NavFooter = React.createClass({
               <ul className="right hide-on-med-and-down">
                 <li><a href="">Artist</a></li>
                 <li><a href="#studio/">Studio</a></li>
-                <li><a href="collapsible.html">Media</a></li>
+                <li><a href="#media/">Media</a></li>
               </ul>
               <ul className="side-nav" id="mobile-demo">
                 <li><a href="">Artist</a></li>
                 <li><a href="#studio/">Studio</a></li>
-                <li><a href="collapsible.html">Media</a></li>
+                <li><a href="#media/">Media</a></li>
               </ul>
             </div>
           </nav>
@@ -59,7 +59,7 @@ var NavFooter = React.createClass({
                 <ul>
                   <div><a className="grey-text text-darken-3" href="">Artist</a></div>
                   <div><a className="grey-text text-darken-3" href="#studio/">Studio</a></div>
-                  <div><a className="grey-text text-darken-3" href="#!">Media</a></div>
+                  <div><a className="grey-text text-darken-3" href="#media/">Media</a></div>
                 </ul>
               </div>
             </div>

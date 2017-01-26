@@ -185,6 +185,9 @@ body{
 /*REVIEWS*/
 #about-reviews{
   box-shadow: 0px 2px 4px 1px grey;
+  .collapsible-header{
+    font-size: 18px;
+  }
   #reviews{
     box-shadow: none;
     border: none;

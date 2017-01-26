@@ -9,11 +9,7 @@ var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 //############ CONTAINERS #########################/
 
 var Studio= React.createClass({
-  componentDidMount(){
-    $('.parallax').parallax();
-    $('.slider').slider().height(450);
-    $('.collapsible').collapsible();
-  },
+
   render: function(){
     return (
       <div className="studio-page">{/*wrapper div*/}

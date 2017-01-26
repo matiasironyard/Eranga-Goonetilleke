@@ -23,8 +23,7 @@ var HeaderContainer = React.createClass({
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://twitter.com/erangagnt" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a className="btn-floating btn-large waves-effect waves-light hoverable"><i className="fa fa-envelope" aria-hidden="true"></i>
-                </a></li>
+                <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.youtube.com/user/esgoonetilleke" target="_blank"><i className="fa fa-youtube-play" aria-hidden="true"></i></a></li>
               </ul>
             </div>
           </div>
@@ -32,7 +31,7 @@ var HeaderContainer = React.createClass({
 
         <div  className="main row">
           <div id="content" className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 z-depth-4">
-            <div id="title" className="col-md-12 hidden-xs">
+            <div id="title" className="row">
               <h1>Eranga Goonetilleke</h1>
             </div>
             <div id="about" className="col-md-12 col-sm-12 col-xs-12">
@@ -45,10 +44,9 @@ var HeaderContainer = React.createClass({
               </div>{/*end about-par*/}
             </div>{/*end about*/}
 
-            <div id="link-cards-pane" className="col-md-12 col-sm-12 col-xs-12">
-
+            <div id="link-cards-pane" className="row">
               <div id="link-cards" className="left col s12 m4">
-                <div className="card hoverable">
+                <div className="card medium hoverable">
                   <div className="card-image">
                     <img src="./images/performing-1.jpg"/>
                     <span className="card-title">Resume</span>
@@ -63,7 +61,7 @@ var HeaderContainer = React.createClass({
               </div>
 
               <div id="link-cards" className="middle col s12 m4">
-                <div className="card hoverable">
+                <div className="card medium hoverable">
                   <div className="card-image">
                     <img src="./images/studio.jpg"/>
                     <span className="card-title">Studio Eranga</span>
@@ -72,13 +70,13 @@ var HeaderContainer = React.createClass({
                     <p>Weekly lessons in voice, piano, audition preparation and music theory.</p>
                   </div>
                   <div className="card-action">
-                    <a href="#" className="red-text text-darken-2">Learn More</a>
+                    <a href="#studio/" className="red-text text-darken-2">Learn More</a>
                   </div>
                 </div>
               </div>
 
               <div id="link-cards" className="right col s12 m4">
-                <div className="card hoverable">
+                <div className="card medium hoverable">
                   <div className="card-image">
                     <img src="./images/announcements-2.jpg"/>
                     <span className="card-title">Announcements</span>
@@ -87,15 +85,18 @@ var HeaderContainer = React.createClass({
                     <p>The latest student recitals, competitions and more!</p>
                   </div>
                   <div className="card-action">
-                    <a href="#" className="red-text text-darken-2">Learn More</a>
+                    <a href="#studio/" className="red-text text-darken-2">Learn More</a>
                   </div>
                 </div>
               </div>
+            </div>{/*end card pane*/}
+
+            <div id="artist-video" className="row">
+              <div className="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/B9FiiY2Xkuk" frameborder="0" allowfullscreen></iframe>
+              </div>
             </div>
 
-            <div id="about-video" className="responsive-video col-md-12 col-sm-12 col-xs-12">
-              <Youtube code="B9FiiY2Xkuk"/>
-            </div>
           </div>{/*end artist-content*/}
         </div>{/*end main*/}
       </div>
@@ -104,23 +105,6 @@ var HeaderContainer = React.createClass({
   }
 });
 
-var Youtube = React.createClass({
-    render: function() {
-        return (
-            <div className="videoWrapper">
-              <div className="video row">
-                <iframe src={"http://www.youtube.com/embed/" + this.props.code}
-                        width="100%"
-                        height="500px"
-                        frameBorder="0"
-                        allowFullScreen>
-                </iframe>
-                </div>
-
-            </div>
-        );
-    }
-});
 
 
 var ArtistContainer = React.createClass({

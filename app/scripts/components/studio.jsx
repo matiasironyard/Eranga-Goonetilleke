@@ -11,42 +11,40 @@ var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 var Studio= React.createClass({
   componentDidMount(){
     $('.parallax').parallax();
-    $('.slider').slider().height(450);
     $('.collapsible').collapsible();
-
+    $('.slider').slider();
   },
 
   render: function(){
     return (
       <div className="studio-page">{/*wrapper div*/}
 
-        <div id="studio-header" className="row">
+        <div id="header" className="row">
           <div className="parallax-container">
             <div className="parallax">
-              <img  className="parallax-img" src="./images/studio.jpg"/>
+              <img  className="parallax-img" src="./images/eranga-piano-2-banner.jpeg"/>
             </div>
             <div id="social-icons-pane"className="col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1">
               <ul id="social-icons" className="col-md-1 pull-right">
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://twitter.com/erangagnt" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a className="btn-floating btn-large waves-effect waves-light hoverable"><i className="fa fa-envelope" aria-hidden="true"></i>
-                </a></li>
+                <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.youtube.com/user/esgoonetilleke" target="_blank"><i className="fa fa-youtube-play" aria-hidden="true"></i></a></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div  className="main row">
+        <div  id="studio" className="main row">
           <div id="content" className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 z-depth-4">
-            <div id="title" className="col-md-12">
+            <div id="title" className="row">
               <h1>Studio Eranga</h1>
             </div>
-            <div id="studio-pane" className="col-md-12 col-sm-12 col-xs-12">
+            <div id="slider-pane" className="row">
               <div className="slider">
-                <ul className="slides">
+                <ul id="slides" className="slides">
                   <li>
-                    <img src="./images/finley.jpg"/>
+                    <img src="./images/finley-2.jpg"/>
                     <div className="caption center-align">
                       <h3 id="headings">Dream</h3>
                     </div>
@@ -58,14 +56,16 @@ var Studio= React.createClass({
                     </div>
                   </li>
                   <li>
-                    <img src="http://lorempixel.com/580/250/nature/3"/>
+                    <img src="./images/inspire.jpg"/>
                     <div className="caption right-align">
                       <h3>Inspire</h3>
                     </div>
                   </li>
                 </ul>
               </div>
-              <div className=" row">
+            </div>{/*end slider-pane*/}
+
+            <div id="studio-pane" className="row">
               <div id="about-description" className="col-md-6">
                 <div id="about-par">
                   <h3 id="headings">About the Studio</h3>
@@ -122,11 +122,49 @@ var Studio= React.createClass({
                     </li>
                   </ul>
               </div>
-            </div>{/*end about*/}
-          </div>
-        </div>{/*end studio-content*/}
-      </div>{/*end main*/}
-    </div>
+            </div>{/*end studio-pane*/}
+            <div id="announcements-pane" className="row">
+              <div className="divider"/>
+              <div className="row">
+                <h2 id="headings">Announcements</h2>
+              </div>
+              <div id="recital-card"className="col s12 m6">
+                <div className="card large">
+                  <div className="card-image">
+                    <img src="./images/recital-pic.jpg"/>
+                    <span className="card-title">Recitals</span>
+                  </div>
+                  <div className="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                  </div>
+                  <div className="card-action">
+                    <a href="#">See Details</a>
+                    </div>
+                  </div>
+                </div>{/*end recital card*/}
+                <div id="recital-card"className="col s12 m6">
+                  <div className="card large">
+                    <div className="card-image">
+                      <img src="./images/congrats.jpg"/>
+                      <span className="card-title">Congratulations!</span>
+                    </div>
+                    <div className="card-content">
+                      <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div className="card-action">
+                      <a href="#">See Details</a>
+                      </div>
+                    </div>
+                  </div>{/*end recital card*/}
+              </div>
+
+
+
+          </div>{/*end content*/}
+        </div>{/*end main*/}
+      </div>
 
     )
   }

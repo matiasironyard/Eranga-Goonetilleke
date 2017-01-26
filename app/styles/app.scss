@@ -19,6 +19,10 @@ p{
   line-height: 2;
 }
 
+#headings{
+  font-family: 'Raleway', sans-serif;
+}
+
 /********** HEADER ****************/
 #header{
   .parallax-container{
@@ -26,11 +30,11 @@ p{
   }
 }
 
-// body{
-//   background-image: url('../images/background-1.jpg');
-//   background-size: cover;
-//   background-repeat: no-repeat;
-// }
+body{
+  background-image: url('../images/background-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /******** NAV **********/
 .nav-wrapper{
   // background: #fff;
@@ -60,24 +64,25 @@ p{
 }
 /******** MAIN ***************/
 .main{
-  background-image: url('../images/background-1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-image: url('../images/background-1.jpg');
+  // background-size: cover;
+  // background-repeat: no-repeat;
   margin-top: -20px;
 }
 
 /******** ARTIST PAGE CONTENT **********/
 #content{
+  z-index: 1;
   position: relative;
   bottom: 100px;
   background-color: #fff;
   #title{
     // text-transform: uppercase;
-    font-size: 70px;
+    // font-size: 80px;
+    top: 20px;
     font-family: 'Great Vibes', cursive;
     text-align: center;
     background-color: #fff;
-    height: 100px;
     span{
       font-size: 25px;
       position: relative;
@@ -96,6 +101,9 @@ p{
         background-size: cover;
         margin: 10px;
       }
+    }
+    #about-reviews{
+      // top: -150px;
     }
   }
 
@@ -125,6 +133,28 @@ p{
   //   margin-right: -30px;
   //   margin-bottom: -25px;
   // }
+}
+
+/***********STUDIO PAGE**********/
+
+/*SLIDER*/
+.slider{
+  z-index: 0;
+}
+.indicators{
+  display: none;
+}
+
+/*REVIEWS*/
+#reviews{
+  box-shadow: none;
+  border: none;
+  #review-text{
+    font-size: 12px;
+  }
+  #reviewer{
+    font-weight: bold;
+  }
 }
 /********** FOOTER ****************/
 

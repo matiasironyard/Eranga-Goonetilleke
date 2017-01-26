@@ -5,14 +5,22 @@ var $ = window.jQuery = require('jquery');
 
 
 var NavFooter = React.createClass({
+  componentDidMount(){
+    $('.button-collapse').sideNav({
+          menuWidth: 200, // Default is 240
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          draggable: true // Choose whether you can drag to open on touch screens
+        }
+      );
+  },
   render: function(){
-
     return (
       <div>
         <div>
-          <nav className="N/A transparent">
+          <nav className="white">
             <div className="nav-wrapper">
-              <a href="#!" className="brand-logo">Eranga Goonetilleke</a>
+              <a href="" className="brand-logo">Eranga Goonetilleke</a>
               <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
               <ul className="right hide-on-med-and-down">
                 <li><a href="">Artist</a></li>
@@ -33,16 +41,16 @@ var NavFooter = React.createClass({
           {this.props.children}
         </main>
 
-        <footer className="page-footer N/A transparent">
+        <footer className="page-footer white">
           <div className="container">
             <div className="row">
               <div className="col l6 s10">
                 <h5 className="grey-text text-darken-3">Contact me!</h5>
                   <div id="social-icons-footer"className="row">
-                      <div className="col-md-2 col-sm-3 col-xs-3"><a className="btn-floating btn-small waves-effect waves-light" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></div>
-                      <div className="col-md-2 col-sm-3 col-xs-3"><a className="btn-floating btn-small waves-effect waves-light" href="https://twitter.com/erangagnt" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></div>
-                      <div className="col-md-2 col-sm-3 col-xs-3"><a className="btn-floating btn-small waves-effect waves-light" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></div>
-                      <div className="col-md-2 col-sm-3 col-xs-3"><a className="btn-floating btn-small waves-effect waves-light"><i className="fa fa-envelope" aria-hidden="true"></i>
+                      <div className="col-md-2 col-sm-1 col-xs-2"><a className="btn-floating btn-small waves-effect waves-light" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></div>
+                      <div className="col-md-2 col-sm-1 col-xs-2"><a className="btn-floating btn-small waves-effect waves-light" href="https://twitter.com/erangagnt" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></div>
+                      <div className="col-md-2 col-sm-1 col-xs-2"><a className="btn-floating btn-small waves-effect waves-light" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></div>
+                      <div className="col-md-2 col-sm-1 col-xs-2"><a className="btn-floating btn-small waves-effect waves-light"><i className="fa fa-envelope" aria-hidden="true"></i>
                       </a></div>
                   </div>
               </div>

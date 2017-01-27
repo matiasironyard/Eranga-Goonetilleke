@@ -21,7 +21,7 @@ var NavFooter = React.createClass({
     return (
       <div>
         <div>
-          <nav className="white">
+          <nav className="white navbar-fixed-top">
             <div className="nav-wrapper">
               <a href="" className="brand-logo">Eranga Goonetilleke</a>
               <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>

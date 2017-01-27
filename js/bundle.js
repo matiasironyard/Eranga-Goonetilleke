@@ -664,7 +664,7 @@ var NavFooter = React.createClass({displayName: "NavFooter",
     return (
       React.createElement("div", null, 
         React.createElement("div", null, 
-          React.createElement("nav", {className: "white"}, 
+          React.createElement("nav", {className: "white navbar-fixed-top"}, 
             React.createElement("div", {className: "nav-wrapper"}, 
               React.createElement("a", {href: "", className: "brand-logo"}, "Eranga Goonetilleke"), 
               React.createElement("a", {href: "#", "data-activates": "mobile-demo", className: "button-collapse"}, React.createElement("i", {className: "material-icons"}, "menu")), 

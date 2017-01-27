@@ -1,6 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = window.jQuery = require('jquery');
+var router = require('../router.js');
+
 
 
 
@@ -15,6 +17,7 @@ var NavFooter = React.createClass({
       );
   },
   render: function(){
+
     return (
       <div>
         <div>
@@ -67,6 +70,7 @@ var NavFooter = React.createClass({
           <div className="footer-copyright">
             <div className="container grey-text text-darken-3">
             © 2017 Eranga Goonetilleke
+            <a href="www.matiasmariani.io" className="pull-right">Designed by Matias Mariani</a>
             </div>
           </div>
         </footer>

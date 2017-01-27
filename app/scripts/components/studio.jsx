@@ -5,6 +5,8 @@ var $ = require('jquery');
 
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
+var reviews = require('../media/reviews.js').reviews;
+
 
 //############ CONTAINERS #########################/
 
@@ -16,6 +18,7 @@ var Studio= React.createClass({
   },
 
   render: function(){
+
     return (
       <div className="studio-page">{/*wrapper div*/}
 
@@ -90,39 +93,11 @@ var Studio= React.createClass({
               <div id="about-reviews" className="col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2">
                 <h4 id="headings">Reviews</h4>
                 <div className="divider"/>
-                <ul className="collapsible" data-collapsible="accordion" id="reviews">
-                    <li>
-                      <div className="collapsible-header truncate">"Eranga is an extraordinary music teacher and person. I have had many voice teachers... "</div>
-                      <div className="collapsible-body"><p id="review-text">"Eranga is an extraordinary music teacher and person. I have had many voice teachers, and she has been the best I've had. She goes above and beyond with each of her students to make sure that they learn, improve, understand and grow in music. I had been singing for over 10 years when I met Eranga, and she was the first teacher that asked me if I knew what the words meant that I was singing. We worked on understanding what each word and note meant-and it took my singing from good to great. The tone and quality improved in my voice in a matter of months, along with the place in my heart from which I was singing. Being taught by Eranga has made all the difference in my love for voice, and Eranga is a teacher who not only teaches you music, but also about who you are, and helps you become the artist you want to be. Thank you!" <br></br>~Lacey Key</p></div>
-                    </li>
-                    <li>
-                      <div className="collapsible-header truncate active">"Eranga is absolutely wonderful. I came to her with a simple of wish..."</div>
-                      <div className="collapsible-body"><p id="review-text">"Eranga is absolutely wonderful. I came to her with a simple of wish of wanting to improve my vocals and gained so much more. Her knowledge and passion is evident in her teaching and her support for her students is overflowing. It has been so rewarding learning under her, and because of her love and talent for this craft, I now have a new appreciation/ discipline for music and singing that I will always cherish. I am truly blessed to call her my teacher. Thank You for all you you do!" <br></br>~Amanda Darchiville</p></div>
-                    </li>
-                    <li>
-                      <div className="collapsible-header truncate">"Eranga is an excellent teacher! She is extremely knowledgable..."</div>
-                      <div className="collapsible-body"><p id="review-text">"Eranga is an excellent teacher! She is extremely knowledgable about the intricacies of the voice and has helped my daughter to focus on improving her vocal strength and quality. Carson trusts and values Eranga's expertise in her field." <br></br>~Kelli Hardigree</p></div>
-                    </li>
-                    <li>
-                      <div className="collapsible-header truncate">"This has truly been a wonderful first year for Finley! It's amazing to see..."</div>
-                      <div className="collapsible-body"><p id="review-text">"This has truly been a wonderful first year for Finley! It's amazing to see how her little voice has developed and the confidence she's gained. We absolutely Love Mrs. Eranga!!"<br></br>~Christy Sloan</p></div>
-                    </li>
-                    <li>
-                      <div className="collapsible-header truncate">"Eranga is a gifted teacher and you can see the results when you hear her students perform..."</div>
-                      <div className="collapsible-body"><p id="review-text">"Eranga is a gifted teacher and you can see the results when you hear her students perform. They are confident and clearly enjoy making music, and they perform with great expression and musicality. It is a pleasure to hear them!"<br></br>~Susan Baker</p></div>
-                    </li>
-                    <li>
-                      <div className="collapsible-header truncate">"Eranga is an awesome teacher! She has helped my daughter..."</div>
-                      <div className="collapsible-body"><p id="review-text">"Eranga is an awesome teacher! She has helped my daughter take her voice to an even greater level of performance. Eranga also has a positive spirit and is a great mentor."<br></br>~Barbara Key</p></div>
-                    </li>
-                    <li>
-                      <div className="collapsible-header truncate">"I can't believe it's already been almost a year since I have been vocal training with Eranga Goonetilleke..."</div>
-                      <div className="collapsible-body"><p id="review-text">"The Eranga Experience:
-                        I can't believe it's already been almost a year since I have been vocal training with Eranga Goonetilleke. Straying far away from a learning environment, and being constantly enveloped in a 9 to 5 lifestyle, I knew it was time for a fresh reality and challenge. My love for singing led me to Eranga, who had worked previously with my sister. Her stern yet positive and inspiring teaching methodology has driven me to learn so much about my vocal potential; showing me a side of myself I never knew. Every lesson is an exciting new stepping stone to conquer With her guidance, I feel confident on my path. Looking forward to what the future holds in vocal training with Eranga! Thank You!."<br></br>~Steven Darchiville</p></div>
-                    </li>
-                  </ul>
-              </div>
+                <Reviews/>
+              </div>{/*end reviews*/}
+
             </div>{/*end studio-pane*/}
+
             <div id="announcements-pane" className="row">
               <div className="divider"/>
               <div className="row">
@@ -170,7 +145,24 @@ var Studio= React.createClass({
   }
 });
 
-
+var Reviews = React.createClass({
+  render: function(){
+    var self = this;
+    var myReviews = reviews.map(function(reviews){
+      return (
+        <li key={reviews.id}>
+          <div className="collapsible-header truncate">{reviews.title}</div>
+          <div className="collapsible-body"><p id="review-text">{reviews.review} <br></br>~{reviews.reviewer}</p></div>
+        </li>
+      )
+    });
+    return (
+      <ul className="collapsible" data-collapsible="accordion" id="reviews">
+          {myReviews}
+        </ul>
+    )
+  }
+});
 
 var StudioContainer = React.createClass({
     render: function() {

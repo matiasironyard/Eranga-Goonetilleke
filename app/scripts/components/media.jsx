@@ -5,6 +5,9 @@ var $ = require('jquery');
 
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
+var images = require('../media/images.js').images;
+var youtube = require('../media/youtube.js').youtube;
+
 
 //############ CONTAINERS #########################/
 
@@ -16,6 +19,7 @@ var Media= React.createClass({
   },
 
   render: function(){
+
     return (
       <div className="studio-page">{/*wrapper div*/}
 
@@ -40,11 +44,9 @@ var Media= React.createClass({
             <div id="title" className="row">
               <h1>Media Gallery</h1>
             </div>
-
-
-
-
-
+            <ArtistGallery />
+            <YoutubeGallery/>
+            <StudioGallery/>
           </div>{/*end content*/}
         </div>{/*end main*/}
       </div>
@@ -53,6 +55,82 @@ var Media= React.createClass({
   }
 });
 
+var StudioGallery = React.createClass({
+
+  componentDidMount: function(){
+    $('.materialboxed').materialbox();
+  },
+  render: function(){
+    var self = this;
+    var Images = images.map(function(img){
+      console.log(img.img);
+      return(
+        <li key={img.id}  id="media-li"className="col-md-4">
+          <img src={img.img} id="images"className="responsive-img materialboxed" data-caption={img.caption}/>
+        </li>
+      )
+    });
+    return(
+      <div id="gallery-row" className="row">
+        <h3 id="headings">Studio Gallery</h3>
+        <div className="divider"/>
+        <ul id="images-ul">
+        {Images}
+        </ul>
+      </div>
+    )
+  }
+});
+
+var ArtistGallery = React.createClass({
+
+  componentDidMount: function(){
+    $('.materialboxed').materialbox();
+  },
+  render: function(){
+    var self = this;
+    var Images = images.map(function(img){
+      console.log(img.img);
+      return(
+        <li key={img.id}  id="media-li"className="col-md-4">
+          <img src={img.img} id="images"className="responsive-img materialboxed" data-caption={img.caption}/>
+        </li>
+      )
+    });
+    return(
+      <div id="gallery-row" className="row">
+        <h3 id="headings">Artist Gallery</h3>
+        <div className="divider"/>
+        <ul id="images-ul">
+        {Images}
+        </ul>
+      </div>
+    )
+  }
+});
+
+var YoutubeGallery = React.createClass({
+  render: function(){
+    var self = this;
+    var Youtube = youtube.map(function(video){
+      console.log(video);
+      return(
+        <li key={video.id}  id="media-li"className="col-md-4">
+            <div className="video-container">
+              <iframe width="853" height="480" src={video.url} frameBorder="0" allowFullScreen></iframe>
+            </div>
+        </li>
+      )
+    });
+    return(
+      <div id="video-row" className="row">
+        <ul id="video-gallery">
+          {Youtube}
+        </ul>
+      </div>
+    )
+  }
+});
 
 
 var MediaContainer = React.createClass({

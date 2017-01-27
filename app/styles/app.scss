@@ -30,6 +30,8 @@ p{
 
 }
 
+
+
 /********** HEADER ****************/
 #header{
   .parallax-container{
@@ -198,6 +200,17 @@ body{
       font-weight: bold;
     }
   }
+}
+/********** GALLERY ****************/
+#media-li{
+  margin-bottom: 20px;
+  filter: brightness(.8);
+  img{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+  }
+}
+#media-li:hover{
+  filter:none;
 }
 
 /********** FOOTER ****************/

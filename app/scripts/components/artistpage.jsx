@@ -61,7 +61,7 @@ var HeaderContainer = React.createClass({
 
             <div id="artist-video" className="row">
               <div className="video-container">
-                <iframe width="853" height="480" src="https://www.youtube.com/embed/B9FiiY2Xkuk" frameborder="0" allowfullscreen></iframe>
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/B9FiiY2Xkuk" frameBorder="0" allowFullScreen></iframe>
               </div>
             </div>
 

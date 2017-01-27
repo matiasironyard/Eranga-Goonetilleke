@@ -5772,6 +5772,10 @@ p {
   font-family: 'Raleway', sans-serif;
   color: #DD2C00; }
 
+.divider {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
 /********** HEADER ****************/
 #header .parallax-container {
   height: 600px; }
@@ -5812,6 +5816,9 @@ body {
   position: relative;
   bottom: 100px;
   background-color: #fff;
+  /*ABOUT SECTION*/
+  /*PERFORMANCE PICS SECTION*/
+  /*VIDEO SECTION*/
   /************LINK CARDS PANE **************/ }
   #content #title {
     top: 20px;
@@ -5827,16 +5834,26 @@ body {
       left: 130px;
       font-family: 'Raleway', sans-serif; }
   #content #about {
-    margin-top: 50px; }
-    #content #about #about-par #about-img {
+    margin-top: 30px;
+    margin-bottom: 40px; }
+    #content #about #about-img {
+      border-radius: 100%;
       height: 300px;
+      width: 300px;
       background-image: url("../images/headshot-1.jpg");
       background-position: top;
       background-size: cover;
-      margin: 10px; }
+      margin-right: 35px;
+      margin-top: 80px;
+      margin-bottom: 20px; }
+  #content #perfomance-imgs {
+    margin-top: 80px;
+    margin-bottom: 30px; }
+  #content #artist-video {
+    margin-top: 100px; }
   #content #link-cards-pane {
-    margin-top: 40px;
-    margin-bottom: 40px; }
+    margin-top: 100px;
+    margin-bottom: 30px; }
     #content #link-cards-pane #link-cards {
       padding: 5px;
       background-size: cover;
@@ -5859,6 +5876,8 @@ body {
 /*REVIEWS*/
 #about-reviews {
   box-shadow: 0px 2px 4px 1px grey; }
+  #about-reviews .collapsible-header {
+    font-size: 18px; }
   #about-reviews #reviews {
     box-shadow: none;
     border: none; }
@@ -5867,6 +5886,18 @@ body {
     #about-reviews #reviews #reviewer {
       font-weight: bold; }
 
+/********** GALLERY ****************/
+#media-li {
+  margin-bottom: 20px;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8); }
+  #media-li img {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29); }
+
+#media-li:hover {
+  -webkit-filter: none;
+          filter: none; }
+
 /********** FOOTER ****************/
 .page-footer {
   color: #000; }
@@ -5874,4 +5905,5 @@ body {
     margin-top: 20px; }
     .page-footer #social-icons-footer a {
       background-color: #DD2C00; }
+
 /*# sourceMappingURL=app.css.map */

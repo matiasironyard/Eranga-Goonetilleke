@@ -5776,14 +5776,6 @@ p {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-.open {
-  background-color: #fff; }
-
-.modal-content {
-  box-shadow: none;
-  border: none;
-  border-radius: none; }
-
 /********** HEADER ****************/
 #header .parallax-container {
   height: 600px; }

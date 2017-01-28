@@ -336,7 +336,7 @@ var Studio= React.createClass({displayName: "Studio",
             React.createElement("div", {id: "title", className: "row"}, 
               React.createElement("h1", null, "Studio Eranga")
             ), 
-            React.createElement("div", {id: "slider-pane", className: "row"}, 
+            React.createElement("div", {id: "slider-pane", className: "row hidden-xs"}, 
               React.createElement("div", {className: "slider"}, 
                 React.createElement("ul", {id: "slides", className: "slides"}, 
                   React.createElement("li", null, 
@@ -453,7 +453,7 @@ var Reviews = React.createClass({displayName: "Reviews",
           React.createElement("a", {href: id}, 
             React.createElement("p", {id: "review-title", className: ""}, reviews.title, "...")
           ), 
-            React.createElement("div", {id: reviews.id, className: "modal"}, 
+            React.createElement("div", {id: reviews.id, className: "modal bottom-sheet"}, 
               React.createElement("div", {className: "modal-content"}, 
                 React.createElement("p", {id: "review-text"}, reviews.review, React.createElement("br", null), React.createElement("span", {className: "pull-right"}, reviews.reviewer))
               )

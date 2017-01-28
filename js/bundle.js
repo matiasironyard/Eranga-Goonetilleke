@@ -16,7 +16,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
   },
   render: function(){
     return (
-      React.createElement("div", {className: "artist-page"}, /*wrapper div*/
+      React.createElement("div", {id: "pages", className: "artist-page"}, /*wrapper div*/
         React.createElement("div", {id: "header", className: "row"}, 
           React.createElement("div", {className: "parallax-container"}, 
             React.createElement("div", {className: "parallax"}, React.createElement("img", {className: "parallax-img", src: "./images/headshot-2.jpg"})), 
@@ -40,9 +40,9 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
               React.createElement("div", {id: "about-par", className: "col l10 offset-l1 m11"}, 
                 React.createElement("div", {id: "about-img", className: "responsive-img col l6 m3"}), 
                   React.createElement("h3", {id: "headings"}, "About Eranga"), 
-                  React.createElement("p", {className: "flow-text"}, "Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others."), 
-                  React.createElement("p", {className: "flow-text"}, "Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire."), 
-                  React.createElement("p", {className: "flow-text"}, "She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London."
+                  React.createElement("p", {id: "primary-text"}, "Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others."), 
+                  React.createElement("p", {id: "primary-text"}, "Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire."), 
+                  React.createElement("p", {id: "primary-text"}, "She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London."
                   )
               )/*end about-par*/
             ), /*end about*/
@@ -75,7 +75,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                     React.createElement("span", {className: "card-title"}, "Resume")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", null, "Learn about Eranga's roles, concerts and more.")
+                    React.createElement("p", {id: "primary-text"}, "Learn about Eranga's roles, concerts and more.")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#", className: "red-text text-darken-2"}, "Learn More")
@@ -90,7 +90,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                     React.createElement("span", {className: "card-title"}, "Studio Eranga")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", null, "Weekly lessons in voice, piano, audition preparation and music theory.")
+                    React.createElement("p", {id: "primary-text"}, "Weekly lessons in voice, piano, audition preparation and music theory.")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#studio/", className: "red-text text-darken-2"}, "Learn More")
@@ -105,7 +105,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                     React.createElement("span", {className: "card-title"}, "Announcements")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", null, "The latest student recitals, competitions and more!")
+                    React.createElement("p", {id: "primary-text"}, "The latest student recitals, competitions and more!")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#studio/", className: "red-text text-darken-2"}, "Learn More")
@@ -163,7 +163,7 @@ var Media= React.createClass({displayName: "Media",
   render: function(){
 
     return (
-      React.createElement("div", {className: "studio-page"}, /*wrapper div*/
+      React.createElement("div", {id: "pages", className: "studio-page"}, /*wrapper div*/
 
         React.createElement("div", {id: "header", className: "row"}, 
           React.createElement("div", {className: "parallax-container"}, 
@@ -310,7 +310,7 @@ var Studio= React.createClass({displayName: "Studio",
   render: function(){
 
     return (
-      React.createElement("div", {className: "studio-page"}, /*wrapper div*/
+      React.createElement("div", {id: "pages", className: "studio-page"}, /*wrapper div*/
 
         React.createElement("div", {id: "header", className: "row"}, 
           React.createElement("div", {className: "parallax-container"}, 
@@ -685,9 +685,9 @@ var NavFooter = React.createClass({displayName: "NavFooter",
               React.createElement("a", {href: "", className: "brand-logo"}, "Eranga Goonetilleke"), 
               React.createElement("a", {href: "", "data-activates": "mobile-demo", className: "button-collapse"}, React.createElement("i", {className: "material-icons"}, "menu")), 
               React.createElement("ul", {className: "right hide-on-med-and-down"}, 
-                React.createElement("li", null, React.createElement("a", {href: ""}, "Artist")), 
-                React.createElement("li", null, React.createElement("a", {href: "#studio/"}, "Studio")), 
-                React.createElement("li", null, React.createElement("a", {href: "#media/"}, "Media"))
+                React.createElement("li", {className: "fill"}, React.createElement("a", {href: ""}, "Artist")), 
+                React.createElement("li", {className: "fill"}, React.createElement("a", {href: "#studio/"}, "Studio")), 
+                React.createElement("li", {className: "fill"}, React.createElement("a", {href: "#media/"}, "Media"))
               ), 
               React.createElement("ul", {className: "side-nav", id: "mobile-demo"}, 
                 React.createElement("li", null, React.createElement("a", {href: ""}, "Artist")), 

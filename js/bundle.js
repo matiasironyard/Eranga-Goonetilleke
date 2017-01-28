@@ -47,18 +47,18 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
               )/*end about-par*/
             ), /*end about*/
 
-            React.createElement("div", {className: "divider"}), 
+            React.createElement("div", {className: "divider hide-on-small-only "}), 
 
             React.createElement("div", {id: "perfomance-imgs", className: "row"}, 
-              React.createElement("div", {id: "performance-card left", className: "col l4 m4"}, 
-                React.createElement("img", {className: "materialboxed responsive-img", "data-caption": "A picture of some deer and tons of trees", src: "./images/performance-1.jpg"})
-              ), 
-              React.createElement("div", {id: "performance-card middle", className: "col l4 m4"}, 
-                React.createElement("img", {className: "materialboxed responsive-img", "data-caption": "A picture of some deer and tons of trees", src: "./images/performance-2.jpg"})
-              ), 
-              React.createElement("div", {id: "performance-card right", className: "col l4 m4"}, 
-                React.createElement("img", {className: "materialboxed responsive-img", "data-caption": "A picture of some deer and tons of trees", src: "./images/performance-3.jpg"})
+              React.createElement("div", {className: "col l10 offset-l1 m11 offset-m1 hide-on-small-only "}, 
+                React.createElement("div", {className: "col l4 performance-cards left-side"}
+                ), 
+                React.createElement("div", {className: "col l4 performance-cards middle-side"}
+                ), 
+                React.createElement("div", {className: "col l4 performance-cards right-side"}
+                )
               )
+
             ), 
 
             React.createElement("div", {id: "artist-video", className: "row"}, 
@@ -361,11 +361,11 @@ var Studio= React.createClass({displayName: "Studio",
             React.createElement("div", {id: "about", className: "row"}, 
               React.createElement("div", {id: "about-description", className: "col l10 offset-l1"}, 
                 React.createElement("div", {id: "about-par", className: "col l5"}, 
-                  React.createElement("div", {id: "studio-about-img", className: "col m4 hide-on-small-only"}), 
-                  React.createElement("div", {className: "col l12 m7 s12"}, 
+                  React.createElement("div", {id: "studio-about-img", className: "col l4 hide-on-med-and-down"}), 
+                  React.createElement("div", {className: "col l12 m12 s12"}, 
                   React.createElement("h3", {id: "headings"}, "About the Studio"), 
                   React.createElement("div", {className: "divider"}), 
-                  React.createElement("p", {id: "primary-text"}, "Studio Eranga is located in Spartanburg, SC. Students received lesson in voice, piano, and theory. Say more about the studio")
+                  React.createElement("p", {id: "primary-text"}, "Studio Eranga is located in Spartanburg, SC. Students receive lessons in voice, piano, audition preparation and music theory. The studio grew from less than ten students to more than fourty since  its stablishment in 2013! Mrs. Goonetilleke's students earned acolytes in local and state wide competitions and have been admitted into prestigious schools from around the country. Mrs. Goonetilleke also teaches at The Lawson Academy of the Arts at Converse College, S.C.")
                   )
                 ), /*end about-par*/
                 React.createElement("div", {id: "about-par", className: "col l7"}, 
@@ -379,7 +379,8 @@ var Studio= React.createClass({displayName: "Studio",
                   ), 
                   React.createElement("p", {id: "primary-text"}, "It is a universal language that connects us all to each other and develops our personality and spirituality." + ' ' +
                   "It gives me great joy to help students discover and develop their gifts by providing them with healthy technique, tools to be a better performer, performing opportunities and inspiration!"
-                  )
+                  ), 
+                  React.createElement("img", {src: "./images/announcements-2.jpg", className: "responsive-img"})
                 )/*end about-par*/
               )/*end about-right*/
             ), /*end studio-pane*/
@@ -395,11 +396,16 @@ var Studio= React.createClass({displayName: "Studio",
                       React.createElement("span", {className: "card-title"}, "Recitals")
                     ), 
                     React.createElement("div", {className: "card-content"}, 
-                      React.createElement("p", {id: "primary-text"}, "I am a very simple card. I am good at containing small bits of information." + ' ' +
-                      "I am convenient because I require little markup to use effectively.")
+                      React.createElement("p", {id: "primary-text"}, "See upcoming studio recitals as well as outside performances by students.")
                     ), 
                     React.createElement("div", {className: "card-action"}, 
-                      React.createElement("a", {href: "#"}, "See Details")
+                      React.createElement("a", {href: "#recitals"}, "See Details")
+                      ), 
+                      React.createElement("div", {id: "recitals", className: "modal bottom-sheet"}, 
+                        React.createElement("div", {className: "modal-content"}, 
+                          React.createElement("h4", {id: "headings"}, "Recitals"), 
+                          React.createElement("p", {id: "review-text"}, "Stay tunned for details on the next studio recital!")
+                        )
                       )
                     )
                   ), /*end recital card*/
@@ -410,11 +416,16 @@ var Studio= React.createClass({displayName: "Studio",
                         React.createElement("span", {className: "card-title"}, "Congratulations!")
                       ), 
                       React.createElement("div", {className: "card-content"}, 
-                        React.createElement("p", {id: "primary-text"}, "I am a very simple card. I am good at containing small bits of information." + ' ' +
-                        "I am convenient because I require little markup to use effectively.")
+                        React.createElement("p", {id: "primary-text"}, "Students' accomplishments and more.")
                       ), 
                       React.createElement("div", {className: "card-action"}, 
-                        React.createElement("a", {href: "#"}, "See Details")
+                        React.createElement("a", {href: "#announcements"}, "See Details")
+                        ), 
+                        React.createElement("div", {id: "announcements", className: "modal bottom-sheet"}, 
+                          React.createElement("div", {className: "modal-content"}, 
+                            React.createElement("h4", {id: "headings"}, "Announcements"), 
+                            React.createElement("p", {id: "review-text"}, "Announcements coming soon")
+                          )
                         )
                       )
                     )/*end recital card*/
@@ -453,7 +464,7 @@ var Reviews = React.createClass({displayName: "Reviews",
           ), 
             React.createElement("div", {id: reviews.id, className: "modal bottom-sheet"}, 
               React.createElement("div", {className: "modal-content"}, 
-                React.createElement("p", {id: "review-text"}, reviews.review, React.createElement("br", null), React.createElement("span", {className: "pull-right"}, reviews.reviewer))
+                React.createElement("p", {id: "review-text"}, reviews.review, React.createElement("br", null), React.createElement("span", {className: "pull-right"}, "~ ", reviews.reviewer))
               )
             )
         )
@@ -712,7 +723,7 @@ var NavFooter = React.createClass({displayName: "NavFooter",
                       React.createElement("div", {className: "col-md-2 col-sm-1 col-xs-2"}, React.createElement("a", {className: "btn-floating btn-small waves-effect waves-light", href: "https://www.facebook.com/studioEranga/?fref=ts", target: "_blank"}, React.createElement("i", {className: "fa fa-facebook", "aria-hidden": "true"}))), 
                       React.createElement("div", {className: "col-md-2 col-sm-1 col-xs-2"}, React.createElement("a", {className: "btn-floating btn-small waves-effect waves-light", href: "https://twitter.com/erangagnt", target: "_blank"}, React.createElement("i", {className: "fa fa-twitter", "aria-hidden": "true"}))), 
                       React.createElement("div", {className: "col-md-2 col-sm-1 col-xs-2"}, React.createElement("a", {className: "btn-floating btn-small waves-effect waves-light", href: "https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215", target: "_blank"}, React.createElement("i", {className: "fa fa-linkedin", "aria-hidden": "true"}))), 
-                      React.createElement("div", {className: "col-md-2 col-sm-1 col-xs-2"}, React.createElement("a", {className: "btn-floating btn-small waves-effect waves-light"}, React.createElement("i", {className: "fa fa-envelope", "aria-hidden": "true"})
+                      React.createElement("div", {className: "col-md-2 col-sm-1 col-xs-2"}, React.createElement("a", {className: "btn-floating btn-small waves-effect waves-light", href: "mailto:studioeranga@gmail.com"}, React.createElement("i", {className: "fa fa-envelope", "aria-hidden": "true"})
                       ))
                   )
               ), 

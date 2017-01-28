@@ -168,7 +168,7 @@ var Media= React.createClass({displayName: "Media",
         React.createElement("div", {id: "header", className: "row"}, 
           React.createElement("div", {className: "parallax-container"}, 
             React.createElement("div", {className: "parallax"}, 
-              React.createElement("img", {className: "parallax-img", src: "./images/recital-pic.jpg"})
+              React.createElement("img", {className: "parallax-img", src: "./images/eranga-piano-2-banner.jpeg"})
             ), 
             React.createElement("div", {id: "social-icons-pane", className: "col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1"}, 
               React.createElement("ul", {id: "social-icons", className: "col-md-1 pull-right"}, 
@@ -318,7 +318,7 @@ var Studio= React.createClass({displayName: "Studio",
         React.createElement("div", {id: "header", className: "row"}, 
           React.createElement("div", {className: "parallax-container"}, 
             React.createElement("div", {className: "parallax"}, 
-              React.createElement("img", {className: "parallax-img", src: "./images/eranga-piano-2-banner.jpeg"})
+              React.createElement("img", {className: "parallax-img", src: "./images/recital-pic.jpg"})
             ), 
             React.createElement("div", {id: "social-icons-pane", className: "col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1"}, 
               React.createElement("ul", {id: "social-icons", className: "col-md-1 pull-right"}, 
@@ -360,15 +360,16 @@ var Studio= React.createClass({displayName: "Studio",
                 )
               )
             ), /*end slider-pane*/
-
-            React.createElement("div", {id: "studio-pane", className: "row"}, 
-              React.createElement("div", {id: "about-description", className: "col-md-6"}, 
-                React.createElement("div", {id: "about-par"}, 
+            React.createElement(Reviews, null), 
+            React.createElement("div", {id: "about", className: "row"}, 
+              React.createElement("div", {id: "about-description", className: "col-md-10 col-md-offset-1"}, 
+                React.createElement("div", {id: "about-par", className: "col-md-5"}, 
+                  React.createElement("div", {id: "studio-about-img"}), 
                   React.createElement("h3", {id: "headings"}, "About the Studio"), 
                   React.createElement("div", {className: "divider"}), 
                   React.createElement("p", null, "Studio Eranga is located in Spartanburg, SC. Students received lesson in voice, piano, and theory. Say more about the studio")
                 ), /*end about-par*/
-                React.createElement("div", {id: "about-par"}, 
+                React.createElement("div", {id: "about-par", className: "col-md-7"}, 
                   React.createElement("h3", {id: "headings"}, "Studio Phylosophy"), 
                   React.createElement("div", {className: "divider"}), 
                   React.createElement("p", null, "Music, in my opinion, is the language of the soul. Music not only entertains, but it brings immence joy, comfort and healing. Whether you like to sing in the shower or on stage, you sing because it is one of the most authentic ways of expressing who you are! No matter what culture, background, age, ethnicity or sex, music, can be a positive hobby, escape or even a way of life."), 
@@ -381,41 +382,18 @@ var Studio= React.createClass({displayName: "Studio",
                   "It gives me great joy to help students discover and develop their gifts by providing them with healthy technique, tools to be a better performer, performing opportunities and inspiration!"
                   )
                 )/*end about-par*/
-              ), /*end about-right*/
-
-              React.createElement("div", {id: "about-reviews", className: "col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2"}, 
-                React.createElement("h4", {id: "headings"}, "Reviews"), 
-                React.createElement("div", {className: "divider"}), 
-                React.createElement(Reviews, null)
-              )/*end reviews*/
-
+              )/*end about-right*/
             ), /*end studio-pane*/
 
             React.createElement("div", {id: "announcements-pane", className: "row"}, 
-              React.createElement("div", {className: "divider"}), 
-              React.createElement("div", {className: "row"}, 
-                React.createElement("h2", {id: "headings"}, "Announcements")
-              ), 
-              React.createElement("div", {id: "recital-card", className: "col s12 m6"}, 
-                React.createElement("div", {className: "card large"}, 
-                  React.createElement("div", {className: "card-image"}, 
-                    React.createElement("img", {src: "./images/recital-pic.jpg"}), 
-                    React.createElement("span", {className: "card-title"}, "Recitals")
-                  ), 
-                  React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", null, "I am a very simple card. I am good at containing small bits of information." + ' ' +
-                    "I am convenient because I require little markup to use effectively.")
-                  ), 
-                  React.createElement("div", {className: "card-action"}, 
-                    React.createElement("a", {href: "#"}, "See Details")
-                    )
-                  )
-                ), /*end recital card*/
+              React.createElement("div", {className: "col-md-10 col-md-offset-1"}, 
+                React.createElement("h2", {id: "headings"}, "News"), 
+                React.createElement("div", {className: "divider"}), 
                 React.createElement("div", {id: "recital-card", className: "col s12 m6"}, 
                   React.createElement("div", {className: "card large"}, 
                     React.createElement("div", {className: "card-image"}, 
-                      React.createElement("img", {src: "./images/congrats.jpg"}), 
-                      React.createElement("span", {className: "card-title"}, "Congratulations!")
+                      React.createElement("img", {src: "./images/recital-pic.jpg"}), 
+                      React.createElement("span", {className: "card-title"}, "Recitals")
                     ), 
                     React.createElement("div", {className: "card-content"}, 
                       React.createElement("p", null, "I am a very simple card. I am good at containing small bits of information." + ' ' +
@@ -425,7 +403,23 @@ var Studio= React.createClass({displayName: "Studio",
                       React.createElement("a", {href: "#"}, "See Details")
                       )
                     )
-                  )/*end recital card*/
+                  ), /*end recital card*/
+                  React.createElement("div", {id: "recital-card", className: "col s12 m6"}, 
+                    React.createElement("div", {className: "card large"}, 
+                      React.createElement("div", {className: "card-image"}, 
+                        React.createElement("img", {src: "./images/congrats.jpg"}), 
+                        React.createElement("span", {className: "card-title"}, "Congratulations!")
+                      ), 
+                      React.createElement("div", {className: "card-content"}, 
+                        React.createElement("p", null, "I am a very simple card. I am good at containing small bits of information." + ' ' +
+                        "I am convenient because I require little markup to use effectively.")
+                      ), 
+                      React.createElement("div", {className: "card-action"}, 
+                        React.createElement("a", {href: "#"}, "See Details")
+                        )
+                      )
+                    )/*end recital card*/
+                  )
               )
 
 
@@ -439,20 +433,44 @@ var Studio= React.createClass({displayName: "Studio",
 });
 
 var Reviews = React.createClass({displayName: "Reviews",
+  componentDidMount: function(){
+    $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: 0, // Opacity of modal background
+      inDuration: 200, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '100%', // Starting top style attribute
+      endingTop: '100%', // Ending top style attribute
+    });
+  },
   render: function(){
     var self = this;
     var myReviews = reviews.map(function(reviews){
+      var id = '#'+reviews.id;
+      console.log(id);
       return (
-        React.createElement("li", {key: reviews.id}, 
-          React.createElement("div", {className: "collapsible-header truncate"}, reviews.title), 
-          React.createElement("div", {className: "collapsible-body"}, React.createElement("p", {id: "review-text"}, reviews.review, " ", React.createElement("br", null), "~", reviews.reviewer))
+        React.createElement("div", {key: reviews.id, id: "review-card", className: "col-md-4"}, 
+          React.createElement("a", {href: id}, 
+            React.createElement("p", {id: "review-title", className: ""}, reviews.title, "...")
+          ), 
+            React.createElement("div", {id: reviews.id, className: "modal"}, 
+              React.createElement("div", {className: "modal-content"}, 
+                React.createElement("p", {id: "review-text"}, reviews.review, React.createElement("br", null), React.createElement("span", {className: "pull-right"}, reviews.reviewer))
+              )
+            )
         )
+
       )
     });
     return (
-      React.createElement("ul", {className: "collapsible", "data-collapsible": "accordion", id: "reviews"}, 
-          myReviews
+      React.createElement("div", {className: "row", id: "reviews"}, 
+        React.createElement("div", {id: "about-reviews", className: "col-md-10 col-md-offset-1"}, 
+          React.createElement("h3", {id: "headings"}, "Reviews"), 
+          React.createElement("div", {className: "divider"}), 
+            myReviews, 
+          React.createElement("div", {className: "divider"})
         )
+      )
     )
   }
 });
@@ -519,34 +537,34 @@ module.exports = {
 "use strict";
 var reviews = [{
   id: '1',
-  title: 'Eranga is an extraordinary music teacher and person.',
+  title: 'Eranga is an extraordinary music teacher and person',
   reviewer: 'Lacey Key',
   review: "Eranga is an extraordinary music teacher and person. I have had many voice teachers, and she has been the best I've had. She goes above and beyond with each of her students to make sure that they learn, improve, understand and grow in music. I had been singing for over 10 years when I met Eranga, and she was the first teacher that asked me if I knew what the words meant that I was singing. We worked on understanding what each word and note meant-and it took my singing from good to great. The tone and quality improved in my voice in a matter of months, along with the place in my heart from which I was singing. Being taught by Eranga has made all the difference in my love for voice, and Eranga is a teacher who not only teaches you music, but also about who you are, and helps you become the artist you want to be. Thank you!"
 }, {
   id: '2',
-  title: 'Eranga is absolutely wonderful. I came to her with a simple of wish of wanting to improve my vocals and gained so much more.',
+  title: 'Eranga is absolutely wonderful. I came to her with a simple of wish',
   reviewer: 'Amanda Darchiville',
   review: "Eranga is absolutely wonderful. I came to her with a simple of wish of wanting to improve my vocals and gained so much more. Her knowledge and passion is evident in her teaching and her support for her students is overflowing. It has been so rewarding learning under her, and because of her love and talent for this craft, I now have a new appreciation/ discipline for music and singing that I will always cherish. I am truly blessed to call her my teacher. Thank You for all you you do!",
 }, {
   id: '3',
-  title: 'Eranga is an excellent teacher! She is extremely knowledgable about the intricacies of the voice',
+  title: 'Eranga is an excellent teacher! She is extremely knowledgable about',
   reviewer: 'Kelli Hardigree',
   review: "Eranga is an excellent teacher! She is extremely knowledgable about the intricacies of the voice and has helped my daughter to focus on improving her vocal strength and quality. Carson trusts and values Eranga's expertise in her field.",
 }, {
   id: '4',
-  title: "The Eranga Experience: I can't believe it's already been almost a year since I have been vocal training with Eranga Goonetilleke.",
+  title: "The Eranga Experience: I can't believe it's already been almost a year since",
   reviewer: 'Steven Darchiville',
   review: "The Eranga Experience: I can't believe it's already been almost a year since I have been vocal training with Eranga Goonetilleke. Straying far away from a learning environment, and being constantly enveloped in a 9 to 5 lifestyle, I knew it was time for a fresh reality and challenge. My love for singing led me to Eranga, who had worked previously with my sister. Her stern yet positive and inspiring teaching methodology has driven me to learn so much about my vocal potential; showing me a side of myself I never knew. Every lesson is an exciting new stepping stone to conquer With her guidance, I feel confident on my path. Looking forward to what the future holds in vocal training with Eranga! Thank You!",
 }, {
   id: '5',
-  title: "This has truly been a wonderful first year for Finley! It's amazing to see how her little voice has developed and the confidence she's gained.",
+  title: "This has truly been a wonderful first year for Finley! It's amazing to see.",
   reviewer: 'Christy Sloan',
   review: "This has truly been a wonderful first year for Finley! It's amazing to see how her little voice has developed and the confidence she's gained. We absolutely Love Mrs. Eranga!!",
 }, {
   id: '6',
   reviewer: 'Barbara Key',
   review: "Eranga is an awesome teacher! She has helped my daughter take her voice to an even greater level of performance. Eranga also has a positive spirit and is a great mentor.",
-  title: 'Eranga is an awesome teacher! She has helped my daughter take her voice to an even greater level of performance.',
+  title: 'Eranga is an awesome teacher! She has helped my daughter take her voice to',
 }, {
   id: '7',
   reviewer: 'Susan Baker',
@@ -713,7 +731,7 @@ var NavFooter = React.createClass({displayName: "NavFooter",
           React.createElement("div", {className: "footer-copyright"}, 
             React.createElement("div", {className: "container grey-text text-darken-3"}, 
             "© 2017 Eranga Goonetilleke", 
-            React.createElement("a", {href: "www.matiasmariani.io", className: "pull-right"}, "Designed by Matias Mariani")
+            React.createElement("a", {href: "http://www.matiasmariani.io", target: "_blank", className: "pull-right"}, "Designed by Matias Mariani")
             )
           )
         )

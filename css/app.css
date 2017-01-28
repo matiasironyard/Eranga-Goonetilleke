@@ -5776,6 +5776,14 @@ p {
   margin-top: 30px;
   margin-bottom: 30px; }
 
+.open {
+  background-color: #fff; }
+
+.modal-content {
+  box-shadow: none;
+  border: none;
+  border-radius: none; }
+
 /********** HEADER ****************/
 #header .parallax-container {
   height: 600px; }
@@ -5798,7 +5806,7 @@ body {
 /******** SOCIAL **********/
 #social-icons-pane {
   position: relative;
-  top: 15%; }
+  top: 25%; }
   #social-icons-pane li {
     color: #fff;
     font-size: 30px;
@@ -5846,6 +5854,18 @@ body {
       margin-right: 35px;
       margin-top: 80px;
       margin-bottom: 20px; }
+    #content #about #studio-about-img {
+      border-radius: 100%;
+      height: 300px;
+      width: 300px;
+      background-image: url("../images/eranga-piano.jpg");
+      background-position: top;
+      background-size: cover;
+      margin-right: 35px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      -webkit-filter: brightness(2);
+              filter: brightness(2); }
   #content #perfomance-imgs {
     margin-top: 80px;
     margin-bottom: 30px; }
@@ -5874,17 +5894,15 @@ body {
   display: none; }
 
 /*REVIEWS*/
-#about-reviews {
-  box-shadow: 0px 2px 4px 1px grey; }
-  #about-reviews .collapsible-header {
-    font-size: 18px; }
-  #about-reviews #reviews {
-    box-shadow: none;
-    border: none; }
-    #about-reviews #reviews #review-text {
-      font-size: 14px; }
-    #about-reviews #reviews #reviewer {
-      font-weight: bold; }
+#about-reviews #review-card {
+  height: 100px;
+  margin-top: 20px; }
+  #about-reviews #review-card #review-title {
+    text-align: center;
+    text-decoration: none;
+    font-style: italic;
+    opacity: .8;
+    color: #000; }
 
 /********** GALLERY ****************/
 #media-li {
@@ -5905,4 +5923,5 @@ body {
     margin-top: 20px; }
     .page-footer #social-icons-footer a {
       background-color: #DD2C00; }
+
 /*# sourceMappingURL=app.css.map */

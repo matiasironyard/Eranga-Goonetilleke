@@ -43,7 +43,7 @@ var Studio= React.createClass({
             <div id="title" className="row">
               <h1>Studio Eranga</h1>
             </div>
-            <div id="slider-pane" className="row">
+            <div id="slider-pane" className="row hidden-xs">
               <div className="slider">
                 <ul id="slides" className="slides">
                   <li>
@@ -160,7 +160,7 @@ var Reviews = React.createClass({
           <a href={id}>
             <p id="review-title" className="">{reviews.title}...</p>
           </a>
-            <div id={reviews.id} className="modal">
+            <div id={reviews.id} className="modal bottom-sheet">
               <div className="modal-content">
                 <p id="review-text">{reviews.review}<br></br><span className="pull-right">{reviews.reviewer}</span></p>
               </div>

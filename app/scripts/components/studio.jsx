@@ -71,11 +71,11 @@ var Studio= React.createClass({
             <div id="about" className="row">
               <div id="about-description" className="col l10 offset-l1">
                 <div id="about-par"className="col l5">
-                  <div id="studio-about-img" className="col m4 hide-on-small-only"/>
-                  <div className="col l12 m7 s12">
+                  <div id="studio-about-img" className="col l4 hide-on-med-and-down"/>
+                  <div className="col l12 m12 s12">
                   <h3 id="headings">About the Studio</h3>
                   <div className="divider"/>
-                  <p id="primary-text">Studio Eranga is located in Spartanburg, SC. Students received lesson in voice, piano, and theory. Say more about the studio</p>
+                  <p id="primary-text">Studio Eranga is located in Spartanburg, SC. Students receive lessons in voice, piano, audition preparation and music theory. The studio grew from less than ten students to more than fourty since  its stablishment in 2013! Mrs. Goonetilleke&#39;s students earned acolytes in local and state wide competitions and have been admitted into prestigious schools from around the country. Mrs. Goonetilleke also teaches at The Lawson Academy of the Arts at Converse College, S.C.</p>
                   </div>
                 </div>{/*end about-par*/}
                 <div id="about-par" className="col l7">
@@ -90,6 +90,7 @@ var Studio= React.createClass({
                   <p id="primary-text">It is a universal language that connects us all to each other and develops our personality and spirituality.
                   It gives me great joy to help students discover and develop their gifts by providing them with healthy technique, tools to be a better performer, performing opportunities and inspiration!
                   </p>
+                  <img src="./images/announcements-2.jpg"className="responsive-img"/>
                 </div>{/*end about-par*/}
               </div>{/*end about-right*/}
             </div>{/*end studio-pane*/}
@@ -105,11 +106,16 @@ var Studio= React.createClass({
                       <span className="card-title">Recitals</span>
                     </div>
                     <div className="card-content">
-                      <p id="primary-text">I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
+                      <p id="primary-text">See upcoming studio recitals as well as outside performances by students.</p>
                     </div>
                     <div className="card-action">
-                      <a href="#">See Details</a>
+                      <a href="#recitals">See Details</a>
+                      </div>
+                      <div id="recitals" className="modal bottom-sheet">
+                        <div className="modal-content">
+                          <h4 id="headings">Recitals</h4>
+                          <p id="review-text">Stay tunned for details on the next studio recital!</p>
+                        </div>
                       </div>
                     </div>
                   </div>{/*end recital card*/}
@@ -120,11 +126,16 @@ var Studio= React.createClass({
                         <span className="card-title">Congratulations!</span>
                       </div>
                       <div className="card-content">
-                        <p id="primary-text">I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
+                        <p id="primary-text">Students&#39; accomplishments and more.</p>
                       </div>
                       <div className="card-action">
-                        <a href="#">See Details</a>
+                        <a href="#announcements">See Details</a>
+                        </div>
+                        <div id="announcements" className="modal bottom-sheet">
+                          <div className="modal-content">
+                            <h4 id="headings">Announcements</h4>
+                            <p id="review-text">Announcements coming soon</p>
+                          </div>
                         </div>
                       </div>
                     </div>{/*end recital card*/}
@@ -163,7 +174,7 @@ var Reviews = React.createClass({
           </a>
             <div id={reviews.id} className="modal bottom-sheet">
               <div className="modal-content">
-                <p id="review-text">{reviews.review}<br></br><span className="pull-right">{reviews.reviewer}</span></p>
+                <p id="review-text">{reviews.review}<br></br><span className="pull-right">~ {reviews.reviewer}</span></p>
               </div>
             </div>
         </div>

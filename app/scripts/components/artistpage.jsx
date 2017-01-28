@@ -45,18 +45,18 @@ var HeaderContainer = React.createClass({
               </div>{/*end about-par*/}
             </div>{/*end about*/}
 
-            <div className="divider"/>
+            <div className="divider hide-on-small-only "/>
 
             <div id="perfomance-imgs" className="row">
-              <div id="performance-card left" className="col l4 m4">
-                <img className="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees" src="./images/performance-1.jpg"/>
+              <div className="col l10 offset-l1 m11 offset-m1 hide-on-small-only ">
+                <div className="col l4 performance-cards left-side">
+                </div>
+                <div className="col l4 performance-cards middle-side">
+                </div>
+                <div  className="col l4 performance-cards right-side">
+                </div>
               </div>
-              <div id="performance-card middle" className="col l4 m4">
-                <img className="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees"  src="./images/performance-2.jpg"/>
-              </div>
-              <div id="performance-card right" className="col l4 m4">
-                <img className="materialboxed responsive-img" data-caption="A picture of some deer and tons of trees"  src="./images/performance-3.jpg"/>
-              </div>
+
             </div>
 
             <div id="artist-video" className="row">

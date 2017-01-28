@@ -61,11 +61,12 @@ a:hover{
 // .open{
 //   background-color: #fff;
 // }
-// .modal-content{
-//   box-shadow: none;
-//   border: none;
-//   border-radius: none;
-// }
+.modal-content{
+  box-shadow: none;
+  border: none;
+  border-radius: none;
+  z-index: 1;
+}
 
 
 
@@ -190,6 +191,23 @@ a:hover{
   #perfomance-imgs{
     margin-top: 80px;
     margin-bottom: 30px;
+    .performance-cards{
+      border-radius: 100%;
+      height: 20vw;
+      width: 20vw;
+      margin: 10px;
+      background-size: cover;
+      background-position: center;
+    }
+    .left-side{
+      background-image: url('../images/performance-2.jpg');
+    }
+    .middle-side{
+      background-image: url('../images/performance-1.jpg');
+    }
+    .right-side{
+      background-image: url('../images/performance-3.jpg');
+    }
   }
 /*VIDEO SECTION*/
 #artist-video{

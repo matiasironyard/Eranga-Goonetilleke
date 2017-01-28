@@ -28,8 +28,8 @@ var Media= React.createClass({
             <div className="parallax">
               <img  className="parallax-img" src="./images/eranga-piano-2-banner.jpeg"/>
             </div>
-            <div id="social-icons-pane"className="col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1">
-              <ul id="social-icons" className="col-md-1 pull-right">
+            <div id="social-icons-pane"className="col l8 offset-l3 m10 offset-m1 s10">
+              <ul id="social-icons" className="col l1 m1 s1 pull-right">
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://twitter.com/erangagnt" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -40,7 +40,7 @@ var Media= React.createClass({
         </div>
 
         <div  id="studio" className="main row">
-          <div id="content" className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 z-depth-4">
+          <div id="content" className="col l10 offset-l1 m10 offset-m1 s12 z-depth-4">
             <div id="title" className="row">
               <h1>Media Gallery</h1>
             </div>
@@ -63,9 +63,8 @@ var StudioGallery = React.createClass({
   render: function(){
     var self = this;
     var Images = images.map(function(img){
-      console.log(img.img);
       return(
-        <li key={img.id}  id="media-li"className="col-md-4">
+        <li key={img.id}  id="media-li"className="col l4 m6">
           <img src={img.img} id="images"className="responsive-img materialboxed" data-caption={img.caption}/>
         </li>
       )
@@ -90,9 +89,8 @@ var ArtistGallery = React.createClass({
   render: function(){
     var self = this;
     var Images = images.map(function(img){
-      console.log(img.img);
       return(
-        <li key={img.id}  id="media-li"className="col-md-4">
+        <li key={img.id}  id="media-li"className="col l4 m6">
           <img src={img.img} id="images"className="responsive-img materialboxed" data-caption={img.caption}/>
         </li>
       )
@@ -113,9 +111,8 @@ var YoutubeGallery = React.createClass({
   render: function(){
     var self = this;
     var Youtube = youtube.map(function(video){
-      console.log(video);
       return(
-        <li key={video.id}  id="media-li"className="col-md-4">
+        <li key={video.id}  id="media-li"className="col l4 m6">
             <div className="video-container">
               <iframe width="853" height="480" src={video.url} frameBorder="0" allowFullScreen></iframe>
             </div>

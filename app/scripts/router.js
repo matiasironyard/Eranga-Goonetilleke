@@ -14,13 +14,13 @@ var MediaContainer = require('./components/media.jsx').MediaContainer;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    '': 'index',
+    'home/': 'home',
     'studio/': 'studio',
     'media/': 'media',
     'contact/': 'contact'
   },
 
-  index: function(){
+  home: function(){
   // console.log('hi index');
   ReactDOM.render(
     React.createElement(ArtistContainer, {router: this}),

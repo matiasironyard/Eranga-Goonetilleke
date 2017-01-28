@@ -23,15 +23,15 @@ var NavFooter = React.createClass({
         <div>
           <nav className="white navbar-fixed-top">
             <div className="nav-wrapper">
-              <a href="" className="brand-logo">Eranga Goonetilleke</a>
-              <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+              <a href="#home/" className="brand-logo">Eranga Goonetilleke</a>
+              <a href="" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
               <ul className="right hide-on-med-and-down">
-                <li><a href="">Artist</a></li>
+                <li><a href="#home/">Artist</a></li>
                 <li><a href="#studio/">Studio</a></li>
                 <li><a href="#media/">Media</a></li>
               </ul>
               <ul className="side-nav" id="mobile-demo">
-                <li><a href="">Artist</a></li>
+                <li><a href="#home/">Artist</a></li>
                 <li><a href="#studio/">Studio</a></li>
                 <li><a href="#media/">Media</a></li>
               </ul>
@@ -60,7 +60,7 @@ var NavFooter = React.createClass({
               <div className="col l4 offset-l2 s2">
                 <h5 className="grey-text text-darken-3">Links</h5>
                 <ul>
-                  <div><a className="grey-text text-darken-3" href="">Artist</a></div>
+                  <div><a className="grey-text text-darken-3" href="#home/">Artist</a></div>
                   <div><a className="grey-text text-darken-3" href="#studio/">Studio</a></div>
                   <div><a className="grey-text text-darken-3" href="#media/">Media</a></div>
                 </ul>

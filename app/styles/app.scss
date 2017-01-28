@@ -13,22 +13,37 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 //********* GENERAL ***************/
+
+body{
+  // background-image: url('../images/background-2.jpg');
+  background: linear-gradient(135deg, rgba(137,230,225,1) 0%, rgba(217,217,104,1) 60%, rgba(123,210,160,1) 84%, rgba(60,205,198,1) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 p{
   font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+#primary-text{
+  line-height: 2;
+  opacity: .87;
+  font-size: 120%;
+}
+#secondary-text{
+  line-height: 1.5;
+  opacity: .54;
+  font-size: 110%;
+}
+#headings{
+  font-family: 'Raleway', sans-serif;
+  color: #DD2C00;
 }
 
 a:hover{
   text-decoration: none;
   text-shadow: 0px 1px 1px rgba(107, 98, 98, 0.5);
-}
-
-#primary-text{
-  font-size: 3vmin;
-  line-height: 2;
-}
-#headings{
-  font-family: 'Raleway', sans-serif;
-  color: #DD2C00;
 }
 
 .divider{
@@ -59,12 +74,6 @@ a:hover{
   .parallax-container{
     height: 600px;
   }
-}
-
-body{
-  background-image: url('../images/background-2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 /******** NAV **********/
 .nav-wrapper{

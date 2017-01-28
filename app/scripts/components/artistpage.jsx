@@ -30,7 +30,7 @@ var HeaderContainer = React.createClass({
         </div>
 
         <div  className="main row">
-          <div id="content" className="col l10 offset-l1 m10 offset-m1 s12 z-depth-4z-depth-4">
+          <div id="content" className="col l10 offset-l1 m10 offset-m1 s12 z-depth-4">
             <div id="title" className="row">
               <h1>Eranga Goonetilleke</h1>
             </div>
@@ -73,7 +73,7 @@ var HeaderContainer = React.createClass({
                     <span className="card-title">Resume</span>
                   </div>
                   <div className="card-content">
-                    <p id="primary-text">Learn about Eranga's roles, concerts and more.</p>
+                    <p id="secondary-text">Learn about Eranga's roles, concerts and more.</p>
                   </div>
                   <div className="card-action">
                     <a href="#" className="red-text text-darken-2">Learn More</a>
@@ -88,7 +88,7 @@ var HeaderContainer = React.createClass({
                     <span className="card-title">Studio Eranga</span>
                   </div>
                   <div className="card-content">
-                    <p id="primary-text">Weekly lessons in voice, piano, audition preparation and music theory.</p>
+                    <p id="secondary-text">Weekly lessons in voice, piano, audition preparation and music theory.</p>
                   </div>
                   <div className="card-action">
                     <a href="#studio/" className="red-text text-darken-2">Learn More</a>
@@ -103,7 +103,7 @@ var HeaderContainer = React.createClass({
                     <span className="card-title">Announcements</span>
                   </div>
                   <div className="card-content">
-                    <p id="primary-text">The latest student recitals, competitions and more!</p>
+                    <p id="secondary-text">The latest student recitals, competitions and more!</p>
                   </div>
                   <div className="card-action">
                     <a href="#studio/" className="red-text text-darken-2">Learn More</a>

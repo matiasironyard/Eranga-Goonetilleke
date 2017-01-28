@@ -5763,20 +5763,33 @@ button.close {
 *::after {
   box-sizing: border-box; }
 
-p {
-  font-family: 'Raleway', sans-serif; }
+body {
+  background: -webkit-linear-gradient(315deg, #89e6e1 0%, #d9d968 60%, #7bd2a0 84%, #3ccdc6 100%);
+  background: linear-gradient(135deg, #89e6e1 0%, #d9d968 60%, #7bd2a0 84%, #3ccdc6 100%);
+  background-size: cover;
+  background-repeat: no-repeat; }
 
-a:hover {
-  text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(107, 98, 98, 0.5); }
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px; }
 
 #primary-text {
-  font-size: 3vmin;
-  line-height: 2; }
+  line-height: 2;
+  opacity: .87;
+  font-size: 120%; }
+
+#secondary-text {
+  line-height: 1.5;
+  opacity: .54;
+  font-size: 110%; }
 
 #headings {
   font-family: 'Raleway', sans-serif;
   color: #DD2C00; }
+
+a:hover {
+  text-decoration: none;
+  text-shadow: 0px 1px 1px rgba(107, 98, 98, 0.5); }
 
 .divider {
   margin-top: 30px;
@@ -5798,11 +5811,6 @@ a:hover {
 /********** HEADER ****************/
 #header .parallax-container {
   height: 600px; }
-
-body {
-  background-image: url("../images/background-2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
 
 /******** NAV **********/
 .nav-wrapper .brand-logo {

@@ -32,7 +32,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
         ), 
 
         React.createElement("div", {className: "main row"}, 
-          React.createElement("div", {id: "content", className: "col l10 offset-l1 m10 offset-m1 s12 z-depth-4z-depth-4"}, 
+          React.createElement("div", {id: "content", className: "col l10 offset-l1 m10 offset-m1 s12 z-depth-4"}, 
             React.createElement("div", {id: "title", className: "row"}, 
               React.createElement("h1", null, "Eranga Goonetilleke")
             ), 
@@ -75,7 +75,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                     React.createElement("span", {className: "card-title"}, "Resume")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", {id: "primary-text"}, "Learn about Eranga's roles, concerts and more.")
+                    React.createElement("p", {id: "secondary-text"}, "Learn about Eranga's roles, concerts and more.")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#", className: "red-text text-darken-2"}, "Learn More")
@@ -90,7 +90,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                     React.createElement("span", {className: "card-title"}, "Studio Eranga")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", {id: "primary-text"}, "Weekly lessons in voice, piano, audition preparation and music theory.")
+                    React.createElement("p", {id: "secondary-text"}, "Weekly lessons in voice, piano, audition preparation and music theory.")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#studio/", className: "red-text text-darken-2"}, "Learn More")
@@ -105,7 +105,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                     React.createElement("span", {className: "card-title"}, "Announcements")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", {id: "primary-text"}, "The latest student recitals, competitions and more!")
+                    React.createElement("p", {id: "secondary-text"}, "The latest student recitals, competitions and more!")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#studio/", className: "red-text text-darken-2"}, "Learn More")

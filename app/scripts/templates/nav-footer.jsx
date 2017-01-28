@@ -26,9 +26,9 @@ var NavFooter = React.createClass({
               <a href="" className="brand-logo">Eranga Goonetilleke</a>
               <a href="" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
               <ul className="right hide-on-med-and-down">
-                <li><a href="">Artist</a></li>
-                <li><a href="#studio/">Studio</a></li>
-                <li><a href="#media/">Media</a></li>
+                <li className="fill"><a href="">Artist</a></li>
+                <li className="fill"><a href="#studio/">Studio</a></li>
+                <li className="fill"><a href="#media/">Media</a></li>
               </ul>
               <ul className="side-nav" id="mobile-demo">
                 <li><a href="">Artist</a></li>

@@ -21,7 +21,7 @@ var Media= React.createClass({
   render: function(){
 
     return (
-      <div className="studio-page">{/*wrapper div*/}
+      <div id="pages" className="studio-page">{/*wrapper div*/}
 
         <div id="header" className="row">
           <div className="parallax-container">

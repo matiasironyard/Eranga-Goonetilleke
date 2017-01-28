@@ -14,7 +14,7 @@ var HeaderContainer = React.createClass({
   },
   render: function(){
     return (
-      <div className="artist-page">{/*wrapper div*/}
+      <div  id="pages" className="artist-page">{/*wrapper div*/}
         <div id="header" className="row">
           <div className="parallax-container">
             <div className="parallax"><img  className="parallax-img" src="./images/headshot-2.jpg"/></div>
@@ -38,9 +38,9 @@ var HeaderContainer = React.createClass({
               <div id="about-par" className="col l10 offset-l1 m11">
                 <div id="about-img" className="responsive-img col l6 m3"/>
                   <h3 id="headings">About Eranga</h3>
-                  <p className="flow-text">Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others.</p>
-                  <p className="flow-text">Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire.</p>
-                  <p className="flow-text">She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London.
+                  <p id="primary-text">Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others.</p>
+                  <p id="primary-text">Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire.</p>
+                  <p id="primary-text">She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London.
                   </p>
               </div>{/*end about-par*/}
             </div>{/*end about*/}
@@ -73,7 +73,7 @@ var HeaderContainer = React.createClass({
                     <span className="card-title">Resume</span>
                   </div>
                   <div className="card-content">
-                    <p>Learn about Eranga's roles, concerts and more.</p>
+                    <p id="primary-text">Learn about Eranga's roles, concerts and more.</p>
                   </div>
                   <div className="card-action">
                     <a href="#" className="red-text text-darken-2">Learn More</a>
@@ -88,7 +88,7 @@ var HeaderContainer = React.createClass({
                     <span className="card-title">Studio Eranga</span>
                   </div>
                   <div className="card-content">
-                    <p>Weekly lessons in voice, piano, audition preparation and music theory.</p>
+                    <p id="primary-text">Weekly lessons in voice, piano, audition preparation and music theory.</p>
                   </div>
                   <div className="card-action">
                     <a href="#studio/" className="red-text text-darken-2">Learn More</a>
@@ -103,7 +103,7 @@ var HeaderContainer = React.createClass({
                     <span className="card-title">Announcements</span>
                   </div>
                   <div className="card-content">
-                    <p>The latest student recitals, competitions and more!</p>
+                    <p id="primary-text">The latest student recitals, competitions and more!</p>
                   </div>
                   <div className="card-action">
                     <a href="#studio/" className="red-text text-darken-2">Learn More</a>

@@ -20,29 +20,29 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
         React.createElement("div", {id: "header", className: "row"}, 
           React.createElement("div", {className: "parallax-container"}, 
             React.createElement("div", {className: "parallax"}, React.createElement("img", {className: "parallax-img", src: "./images/headshot-2.jpg"})), 
-            React.createElement("div", {id: "social-icons-pane", className: "col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1"}, 
-              React.createElement("ul", {id: "social-icons", className: "col-md-1 pull-right"}, 
-                React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.facebook.com/studioEranga/?fref=ts", target: "_blank"}, React.createElement("i", {className: "fa fa-facebook", "aria-hidden": "true"}))), 
-                React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://twitter.com/erangagnt", target: "_blank"}, React.createElement("i", {className: "fa fa-twitter", "aria-hidden": "true"}))), 
-                React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215", target: "_blank"}, React.createElement("i", {className: "fa fa-linkedin", "aria-hidden": "true"}))), 
-                React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.youtube.com/user/esgoonetilleke", target: "_blank"}, React.createElement("i", {className: "fa fa-youtube-play", "aria-hidden": "true"})))
+              React.createElement("div", {id: "social-icons-pane", className: "col l8 offset-l3 m10 offset-m1 s10"}, 
+                React.createElement("ul", {id: "social-icons", className: "col l1 m1 s1 pull-right"}, 
+                  React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.facebook.com/studioEranga/?fref=ts", target: "_blank"}, React.createElement("i", {className: "fa fa-facebook", "aria-hidden": "true"}))), 
+                  React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://twitter.com/erangagnt", target: "_blank"}, React.createElement("i", {className: "fa fa-twitter", "aria-hidden": "true"}))), 
+                  React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215", target: "_blank"}, React.createElement("i", {className: "fa fa-linkedin", "aria-hidden": "true"}))), 
+                  React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.youtube.com/user/esgoonetilleke", target: "_blank"}, React.createElement("i", {className: "fa fa-youtube-play", "aria-hidden": "true"})))
+                )
               )
-            )
           )
         ), 
 
         React.createElement("div", {className: "main row"}, 
-          React.createElement("div", {id: "content", className: "col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 z-depth-4"}, 
+          React.createElement("div", {id: "content", className: "col l10 offset-l1 m10 offset-m1 s12 z-depth-4z-depth-4"}, 
             React.createElement("div", {id: "title", className: "row"}, 
               React.createElement("h1", null, "Eranga Goonetilleke")
             ), 
             React.createElement("div", {id: "about", className: "row"}, 
-              React.createElement("div", {id: "about-par", className: "col-md-10 col-md-offset-1  col-sm-11"}, 
-                React.createElement("div", {id: "about-img", className: "responsive-img col-md-6 col-sm-3 hidden-xs"}), 
+              React.createElement("div", {id: "about-par", className: "col l10 offset-l1 m11"}, 
+                React.createElement("div", {id: "about-img", className: "responsive-img col l6 m3"}), 
                   React.createElement("h3", {id: "headings"}, "About Eranga"), 
-                  React.createElement("p", null, "Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others."), 
-                  React.createElement("p", null, "Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire."), 
-                  React.createElement("p", null, "She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London."
+                  React.createElement("p", {id: "primary-text"}, "Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others."), 
+                  React.createElement("p", {id: "primary-text"}, "Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire."), 
+                  React.createElement("p", {id: "primary-text"}, "She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London."
                   )
               )/*end about-par*/
             ), /*end about*/
@@ -50,13 +50,13 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
             React.createElement("div", {className: "divider"}), 
 
             React.createElement("div", {id: "perfomance-imgs", className: "row"}, 
-              React.createElement("div", {id: "performance-card left", className: "col-md-4 col-sm-4"}, 
+              React.createElement("div", {id: "performance-card left", className: "col l4 m4"}, 
                 React.createElement("img", {className: "materialboxed responsive-img", "data-caption": "A picture of some deer and tons of trees", src: "./images/performance-1.jpg"})
               ), 
-              React.createElement("div", {id: "performance-card middle", className: "col-md-4 col-sm-4"}, 
+              React.createElement("div", {id: "performance-card middle", className: "col l4 m4"}, 
                 React.createElement("img", {className: "materialboxed responsive-img", "data-caption": "A picture of some deer and tons of trees", src: "./images/performance-2.jpg"})
               ), 
-              React.createElement("div", {id: "performance-card right", className: "col-md-4 col-sm-4"}, 
+              React.createElement("div", {id: "performance-card right", className: "col l4 m4"}, 
                 React.createElement("img", {className: "materialboxed responsive-img", "data-caption": "A picture of some deer and tons of trees", src: "./images/performance-3.jpg"})
               )
             ), 
@@ -68,14 +68,14 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
             ), 
 
             React.createElement("div", {id: "link-cards-pane", className: "row"}, 
-              React.createElement("div", {id: "link-cards", className: "left col s12 m4"}, 
+              React.createElement("div", {id: "link-cards", className: "left col s12 l4"}, 
                 React.createElement("div", {className: "card medium hoverable"}, 
                   React.createElement("div", {className: "card-image"}, 
                     React.createElement("img", {src: "./images/performing-1.jpg"}), 
                     React.createElement("span", {className: "card-title"}, "Resume")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", null, "Learn about Eranga's roles, concerts and more.")
+                    React.createElement("p", {id: "primary-text"}, "Learn about Eranga's roles, concerts and more.")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#", className: "red-text text-darken-2"}, "Learn More")
@@ -83,14 +83,14 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                 )
               ), 
 
-              React.createElement("div", {id: "link-cards", className: "middle col s12 m4"}, 
+              React.createElement("div", {id: "link-cards", className: "middle col s12 l4"}, 
                 React.createElement("div", {className: "card medium hoverable"}, 
                   React.createElement("div", {className: "card-image"}, 
                     React.createElement("img", {src: "./images/studio.jpg"}), 
                     React.createElement("span", {className: "card-title"}, "Studio Eranga")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", null, "Weekly lessons in voice, piano, audition preparation and music theory.")
+                    React.createElement("p", {id: "primary-text"}, "Weekly lessons in voice, piano, audition preparation and music theory.")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#studio/", className: "red-text text-darken-2"}, "Learn More")
@@ -98,14 +98,14 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                 )
               ), 
 
-              React.createElement("div", {id: "link-cards", className: "right col s12 m4"}, 
+              React.createElement("div", {id: "link-cards", className: "right col s12 l4"}, 
                 React.createElement("div", {className: "card medium hoverable"}, 
                   React.createElement("div", {className: "card-image"}, 
                     React.createElement("img", {src: "./images/announcements-2.jpg"}), 
                     React.createElement("span", {className: "card-title"}, "Announcements")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", null, "The latest student recitals, competitions and more!")
+                    React.createElement("p", {id: "primary-text"}, "The latest student recitals, competitions and more!")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
                     React.createElement("a", {href: "#studio/", className: "red-text text-darken-2"}, "Learn More")
@@ -170,8 +170,8 @@ var Media= React.createClass({displayName: "Media",
             React.createElement("div", {className: "parallax"}, 
               React.createElement("img", {className: "parallax-img", src: "./images/eranga-piano-2-banner.jpeg"})
             ), 
-            React.createElement("div", {id: "social-icons-pane", className: "col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1"}, 
-              React.createElement("ul", {id: "social-icons", className: "col-md-1 pull-right"}, 
+            React.createElement("div", {id: "social-icons-pane", className: "col l8 offset-l3 m10 offset-m1 s10"}, 
+              React.createElement("ul", {id: "social-icons", className: "col l1 m1 s1 pull-right"}, 
                 React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.facebook.com/studioEranga/?fref=ts", target: "_blank"}, React.createElement("i", {className: "fa fa-facebook", "aria-hidden": "true"}))), 
                 React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://twitter.com/erangagnt", target: "_blank"}, React.createElement("i", {className: "fa fa-twitter", "aria-hidden": "true"}))), 
                 React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215", target: "_blank"}, React.createElement("i", {className: "fa fa-linkedin", "aria-hidden": "true"}))), 
@@ -182,7 +182,7 @@ var Media= React.createClass({displayName: "Media",
         ), 
 
         React.createElement("div", {id: "studio", className: "main row"}, 
-          React.createElement("div", {id: "content", className: "col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 z-depth-4"}, 
+          React.createElement("div", {id: "content", className: "col l10 offset-l1 m10 offset-m1 s12 z-depth-4"}, 
             React.createElement("div", {id: "title", className: "row"}, 
               React.createElement("h1", null, "Media Gallery")
             ), 
@@ -205,9 +205,8 @@ var StudioGallery = React.createClass({displayName: "StudioGallery",
   render: function(){
     var self = this;
     var Images = images.map(function(img){
-      console.log(img.img);
       return(
-        React.createElement("li", {key: img.id, id: "media-li", className: "col-md-4"}, 
+        React.createElement("li", {key: img.id, id: "media-li", className: "col l4 m6"}, 
           React.createElement("img", {src: img.img, id: "images", className: "responsive-img materialboxed", "data-caption": img.caption})
         )
       )
@@ -232,9 +231,8 @@ var ArtistGallery = React.createClass({displayName: "ArtistGallery",
   render: function(){
     var self = this;
     var Images = images.map(function(img){
-      console.log(img.img);
       return(
-        React.createElement("li", {key: img.id, id: "media-li", className: "col-md-4"}, 
+        React.createElement("li", {key: img.id, id: "media-li", className: "col l4 m6"}, 
           React.createElement("img", {src: img.img, id: "images", className: "responsive-img materialboxed", "data-caption": img.caption})
         )
       )
@@ -255,9 +253,8 @@ var YoutubeGallery = React.createClass({displayName: "YoutubeGallery",
   render: function(){
     var self = this;
     var Youtube = youtube.map(function(video){
-      console.log(video);
       return(
-        React.createElement("li", {key: video.id, id: "media-li", className: "col-md-4"}, 
+        React.createElement("li", {key: video.id, id: "media-li", className: "col l4 m6"}, 
             React.createElement("div", {className: "video-container"}, 
               React.createElement("iframe", {width: "853", height: "480", src: video.url, frameBorder: "0", allowFullScreen: true})
             )
@@ -320,8 +317,8 @@ var Studio= React.createClass({displayName: "Studio",
             React.createElement("div", {className: "parallax"}, 
               React.createElement("img", {className: "parallax-img", src: "./images/recital-pic.jpg"})
             ), 
-            React.createElement("div", {id: "social-icons-pane", className: "col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1"}, 
-              React.createElement("ul", {id: "social-icons", className: "col-md-1 pull-right"}, 
+            React.createElement("div", {id: "social-icons-pane", className: "col l8 offset-l3 m10 offset-m1 s10"}, 
+              React.createElement("ul", {id: "social-icons", className: "col l1 m1 s1 pull-right"}, 
                 React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.facebook.com/studioEranga/?fref=ts", target: "_blank"}, React.createElement("i", {className: "fa fa-facebook", "aria-hidden": "true"}))), 
                 React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://twitter.com/erangagnt", target: "_blank"}, React.createElement("i", {className: "fa fa-twitter", "aria-hidden": "true"}))), 
                 React.createElement("li", null, React.createElement("a", {className: "btn-floating btn-large waves-effect waves-light hoverable", href: "https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215", target: "_blank"}, React.createElement("i", {className: "fa fa-linkedin", "aria-hidden": "true"}))), 
@@ -332,7 +329,7 @@ var Studio= React.createClass({displayName: "Studio",
         ), 
 
         React.createElement("div", {id: "studio", className: "main row"}, 
-          React.createElement("div", {id: "content", className: "col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 z-depth-4"}, 
+          React.createElement("div", {id: "content", className: "col l10 offset-l1 m10 offset-m1 s12 z-depth-4"}, 
             React.createElement("div", {id: "title", className: "row"}, 
               React.createElement("h1", null, "Studio Eranga")
             ), 
@@ -362,23 +359,25 @@ var Studio= React.createClass({displayName: "Studio",
             ), /*end slider-pane*/
             React.createElement(Reviews, null), 
             React.createElement("div", {id: "about", className: "row"}, 
-              React.createElement("div", {id: "about-description", className: "col-md-10 col-md-offset-1"}, 
-                React.createElement("div", {id: "about-par", className: "col-md-5"}, 
-                  React.createElement("div", {id: "studio-about-img"}), 
+              React.createElement("div", {id: "about-description", className: "col l10 offset-l1"}, 
+                React.createElement("div", {id: "about-par", className: "col l5"}, 
+                  React.createElement("div", {id: "studio-about-img", className: "col m4 hide-on-small-only"}), 
+                  React.createElement("div", {className: "col l12 m7 s12"}, 
                   React.createElement("h3", {id: "headings"}, "About the Studio"), 
                   React.createElement("div", {className: "divider"}), 
-                  React.createElement("p", null, "Studio Eranga is located in Spartanburg, SC. Students received lesson in voice, piano, and theory. Say more about the studio")
+                  React.createElement("p", {id: "primary-text"}, "Studio Eranga is located in Spartanburg, SC. Students received lesson in voice, piano, and theory. Say more about the studio")
+                  )
                 ), /*end about-par*/
-                React.createElement("div", {id: "about-par", className: "col-md-7"}, 
+                React.createElement("div", {id: "about-par", className: "col l7"}, 
                   React.createElement("h3", {id: "headings"}, "Studio Phylosophy"), 
                   React.createElement("div", {className: "divider"}), 
-                  React.createElement("p", null, "Music, in my opinion, is the language of the soul. Music not only entertains, but it brings immence joy, comfort and healing. Whether you like to sing in the shower or on stage, you sing because it is one of the most authentic ways of expressing who you are! No matter what culture, background, age, ethnicity or sex, music, can be a positive hobby, escape or even a way of life."), 
+                  React.createElement("p", {id: "primary-text"}, "Music, in my opinion, is the language of the soul. Music not only entertains, but it brings immence joy, comfort and healing. Whether you like to sing in the shower or on stage, you sing because it is one of the most authentic ways of expressing who you are! No matter what culture, background, age, ethnicity or sex, music, can be a positive hobby, escape or even a way of life."), 
                   React.createElement("div", null, 
                     React.createElement("blockquote", null, 
                       "\"If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music... I get most joy in life out of my violin.\" -Albert Einstein, 1929"
                     )
                   ), 
-                  React.createElement("p", null, "It is a universal language that connects us all to each other and develops our personality and spirituality." + ' ' +
+                  React.createElement("p", {id: "primary-text"}, "It is a universal language that connects us all to each other and develops our personality and spirituality." + ' ' +
                   "It gives me great joy to help students discover and develop their gifts by providing them with healthy technique, tools to be a better performer, performing opportunities and inspiration!"
                   )
                 )/*end about-par*/
@@ -386,17 +385,17 @@ var Studio= React.createClass({displayName: "Studio",
             ), /*end studio-pane*/
 
             React.createElement("div", {id: "announcements-pane", className: "row"}, 
-              React.createElement("div", {className: "col-md-10 col-md-offset-1"}, 
+              React.createElement("div", {className: "col l10 offset-l1"}, 
                 React.createElement("h2", {id: "headings"}, "News"), 
                 React.createElement("div", {className: "divider"}), 
-                React.createElement("div", {id: "recital-card", className: "col s12 m6"}, 
+                React.createElement("div", {id: "recital-card", className: "col s12 m6 l6"}, 
                   React.createElement("div", {className: "card large"}, 
                     React.createElement("div", {className: "card-image"}, 
                       React.createElement("img", {src: "./images/recital-pic.jpg"}), 
                       React.createElement("span", {className: "card-title"}, "Recitals")
                     ), 
                     React.createElement("div", {className: "card-content"}, 
-                      React.createElement("p", null, "I am a very simple card. I am good at containing small bits of information." + ' ' +
+                      React.createElement("p", {id: "primary-text"}, "I am a very simple card. I am good at containing small bits of information." + ' ' +
                       "I am convenient because I require little markup to use effectively.")
                     ), 
                     React.createElement("div", {className: "card-action"}, 
@@ -404,14 +403,14 @@ var Studio= React.createClass({displayName: "Studio",
                       )
                     )
                   ), /*end recital card*/
-                  React.createElement("div", {id: "recital-card", className: "col s12 m6"}, 
+                  React.createElement("div", {id: "recital-card", className: "col s12 m6 l6"}, 
                     React.createElement("div", {className: "card large"}, 
                       React.createElement("div", {className: "card-image"}, 
                         React.createElement("img", {src: "./images/congrats.jpg"}), 
                         React.createElement("span", {className: "card-title"}, "Congratulations!")
                       ), 
                       React.createElement("div", {className: "card-content"}, 
-                        React.createElement("p", null, "I am a very simple card. I am good at containing small bits of information." + ' ' +
+                        React.createElement("p", {id: "primary-text"}, "I am a very simple card. I am good at containing small bits of information." + ' ' +
                         "I am convenient because I require little markup to use effectively.")
                       ), 
                       React.createElement("div", {className: "card-action"}, 
@@ -439,17 +438,16 @@ var Reviews = React.createClass({displayName: "Reviews",
       opacity: 0, // Opacity of modal background
       inDuration: 200, // Transition in duration
       outDuration: 200, // Transition out duration
-      startingTop: '100%', // Starting top style attribute
-      endingTop: '100%', // Ending top style attribute
+      startingTop: '10%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
     });
   },
   render: function(){
     var self = this;
     var myReviews = reviews.map(function(reviews){
       var id = '#'+reviews.id;
-      console.log(id);
       return (
-        React.createElement("div", {key: reviews.id, id: "review-card", className: "col-md-4"}, 
+        React.createElement("div", {key: reviews.id, id: "review-card", className: "col l4 m4 s11 valign"}, 
           React.createElement("a", {href: id}, 
             React.createElement("p", {id: "review-title", className: ""}, reviews.title, "...")
           ), 
@@ -463,8 +461,8 @@ var Reviews = React.createClass({displayName: "Reviews",
       )
     });
     return (
-      React.createElement("div", {className: "row", id: "reviews"}, 
-        React.createElement("div", {id: "about-reviews", className: "col-md-10 col-md-offset-1"}, 
+      React.createElement("div", {className: "row valign-wrapper", id: "reviews"}, 
+        React.createElement("div", {id: "about-reviews", className: "col l10 offset-l1"}, 
           React.createElement("h3", {id: "headings"}, "Reviews"), 
           React.createElement("div", {className: "divider"}), 
             myReviews, 
@@ -619,13 +617,13 @@ var MediaContainer = require('./components/media.jsx').MediaContainer;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    '': 'index',
+    'home/': 'home',
     'studio/': 'studio',
     'media/': 'media',
     'contact/': 'contact'
   },
 
-  index: function(){
+  home: function(){
   // console.log('hi index');
   ReactDOM.render(
     React.createElement(ArtistContainer, {router: this}),
@@ -684,15 +682,15 @@ var NavFooter = React.createClass({displayName: "NavFooter",
         React.createElement("div", null, 
           React.createElement("nav", {className: "white navbar-fixed-top"}, 
             React.createElement("div", {className: "nav-wrapper"}, 
-              React.createElement("a", {href: "", className: "brand-logo"}, "Eranga Goonetilleke"), 
-              React.createElement("a", {href: "#", "data-activates": "mobile-demo", className: "button-collapse"}, React.createElement("i", {className: "material-icons"}, "menu")), 
+              React.createElement("a", {href: "#home/", className: "brand-logo"}, "Eranga Goonetilleke"), 
+              React.createElement("a", {href: "", "data-activates": "mobile-demo", className: "button-collapse"}, React.createElement("i", {className: "material-icons"}, "menu")), 
               React.createElement("ul", {className: "right hide-on-med-and-down"}, 
-                React.createElement("li", null, React.createElement("a", {href: ""}, "Artist")), 
+                React.createElement("li", null, React.createElement("a", {href: "#home/"}, "Artist")), 
                 React.createElement("li", null, React.createElement("a", {href: "#studio/"}, "Studio")), 
                 React.createElement("li", null, React.createElement("a", {href: "#media/"}, "Media"))
               ), 
               React.createElement("ul", {className: "side-nav", id: "mobile-demo"}, 
-                React.createElement("li", null, React.createElement("a", {href: ""}, "Artist")), 
+                React.createElement("li", null, React.createElement("a", {href: "#home/"}, "Artist")), 
                 React.createElement("li", null, React.createElement("a", {href: "#studio/"}, "Studio")), 
                 React.createElement("li", null, React.createElement("a", {href: "#media/"}, "Media"))
               )
@@ -721,7 +719,7 @@ var NavFooter = React.createClass({displayName: "NavFooter",
               React.createElement("div", {className: "col l4 offset-l2 s2"}, 
                 React.createElement("h5", {className: "grey-text text-darken-3"}, "Links"), 
                 React.createElement("ul", null, 
-                  React.createElement("div", null, React.createElement("a", {className: "grey-text text-darken-3", href: ""}, "Artist")), 
+                  React.createElement("div", null, React.createElement("a", {className: "grey-text text-darken-3", href: "#home/"}, "Artist")), 
                   React.createElement("div", null, React.createElement("a", {className: "grey-text text-darken-3", href: "#studio/"}, "Studio")), 
                   React.createElement("div", null, React.createElement("a", {className: "grey-text text-darken-3", href: "#media/"}, "Media"))
                 )

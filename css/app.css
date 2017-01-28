@@ -5764,8 +5764,10 @@ button.close {
   box-sizing: border-box; }
 
 p {
-  font-family: 'Raleway', sans-serif;
-  font-size: 15px;
+  font-family: 'Raleway', sans-serif; }
+
+#primary-text {
+  font-size: 3vmin;
   line-height: 2; }
 
 #headings {
@@ -5834,12 +5836,12 @@ body {
       left: 130px;
       font-family: 'Raleway', sans-serif; }
   #content #about {
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 40px; }
     #content #about #about-img {
       border-radius: 100%;
-      height: 300px;
-      width: 300px;
+      height: 25vw;
+      width: 25vw;
       background-image: url("../images/headshot-1.jpg");
       background-position: top;
       background-size: cover;
@@ -5848,12 +5850,11 @@ body {
       margin-bottom: 20px; }
     #content #about #studio-about-img {
       border-radius: 100%;
-      height: 300px;
-      width: 300px;
+      height: 25vw;
+      width: 25vw;
       background-image: url("../images/eranga-piano.jpg");
       background-position: top;
       background-size: cover;
-      margin-right: 35px;
       margin-top: 30px;
       margin-bottom: 20px;
       -webkit-filter: brightness(2);

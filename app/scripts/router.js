@@ -14,7 +14,7 @@ var MediaContainer = require('./components/media.jsx').MediaContainer;
 
 var AppRouter = Backbone.Router.extend({
   routes: {
-    'home/': 'home',
+    '': 'home',
     'studio/': 'studio',
     'media/': 'media',
     'contact/': 'contact'

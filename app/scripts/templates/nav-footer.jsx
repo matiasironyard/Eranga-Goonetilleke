@@ -70,7 +70,7 @@ var NavFooter = React.createClass({
           <div className="footer-copyright">
             <div className="container grey-text text-darken-3">
             © 2017 Eranga Goonetilleke
-            <a href="www.matiasmariani.io" className="pull-right">Designed by Matias Mariani</a>
+            <a href="http://www.matiasmariani.io" target="_blank" className="pull-right">Designed by Matias Mariani</a>
             </div>
           </div>
         </footer>

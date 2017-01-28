@@ -26,7 +26,7 @@ var Media= React.createClass({
         <div id="header" className="row">
           <div className="parallax-container">
             <div className="parallax">
-              <img  className="parallax-img" src="./images/recital-pic.jpg"/>
+              <img  className="parallax-img" src="./images/eranga-piano-2-banner.jpeg"/>
             </div>
             <div id="social-icons-pane"className="col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1">
               <ul id="social-icons" className="col-md-1 pull-right">

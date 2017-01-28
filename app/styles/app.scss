@@ -63,7 +63,7 @@ body{
 
 #social-icons-pane{
   position: relative;
-  top: 15%;
+  top: 25%;
   li{
     color: #fff;
     font-size: 30px;
@@ -109,7 +109,6 @@ body{
   #about{
     margin-top: 30px;
     margin-bottom: 40px;
-
     #about-img{
       border-radius: 100%;
       height: 300px;
@@ -121,6 +120,19 @@ body{
       margin-right: 35px;
       margin-top: 80px;
       margin-bottom: 20px;
+    }
+    #studio-about-img{
+      border-radius: 100%;
+      height: 300px;
+      width: 300px;
+      // height: 300px;
+      background-image: url('../images/eranga-piano.jpg');
+      background-position: top;
+      background-size: cover;
+      margin-right: 35px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      filter: brightness(2);
     }
     #about-par{
 
@@ -186,19 +198,17 @@ body{
 
 /*REVIEWS*/
 #about-reviews{
-  box-shadow: 0px 2px 4px 1px grey;
-  .collapsible-header{
-    font-size: 18px;
-  }
-  #reviews{
-    box-shadow: none;
-    border: none;
-    #review-text{
-      font-size: 14px;
+  #review-card{
+    height: 100px;
+    margin-top: 20px;
+    #review-title{
+      text-align: center;
+      text-decoration: none;
+      font-style: italic;
+      opacity: .8;
+      color: #000;
     }
-    #reviewer{
-      font-weight: bold;
-    }
+
   }
 }
 /********** GALLERY ****************/

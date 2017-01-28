@@ -25,7 +25,7 @@ var Studio= React.createClass({
         <div id="header" className="row">
           <div className="parallax-container">
             <div className="parallax">
-              <img  className="parallax-img" src="./images/eranga-piano-2-banner.jpeg"/>
+              <img  className="parallax-img" src="./images/recital-pic.jpg"/>
             </div>
             <div id="social-icons-pane"className="col-md-8 col-md-offset-3 col-sm-10 col-sm-offset-1">
               <ul id="social-icons" className="col-md-1 pull-right">
@@ -67,15 +67,16 @@ var Studio= React.createClass({
                 </ul>
               </div>
             </div>{/*end slider-pane*/}
-
-            <div id="studio-pane" className="row">
-              <div id="about-description" className="col-md-6">
-                <div id="about-par">
+            <Reviews/>
+            <div id="about" className="row">
+              <div id="about-description" className="col-md-10 col-md-offset-1">
+                <div id="about-par"className="col-md-5">
+                  <div id="studio-about-img"/>
                   <h3 id="headings">About the Studio</h3>
                   <div className="divider"/>
                   <p>Studio Eranga is located in Spartanburg, SC. Students received lesson in voice, piano, and theory. Say more about the studio</p>
                 </div>{/*end about-par*/}
-                <div id="about-par">
+                <div id="about-par" className="col-md-7">
                   <h3 id="headings">Studio Phylosophy</h3>
                   <div className="divider"/>
                   <p>Music, in my opinion, is the language of the soul. Music not only entertains, but it brings immence joy, comfort and healing. Whether you like to sing in the shower or on stage, you sing because it is one of the most authentic ways of expressing who you are! No matter what culture, background, age, ethnicity or sex, music, can be a positive hobby, escape or even a way of life.</p>
@@ -89,40 +90,17 @@ var Studio= React.createClass({
                   </p>
                 </div>{/*end about-par*/}
               </div>{/*end about-right*/}
-
-              <div id="about-reviews" className="col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2">
-                <h4 id="headings">Reviews</h4>
-                <div className="divider"/>
-                <Reviews/>
-              </div>{/*end reviews*/}
-
             </div>{/*end studio-pane*/}
 
             <div id="announcements-pane" className="row">
-              <div className="divider"/>
-              <div className="row">
-                <h2 id="headings">Announcements</h2>
-              </div>
-              <div id="recital-card"className="col s12 m6">
-                <div className="card large">
-                  <div className="card-image">
-                    <img src="./images/recital-pic.jpg"/>
-                    <span className="card-title">Recitals</span>
-                  </div>
-                  <div className="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-                  </div>
-                  <div className="card-action">
-                    <a href="#">See Details</a>
-                    </div>
-                  </div>
-                </div>{/*end recital card*/}
+              <div className="col-md-10 col-md-offset-1">
+                <h2 id="headings">News</h2>
+                <div className="divider"/>
                 <div id="recital-card"className="col s12 m6">
                   <div className="card large">
                     <div className="card-image">
-                      <img src="./images/congrats.jpg"/>
-                      <span className="card-title">Congratulations!</span>
+                      <img src="./images/recital-pic.jpg"/>
+                      <span className="card-title">Recitals</span>
                     </div>
                     <div className="card-content">
                       <p>I am a very simple card. I am good at containing small bits of information.
@@ -133,6 +111,22 @@ var Studio= React.createClass({
                       </div>
                     </div>
                   </div>{/*end recital card*/}
+                  <div id="recital-card"className="col s12 m6">
+                    <div className="card large">
+                      <div className="card-image">
+                        <img src="./images/congrats.jpg"/>
+                        <span className="card-title">Congratulations!</span>
+                      </div>
+                      <div className="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                      </div>
+                      <div className="card-action">
+                        <a href="#">See Details</a>
+                        </div>
+                      </div>
+                    </div>{/*end recital card*/}
+                  </div>
               </div>
 
 
@@ -146,20 +140,44 @@ var Studio= React.createClass({
 });
 
 var Reviews = React.createClass({
+  componentDidMount: function(){
+    $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: 0, // Opacity of modal background
+      inDuration: 200, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '100%', // Starting top style attribute
+      endingTop: '100%', // Ending top style attribute
+    });
+  },
   render: function(){
     var self = this;
     var myReviews = reviews.map(function(reviews){
+      var id = '#'+reviews.id;
+      console.log(id);
       return (
-        <li key={reviews.id}>
-          <div className="collapsible-header truncate">{reviews.title}</div>
-          <div className="collapsible-body"><p id="review-text">{reviews.review} <br></br>~{reviews.reviewer}</p></div>
-        </li>
+        <div key={reviews.id} id="review-card" className="col-md-4">
+          <a href={id}>
+            <p id="review-title" className="">{reviews.title}...</p>
+          </a>
+            <div id={reviews.id} className="modal">
+              <div className="modal-content">
+                <p id="review-text">{reviews.review}<br></br><span className="pull-right">{reviews.reviewer}</span></p>
+              </div>
+            </div>
+        </div>
+
       )
     });
     return (
-      <ul className="collapsible" data-collapsible="accordion" id="reviews">
-          {myReviews}
-        </ul>
+      <div className="row"  id="reviews">
+        <div id="about-reviews" className="col-md-10 col-md-offset-1">
+          <h3 id="headings">Reviews</h3>
+          <div className="divider"/>
+            {myReviews}
+          <div className="divider"/>
+        </div>
+      </div>
     )
   }
 });

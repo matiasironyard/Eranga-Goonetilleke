@@ -99,7 +99,7 @@ var Studio= React.createClass({
               <div className="col l10 offset-l1 m12 s12">
 
                 <div id="section" className="row">
-                  <h2 id="headings">Recitals</h2>
+                  <h3 id="headings">Recitals</h3>
                   <div className="divider"/>
                   <div id="recital-img" className= "col l6 m6">
                     <img src="./images/announcements-2.jpg" className="responsive-img"/>
@@ -114,7 +114,7 @@ var Studio= React.createClass({
                 </div>{/*end recital section row*/}
 
                 <div id="section" className="row">
-                  <h2 id="headings" className="announcement">Announcements</h2>
+                  <h3 id="headings" className="announcement">Announcements</h3>
                   <div className="divider"/>
                   <div id="recital-details" className="col l12">
                     <Announcements/>

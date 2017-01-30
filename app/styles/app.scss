@@ -261,17 +261,21 @@ a:hover{
       opacity: .8;
       color: #000;
     }
-
+  }
+  li:nth-last-child(1){
+    //center div!
   }
 }
 
 /*NEWS*/
 #announcements-pane{
-
   #section{
     margin-top: 30px;
    .recitals{
      background-image: url('../images/announcements-2.jpg');
+   }
+   #primary-text{
+     text-transform: uppercase;
    }
    #sub-headings{
      font-weight: bold;
@@ -279,6 +283,11 @@ a:hover{
      color: #DD2C00;
      margin-bottom: 10%;
    }
+  }
+  #announcement-card{
+    margin-bottom: 30px;
+    min-height: 400px;
+    max-height: 500px;
   }
 }
 

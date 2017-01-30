@@ -104,11 +104,11 @@ var Studio= React.createClass({
                   <div id="recital-img" className= "col l6 m6">
                     <img src="./images/announcements-2.jpg" className="responsive-img"/>
                   </div>
-                  <div id="recital-details" className="col l6 m6">
-                    <h6 id="sub-headings">Recital:</h6><span></span>
-                    <h6 id="sub-headings">Date:</h6><span></span>
-                    <h6 id="sub-headings">Time:</h6><span></span>
-                    <h6 id="sub-headings">Location:</h6><span></span>
+                  <div id="recital-details" className="col l6 m6 s12">
+                    <h6 id="primary-text">Recital</h6><span id="secondary-text">Spring Recital</span>
+                    <h6 id="primary-text">Date</h6><span id="secondary-text">TBA</span>
+                    <h6 id="primary-text">Time</h6><span id="secondary-text"></span>
+                    <h6 id="primary-text">Location</h6><span></span>
                     <div id="location-map"/>
                   </div>
                 </div>{/*end recital section row*/}
@@ -147,7 +147,7 @@ var Reviews = React.createClass({
     var myReviews = reviews.map(function(reviews){
       var id = '#'+reviews.id;
       return (
-        <div key={reviews.id} id="review-card" className="col l4 m4 s11 valign">
+        <li key={reviews.id} id="review-card" className="col l4 m4 s11 valign">
           <a href={id}>
             <p id="review-title" className="">{reviews.title}...</p>
           </a>
@@ -156,15 +156,17 @@ var Reviews = React.createClass({
                 <p id="review-text">{reviews.review}<br></br><span className="pull-right">~ {reviews.reviewer}</span></p>
               </div>
             </div>
-        </div>
+        </li>
       )
     });
     return (
-      <div className="row valign-wrapper"  id="reviews">
+      <div className="row"  id="reviews">
         <div id="about-reviews" className="col l10 offset-l1">
           <h3 id="headings">Reviews</h3>
           <div className="divider"/>
-            {myReviews}
+            <ul>
+              {myReviews}
+            </ul>
           <div className="divider"/>
         </div>
       </div>
@@ -178,7 +180,7 @@ var Announcements = React.createClass({
     var myAnnouncements = announcements.map(function(announcement){
       console.log(announcement);
       return (
-        <div key={announcement.name} className="col l6">
+        <div key={announcement.name} id="announcement-card" className="col l6">
           <img src={announcement.img} alt="" className="responsive-img"/>
           <h5 id="headings">{announcement.name}</h5>
           <p id="secondary-text">{announcement.caption}</p>

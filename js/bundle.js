@@ -389,7 +389,7 @@ var Studio= React.createClass({displayName: "Studio",
               React.createElement("div", {className: "col l10 offset-l1 m12 s12"}, 
 
                 React.createElement("div", {id: "section", className: "row"}, 
-                  React.createElement("h2", {id: "headings"}, "Recitals"), 
+                  React.createElement("h3", {id: "headings"}, "Recitals"), 
                   React.createElement("div", {className: "divider"}), 
                   React.createElement("div", {id: "recital-img", className: "col l6 m6"}, 
                     React.createElement("img", {src: "./images/announcements-2.jpg", className: "responsive-img"})
@@ -404,7 +404,7 @@ var Studio= React.createClass({displayName: "Studio",
                 ), /*end recital section row*/
 
                 React.createElement("div", {id: "section", className: "row"}, 
-                  React.createElement("h2", {id: "headings", className: "announcement"}, "Announcements"), 
+                  React.createElement("h3", {id: "headings", className: "announcement"}, "Announcements"), 
                   React.createElement("div", {className: "divider"}), 
                   React.createElement("div", {id: "recital-details", className: "col l12"}, 
                     React.createElement(Announcements, null)
@@ -770,9 +770,13 @@ var NavFooter = React.createClass({displayName: "NavFooter",
             )
           ), 
           React.createElement("div", {className: "footer-copyright"}, 
-            React.createElement("div", {className: "container grey-text text-darken-3"}, 
-            "© 2017 Eranga Goonetilleke", 
-            React.createElement("a", {href: "http://www.matiasmariani.io", target: "_blank", className: "pull-right"}, "Designed by Matias Mariani")
+            React.createElement("div", {className: "container grey-text text-darken-2 center-align"}, 
+            "© 2017 Eranga Goonetilleke"
+            )
+          ), 
+          React.createElement("div", {className: "footer-copyright"}, 
+            React.createElement("div", {className: "container center-align"}, 
+             React.createElement("a", {href: "http://www.matiasmariani.io", target: "_blank"}, "Designed by Matias Mariani")
             )
           )
         )

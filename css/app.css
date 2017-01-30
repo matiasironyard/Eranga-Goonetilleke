@@ -5808,12 +5808,6 @@ a:hover {
     opacity: 0; }
   to {
     opacity: 1; } }
-.modal-content {
-  box-shadow: none;
-  border: none;
-  border-radius: none;
-  z-index: 1; }
-
 /********** HEADER ****************/
 #header .parallax-container {
   height: 600px; }
@@ -5955,24 +5949,38 @@ a:hover {
     opacity: .8;
     color: #000; }
 
+/*NEWS*/
+#announcements-pane #section {
+  margin-top: 30px; }
+  #announcements-pane #section .recitals {
+    background-image: url("../images/announcements-2.jpg"); }
+  #announcements-pane #section #primary-text {
+    text-transform: uppercase; }
+  #announcements-pane #section #sub-headings {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #DD2C00;
+    margin-bottom: 10%; }
+#announcements-pane #announcement-card {
+  margin-bottom: 30px;
+  min-height: 400px;
+  max-height: 500px; }
+
 /********** GALLERY ****************/
 #media-li {
-  margin-bottom: 20px;
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8); }
+  margin-bottom: 20px; }
   #media-li img {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29); }
-
-#media-li:hover {
-  -webkit-filter: none;
-          filter: none; }
 
 /********** FOOTER ****************/
 .page-footer {
   color: #000; }
+  .page-footer a {
+    color: #DD2C00; }
   .page-footer #social-icons-footer {
     margin-top: 20px; }
-    .page-footer #social-icons-footer a {
-      background-color: #DD2C00; }
+    .page-footer #social-icons-footer i {
+      color: #DD2C00;
+      font-size: 1.6rem; }
 
 /*# sourceMappingURL=app.css.map */

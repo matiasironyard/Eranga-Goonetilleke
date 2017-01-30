@@ -56,18 +56,8 @@ a:hover{
   @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+  }
 }
-}
-// .open{
-//   background-color: #fff;
-// }
-.modal-content{
-  box-shadow: none;
-  border: none;
-  border-radius: none;
-  z-index: 1;
-}
-
 
 
 /********** HEADER ****************/
@@ -274,26 +264,45 @@ a:hover{
 
   }
 }
+
+/*NEWS*/
+#announcements-pane{
+
+  #section{
+    margin-top: 30px;
+   .recitals{
+     background-image: url('../images/announcements-2.jpg');
+   }
+   #sub-headings{
+     font-weight: bold;
+     text-transform: uppercase;
+     color: #DD2C00;
+     margin-bottom: 10%;
+   }
+  }
+}
+
+
 /********** GALLERY ****************/
 #media-li{
   margin-bottom: 20px;
-  filter: brightness(.8);
   img{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
   }
-}
-#media-li:hover{
-  filter:none;
 }
 
 /********** FOOTER ****************/
 
 .page-footer{
   color: #000;
+  a{
+    color: #DD2C00;
+  }
   #social-icons-footer{
     margin-top: 20px;
-    a{
-      background-color: #DD2C00;
+    i{
+      color: #DD2C00;
+      font-size: 1.6rem;
     }
   }
 }

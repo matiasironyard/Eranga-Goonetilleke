@@ -6,7 +6,7 @@ var $ = require('jquery');
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 var reviews = require('../media/reviews.js').reviews;
-
+var announcements = require('../media/announcements.js').announcements;
 
 //############ CONTAINERS #########################/
 
@@ -96,53 +96,32 @@ var Studio= React.createClass({
             </div>{/*end studio-pane*/}
 
             <div id="announcements-pane" className="row">
-              <div className="col l10 offset-l1">
-                <h2 id="headings">News</h2>
-                <div className="divider"/>
-                <div id="recital-card"className="col s12 m6 l6">
-                  <div className="card large">
-                    <div className="card-image">
-                      <img src="./images/recital-pic.jpg"/>
-                      <span className="card-title">Recitals</span>
-                    </div>
-                    <div className="card-content">
-                      <p id="primary-text">See upcoming studio recitals as well as outside performances by students.</p>
-                    </div>
-                    <div className="card-action">
-                      <a href="#recitals">See Details</a>
-                      </div>
-                      <div id="recitals" className="modal bottom-sheet">
-                        <div className="modal-content">
-                          <h4 id="headings">Recitals</h4>
-                          <p id="review-text">Stay tunned for details on the next studio recital!</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>{/*end recital card*/}
-                  <div id="recital-card"className="col s12 m6 l6">
-                    <div className="card large">
-                      <div className="card-image">
-                        <img src="./images/congrats.jpg"/>
-                        <span className="card-title">Congratulations!</span>
-                      </div>
-                      <div className="card-content">
-                        <p id="primary-text">Students&#39; accomplishments and more.</p>
-                      </div>
-                      <div className="card-action">
-                        <a href="#announcements">See Details</a>
-                        </div>
-                        <div id="announcements" className="modal bottom-sheet">
-                          <div className="modal-content">
-                            <h4 id="headings">Announcements</h4>
-                            <p id="review-text">Announcements coming soon</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>{/*end recital card*/}
+              <div className="col l10 offset-l1 m12 s12">
+
+                <div id="section" className="row">
+                  <h2 id="headings">Recitals</h2>
+                  <div className="divider"/>
+                  <div id="recital-img" className= "col l6 m6">
+                    <img src="./images/announcements-2.jpg" className="responsive-img"/>
                   </div>
+                  <div id="recital-details" className="col l6 m6">
+                    <h6 id="sub-headings">Recital:</h6><span></span>
+                    <h6 id="sub-headings">Date:</h6><span></span>
+                    <h6 id="sub-headings">Time:</h6><span></span>
+                    <h6 id="sub-headings">Location:</h6><span></span>
+                    <div id="location-map"/>
+                  </div>
+                </div>{/*end recital section row*/}
+
+                <div id="section" className="row">
+                  <h2 id="headings" className="announcement">Announcements</h2>
+                  <div className="divider"/>
+                  <div id="recital-details" className="col l12">
+                    <Announcements/>
+                  </div>
+                </div>{/*end announcement section row*/}
               </div>
-
-
+            </div>
 
           </div>{/*end content*/}
         </div>{/*end main*/}
@@ -173,12 +152,11 @@ var Reviews = React.createClass({
             <p id="review-title" className="">{reviews.title}...</p>
           </a>
             <div id={reviews.id} className="modal bottom-sheet">
-              <div className="modal-content">
+              <div className="modal-content col l8 offset-l2">
                 <p id="review-text">{reviews.review}<br></br><span className="pull-right">~ {reviews.reviewer}</span></p>
               </div>
             </div>
         </div>
-
       )
     });
     return (
@@ -189,6 +167,28 @@ var Reviews = React.createClass({
             {myReviews}
           <div className="divider"/>
         </div>
+      </div>
+    )
+  }
+});
+
+var Announcements = React.createClass({
+  render: function(){
+    var self = this;
+    var myAnnouncements = announcements.map(function(announcement){
+      console.log(announcement);
+      return (
+        <div key={announcement.name} className="col l6">
+          <img src={announcement.img} alt="" className="responsive-img"/>
+          <h5 id="headings">{announcement.name}</h5>
+          <p id="secondary-text">{announcement.caption}</p>
+        </div>
+      )
+    });
+
+    return(
+      <div>
+        {myAnnouncements}
       </div>
     )
   }

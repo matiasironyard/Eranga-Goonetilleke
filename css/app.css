@@ -5796,8 +5796,8 @@ a:hover {
   margin-bottom: 30px; }
 
 #pages {
-  -webkit-animation: fadein 2s;
-          animation: fadein 2s; }
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s; }
 @-webkit-keyframes fadein {
   from {
     opacity: 0; }
@@ -5982,4 +5982,5 @@ a:hover {
     .page-footer #social-icons-footer i {
       color: #DD2C00;
       font-size: 1.6rem; }
+
 /*# sourceMappingURL=app.css.map */

@@ -2,7 +2,7 @@ var announcements = [{
   img: './images/announcements-2.jpg',
   name: 'my name1',
   caption: 'matias',
-}, {
+}, /*{
   img: './images/announcements-2.jpg',
   name: 'my name2',
   caption: 'matias',
@@ -18,7 +18,7 @@ var announcements = [{
   img: './images/announcements-2.jpg',
   name: 'my name5',
   caption: 'matias',
-}
+}*/
 ];
 
 module.exports = {

@@ -7,7 +7,8 @@ var Carousel = require('react-bootstrap').Carousel;
 
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
-var images = require('../media/studioimages.js').studioImages;
+var studioImages = require('../media/studioimages.js').studioImages;
+var artistImages = require('../media/artistimages.js').artistImages;
 var youtube = require('../media/youtube.js').youtube;
 
 
@@ -64,7 +65,7 @@ var StudioGallery = React.createClass({
   },
   render: function(){
     var self = this;
-    var Images = images.map(function(img){
+    var Images = studioImages.map(function(img){
       console.log(img);
       return(
         <li key={img.id}  id="media-li"className="col l4 m6">
@@ -91,7 +92,7 @@ var ArtistGallery = React.createClass({
   },
   render: function(){
     var self = this;
-    var Images = images.map(function(img){
+    var artist = artistImages.map(function(img){
       return(
         <li key={img.id}  id="media-li"className="col l4 m6">
           <img src={img.img} id="images"className="responsive-img materialboxed" data-caption={img.caption}/>
@@ -103,7 +104,7 @@ var ArtistGallery = React.createClass({
         <h3 id="headings">Artist Gallery</h3>
         <div className="divider"/>
         <ul id="images-ul">
-        {Images}
+        {artist}
         </ul>
       </div>
     )

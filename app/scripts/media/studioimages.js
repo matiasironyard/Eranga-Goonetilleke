@@ -1,47 +1,47 @@
 var studioImages = [{
   id: '1',
-  img: './images/announcements-2.jpg',
-  caption: 'matias',
+  img: './images/studio1.jpg',
+  caption: 'SPO Fundraiser',
 }, {
   id: '2',
-  img: './images/studio/studio2.jpg',
-  caption: 'matias',
+  img: './images/studio2.jpg',
+  caption: '',
 }, {
   id: '3',
-  img: './images/studio/studio3.jpg',
-  caption: 'matias',
+  img: './images/studio3.jpg',
+  caption: 'Marriage of Figaro - Countess Rosina',
 }, {
   id: '4',
-  img: './images/studio/studio4.jpg',
-  caption: 'matias',
+  img: './images/studio4.jpg',
+  caption: '',
 }, {
   id: '5',
-  img: './images/studio/studio5.jpg',
-  caption: 'matias',
+  img: './images/studio5.jpg',
+  caption: '',
 }, {
   id: '6',
-  img: './images/studio/studio6.jpg',
-  caption: 'matias',
+  img: './images/studio6.jpg',
+  caption: '',
 }, {
   id: '7',
-  img: './images/studio/studio7.jpg',
-  caption: 'matias',
+  img: './images/studio7.jpg',
+  caption: '',
 }, {
   id: '8',
-  img: './images/studio/studio8.jpg',
-  caption: 'matias',
+  img: './images/studio8.jpg',
+  caption: '',
 }, {
   id: '9',
-  img: './images/studio/studio9.jpg',
-  caption: 'matias',
+  img: './images/studio9.jpg',
+  caption: '',
 }, {
   id: '10',
-  img: './images/studio/studio10.jpg',
-  caption: 'matias',
+  img: './images/studio10.jpg',
+  caption: '',
 }, {
   id: '11',
-  img: './images/studio/studio11.jpg',
-  caption: 'matias',
+  img: './images/studio11.jpg',
+  caption: '',
 }
 ];
 

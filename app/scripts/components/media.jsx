@@ -1,11 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
+var Modal = require('react-bootstrap').Modal;
+var Carousel = require('react-bootstrap').Carousel;
 
 
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
-var images = require('../media/images.js').images;
+var images = require('../media/studioimages.js').studioImages;
 var youtube = require('../media/youtube.js').youtube;
 
 
@@ -21,9 +23,9 @@ var Media= React.createClass({
   render: function(){
 
     return (
-      <div id="pages" className="studio-page">{/*wrapper div*/}
+      <section id="pages" className="studio-page">{/*wrapper div*/}
 
-        <div id="header" className="row">
+        <section id="header" className="row">
           <div className="parallax-container">
             <div className="parallax">
               <img  className="parallax-img" src="./images/eranga-piano-2-banner.jpeg"/>
@@ -37,9 +39,9 @@ var Media= React.createClass({
               </ul>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div  id="studio" className="main row">
+        <section  id="studio" className="main row">
           <div id="content" className="col l10 offset-l1 m10 offset-m1 s12 z-depth-4">
             <div id="title" className="row">
               <h1>Media Gallery</h1>
@@ -48,8 +50,8 @@ var Media= React.createClass({
             <YoutubeGallery/>
             <StudioGallery/>
           </div>{/*end content*/}
-        </div>{/*end main*/}
-      </div>
+        </section>{/*end main*/}
+      </section>
 
     )
   }
@@ -63,6 +65,7 @@ var StudioGallery = React.createClass({
   render: function(){
     var self = this;
     var Images = images.map(function(img){
+      console.log(img);
       return(
         <li key={img.id}  id="media-li"className="col l4 m6">
           <img src={img.img} id="images"className="responsive-img materialboxed" data-caption={img.caption}/>
@@ -108,11 +111,23 @@ var ArtistGallery = React.createClass({
 });
 
 var YoutubeGallery = React.createClass({
+  getInitialState() {
+    return { showModal: false };
+  },
+
+  close() {
+    this.setState({ showModal: false });
+  },
+
+  open() {
+    this.setState({ showModal: true });
+  },
+
   render: function(){
     var self = this;
     var Youtube = youtube.map(function(video){
       return(
-        <li key={video.id}  id="media-li"className="col l4 m6">
+        <li key={video.id}  id="media-li"className="col l4 m6 s12">
             <div className="video-container">
               <iframe width="853" height="480" src={video.url} frameBorder="0" allowFullScreen></iframe>
             </div>
@@ -121,6 +136,8 @@ var YoutubeGallery = React.createClass({
     });
     return(
       <div id="video-row" className="row">
+        <h3 id="headings">Videos</h3>
+        <div className="divider"/>
         <ul id="video-gallery">
           {Youtube}
         </ul>

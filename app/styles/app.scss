@@ -52,7 +52,7 @@ a:hover{
 }
 
 #pages{
-  animation: fadein 2s;
+  animation: fadein 1s;
   @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }

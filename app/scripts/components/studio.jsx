@@ -20,9 +20,9 @@ var Studio= React.createClass({
   render: function(){
 
     return (
-      <div  id="pages" className="studio-page">{/*wrapper div*/}
+      <section  id="pages" className="studio-page">{/*wrapper div*/}
 
-        <div id="header" className="row">
+        <section id="header" className="row">
           <div className="parallax-container">
             <div className="parallax">
               <img  className="parallax-img" src="./images/recital-pic.jpg"/>
@@ -36,9 +36,9 @@ var Studio= React.createClass({
               </ul>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div  id="studio" className="main row">
+        <section  id="studio" className="main row">
           <div id="content" className="col l10 offset-l1 m10 offset-m1 s12 z-depth-4">
             <div id="title" className="row">
               <h1>Studio Eranga</h1>
@@ -68,8 +68,8 @@ var Studio= React.createClass({
               </div>
             </div>{/*end slider-pane*/}
             <Reviews/>
-            <div id="about" className="row">
-              <div id="about-description" className="col l10 offset-l1">
+            <section id="about" className="row">
+              <article id="about-description" className="col l10 offset-l1">
                 <div id="about-par"className="col l5">
                   <div id="studio-about-img" className="col l4 hide-on-med-and-down"/>
                   <div className="col l12 m12 s12">
@@ -92,40 +92,46 @@ var Studio= React.createClass({
                   </p>
                   <img src="./images/announcements-2.jpg"className="responsive-img"/>
                 </div>{/*end about-par*/}
-              </div>{/*end about-right*/}
-            </div>{/*end studio-pane*/}
+              </article>{/*end about-right*/}
+            </section>{/*end studio-pane*/}
 
-            <div id="announcements-pane" className="row">
+            <section id="announcements-pane" className="row">
               <div className="col l10 offset-l1 m12 s12">
 
-                <div id="section" className="row">
+                <section id="section" className="row">
                   <h3 id="headings">Recitals</h3>
                   <div className="divider"/>
                   <div id="recital-img" className= "col l6 m6">
                     <img src="./images/announcements-2.jpg" className="responsive-img"/>
+                      <h6 id="primary-text">About The Recital</h6>
+                      <p id="secondary-text">Come out for a wonderful evening of music performed by mine and Dr. Valerie MacPhail's talented students. They have worked hard throughout the semester and are ready to entertain you with their tunes!</p>
+                      <p id="secondary-text">Hope to see you all there!</p>
                   </div>
                   <div id="recital-details" className="col l6 m6 s12">
-                    <h6 id="primary-text">Recital</h6><span id="secondary-text">Spring Recital</span>
-                    <h6 id="primary-text">Date</h6><span id="secondary-text">TBA</span>
-                    <h6 id="primary-text">Time</h6><span id="secondary-text"></span>
-                    <h6 id="primary-text">Location</h6><span></span>
-                    <div id="location-map"/>
+                    <h6 id="primary-text">Goonetilleke and MacPhail Studio Recital</h6><span id="secondary-text"></span>
+                    <h6 id="primary-text">Date</h6><span id="secondary-text">May 18, 2017</span>
+                    <h6 id="primary-text">Time</h6><span id="secondary-text">7:00pm-8:15pm</span>
+                    <h6 id="primary-text">Location</h6>
+                    <p id="secondary-text">Daniel Recital Hall (Blackman music building), Converse College</p>
+                    <h6 id="primary-text">Address</h6>
+                    <p id="secondary-text"><a href="https://goo.gl/maps/gWXjkR4yGfK2" target="_blank">580 E Main St, Spartanburg, SC 29302</a></p>
+                    <iframe className= "location-map col l12 m12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.017200099404!2d-81.9208842847609!3d34.956177580369776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8857758530859ce5%3A0xd21a2373b2e741f6!2sConverse+College!5e0!3m2!1sen!2sus!4v1494083872113"  height="300" frameBorder="0" style={{border: 0 }} allowfullscreen></iframe>
                   </div>
-                </div>{/*end recital section row*/}
+                </section>{/*end recital section row*/}
 
-                <div id="section" className="row">
+                <section id="section" className="row">
                   <h3 id="headings" className="announcement">Announcements</h3>
                   <div className="divider"/>
                   <div id="recital-details" className="col l12">
                     <Announcements/>
                   </div>
-                </div>{/*end announcement section row*/}
+                </section>{/*end announcement section row*/}
               </div>
-            </div>
+            </section>
 
           </div>{/*end content*/}
-        </div>{/*end main*/}
-      </div>
+        </section>{/*end main*/}
+      </section>
 
     )
   }

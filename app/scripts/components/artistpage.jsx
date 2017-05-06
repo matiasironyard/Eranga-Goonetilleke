@@ -14,8 +14,8 @@ var HeaderContainer = React.createClass({
   },
   render: function(){
     return (
-      <div  id="pages" className="artist-page">{/*wrapper div*/}
-        <div id="header" className="row">
+      <section  id="pages" className="artist-page">{/*wrapper div*/}
+        <section id="header" className="row">
           <div className="parallax-container">
             <div className="parallax"><img  className="parallax-img" src="./images/headshot-2.jpg"/></div>
               <div id="social-icons-pane"className="col l8 offset-l3 m10 offset-m1 s10">
@@ -27,27 +27,27 @@ var HeaderContainer = React.createClass({
                 </ul>
               </div>
           </div>
-        </div>
+        </section>
 
-        <div  className="main row">
+        <section  className="main row">
           <div id="content" className="col l10 offset-l1 m10 offset-m1 s12 z-depth-4">
             <div id="title" className="row">
               <h1>Eranga Goonetilleke</h1>
             </div>
-            <div id="about" className="row">
-              <div id="about-par" className="col l10 offset-l1 m11">
-                <div id="about-img" className="responsive-img col l6 m3"/>
+            <section id="about" className="row">
+              <article id="about-par" className="col l10 offset-l1 m11">
+                <div id="about-img" className="responsive-img col l6 m4"/>
                   <h3 id="headings">About Eranga</h3>
                   <p id="primary-text">Eranga Goonetilleke is a Native Sri Lankan living in the US. She is an exceptional Broadway/Musical Theater, Opera and Jazz singer who is also known for her versatile acting and dancing skills. She travels internationally conducting master classes and vocal workshops. She continues to inspire her music students and enjoys sharing her knowledge and experience with others.</p>
                   <p id="primary-text">Ms. Goonetilleke is not only known for her beautiful lyric Soprano voice but also as a singer of diverse technique and style. She is highly regarded for her sensitivity to the style, interpretation and emotional commitment to her repertoire.</p>
                   <p id="primary-text">She graduated with a MM in Opera/ Musical Theater at the Southern Illinois University, Carbondale in 2011. She received her BM in Vocal performance at Converse College, SC. She is also an Associate of the Trinity College of Music, London.
                   </p>
-              </div>{/*end about-par*/}
-            </div>{/*end about*/}
+              </article>{/*end about-par*/}
+            </section>{/*end about*/}
 
             <div className="divider hide-on-small-only "/>
 
-            <div id="perfomance-imgs" className="row">
+            <section id="perfomance-imgs" className="row">
               <div className="col l10 offset-l1 m11 offset-m1 hide-on-small-only ">
                 <div className="col l4 performance-cards left-side">
                 </div>
@@ -56,16 +56,15 @@ var HeaderContainer = React.createClass({
                 <div  className="col l4 performance-cards right-side">
                 </div>
               </div>
+            </section>
 
-            </div>
-
-            <div id="artist-video" className="row">
+            <section id="artist-video" className="row">
               <div className="video-container">
                 <iframe width="853" height="480" src="https://www.youtube.com/embed/B9FiiY2Xkuk" frameBorder="0" allowFullScreen></iframe>
               </div>
-            </div>
+            </section>
 
-            <div id="link-cards-pane" className="row">
+            <section id="link-cards-pane" className="row">
               <div id="link-cards" className="left col s12 l4">
                 <div className="card medium hoverable">
                   <div className="card-image">
@@ -110,11 +109,11 @@ var HeaderContainer = React.createClass({
                   </div>
                 </div>
               </div>
-            </div>{/*end card pane*/}
+            </section>{/*end card pane*/}
 
           </div>{/*end artist-content*/}
-        </div>{/*end main*/}
-      </div>
+        </section>{/*end main*/}
+      </section>
 
     )
   }

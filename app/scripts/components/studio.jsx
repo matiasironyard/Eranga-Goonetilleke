@@ -186,10 +186,17 @@ var Announcements = React.createClass({
     var myAnnouncements = announcements.map(function(announcement){
       console.log(announcement);
       return (
-        <div key={announcement.name} id="announcement-card" className="col l6">
-          <img src={announcement.img} alt="" className="responsive-img"/>
-          <h5 id="headings">{announcement.name}</h5>
-          <p id="secondary-text">{announcement.caption}</p>
+        <div className="col l6 ">
+          <div key={announcement.name} id="announcement-card " className="card">
+            <div className="card-image waves-effect waves-block waves-light">
+              <img src={announcement.img} alt="Cate Seegars" className="activator" />
+            </div>
+            <div className="card-content">
+              <h4 id="headings">{announcement.name}</h4>
+              <h5 id="subheadings">{announcement.subheading}</h5>
+              <p id="secondary-text">{announcement.caption}</p>
+            </div>
+          </div>
         </div>
       )
     });

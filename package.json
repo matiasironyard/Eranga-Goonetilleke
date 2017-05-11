@@ -70,7 +70,11 @@
     ]
   },
   "dependencies": {
+    "fb": "^2.0.0",
+    "fb-node": "^1.0.0",
+    "fbgraph": "^1.4.1",
     "materialize-css": "^0.97.8",
+    "node-flickr": "^1.0.0",
     "react-youtube": "^7.3.0"
   }
 }

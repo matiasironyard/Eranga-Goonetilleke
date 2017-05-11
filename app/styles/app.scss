@@ -15,8 +15,8 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 //********* GENERAL ***************/
 
 body{
-  // background-image: url('../images/background-2.jpg');
-  background: linear-gradient(135deg, rgba(137,230,225,1) 0%, rgba(217,217,104,1) 60%, rgba(123,210,160,1) 84%, rgba(60,205,198,1) 100%);
+  background-image: url('../images/background-3.jpg');
+  //background: linear-gradient(135deg, rgba(137,230,225,1) 0%, rgba(217,217,104,1) 60%, rgba(123,210,160,1) 84%, rgba(60,205,198,1) 100%);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -39,6 +39,10 @@ p{
 #headings{
   font-family: 'Raleway', sans-serif;
   color: #DD2C00;
+}
+#subheadings{
+  font-family: 'Raleway', sans-serif;
+  color: grey;
 }
 
 a:hover{
@@ -285,9 +289,9 @@ a:hover{
    }
   }
   #announcement-card{
-    margin-bottom: 30px;
-    min-height: 400px;
-    max-height: 500px;
+    //margin-bottom: 30px;
+    //min-height: 400px;
+    //max-height: 500px;
   }
 }
 

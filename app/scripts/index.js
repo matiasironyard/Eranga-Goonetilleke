@@ -11,15 +11,17 @@ var flickr = new Flickr(keys);
 $(function(){
  Backbone.history.start();
 });
-var myPics = []
 flickr.get("photos.search", {"username":'matiasmariani83'}, function(err, result){
     if (err) return console.error(err);
     console.log(result.photos.photo[0]);
     var id = result.photos.photo[0].id;
     var owner = result.photos.photo[0].owner;
-    url = 'https://www.flickr.com/photos/'+owner+'/'+id+'/';
+    mine = 'https://www.flickr.com/photos/'+owner+'/'+id+'/';
 });
-console.log(myPics);
+var mine;
+setTimeout(function(){
+  console.log('what', mine);
+},3000)
 
 /*FB.options({version: 'v2.4'});
 var fooApp = FB.extend({appId: '1849734768577552', appSecret: 'c1f4be8c88fb4c499c9f1643de5fac77'});

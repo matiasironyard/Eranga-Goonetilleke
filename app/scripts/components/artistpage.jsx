@@ -48,14 +48,14 @@ var HeaderContainer = React.createClass({
             <div className="divider hide-on-small-only "/>
 
             <section id="perfomance-imgs" className="row">
-              <div className="col l10 offset-l1 m11 offset-m1 hide-on-small-only ">
-                <div className="col l4 performance-cards left-side">
-                </div>
-                <div className="col l4 performance-cards middle-side">
-                </div>
-                <div  className="col l4 performance-cards right-side">
-                </div>
-              </div>
+              <ul className="performance-imgs-ul">
+                <li className="performance-cards left-side">
+                </li>
+                <li className="performance-cards middle-side">
+                </li>
+                <li  className="performance-cards right-side">
+                </li>
+              </ul>
             </section>
 
             <section id="artist-video" className="row">

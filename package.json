@@ -75,6 +75,8 @@
     "fbgraph": "^1.4.1",
     "materialize-css": "^0.97.8",
     "node-flickr": "^1.0.0",
+    "react-image-gallery": "^0.8.0",
+    "react-images": "^0.5.2",
     "react-youtube": "^7.3.0"
   }
 }

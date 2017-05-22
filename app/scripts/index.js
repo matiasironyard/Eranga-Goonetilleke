@@ -11,7 +11,8 @@ var flickr = new Flickr(keys);
 $(function(){
  Backbone.history.start();
 });
-flickr.get("photos.search", {"username":'matiasmariani83'}, function(err, result){
+
+/*flickr.get("photos.search", {"username":'matiasmariani83'}, function(err, result){
     if (err) return console.error(err);
     console.log(result.photos.photo[0]);
     var id = result.photos.photo[0].id;

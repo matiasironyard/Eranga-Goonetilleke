@@ -1,11 +1,11 @@
 var $ = require('jquery');
 var Backbone = require('backbone');
 require('./router.js');
-var Flickr = require("node-flickr");
+/*var Flickr = require("node-flickr");
 var keys = {"api_key": "171f7fa7d4af139f9f626e0aa178a96a"}
 var flickr = new Flickr(keys);
 //var FB = require('fb');
-//console.log(FB);
+//console.log(FB);*/
 
 
 $(function(){
@@ -13,16 +13,17 @@ $(function(){
 });
 
 /*flickr.get("photos.search", {"username":'matiasmariani83'}, function(err, result){
-    if (err) return console.error(err);
-    console.log(result.photos.photo[0]);
-    var id = result.photos.photo[0].id;
-    var owner = result.photos.photo[0].owner;
-    mine = 'https://www.flickr.com/photos/'+owner+'/'+id+'/';
-});
-var mine;
-setTimeout(function(){
-  console.log('what', mine);
-},3000)
+        if (err) return console.error(err);
+        var hi = result.photos.photo;
+        var i;
+        for(i = 0; i < hi.length; i ++){
+          var id = hi[i].id;
+          var owner = hi[i].owner;
+          var url = 'https://www.flickr.com/photos/'+owner+'/'+id+'/';
+        }
+    });*/
+
+
 
 /*FB.options({version: 'v2.4'});
 var fooApp = FB.extend({appId: '1849734768577552', appSecret: 'c1f4be8c88fb4c499c9f1643de5fac77'});

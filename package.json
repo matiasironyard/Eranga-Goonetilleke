@@ -70,11 +70,13 @@
     ]
   },
   "dependencies": {
+    "aws-sdk": "^2.82.0",
     "fb": "^2.0.0",
     "fb-node": "^1.0.0",
     "fbgraph": "^1.4.1",
     "materialize-css": "^0.97.8",
     "node-flickr": "^1.0.0",
+    "react-grid-gallery": "^0.3.3",
     "react-image-gallery": "^0.8.0",
     "react-images": "^0.5.2",
     "react-youtube": "^7.3.0"

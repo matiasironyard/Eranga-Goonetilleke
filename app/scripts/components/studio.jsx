@@ -14,7 +14,7 @@ var Studio= React.createClass({
   componentDidMount(){
     $('.parallax').parallax();
     $('.collapsible').collapsible();
-    $('.slider').slider();
+    $('.slider').slider({height: '700px'});
   },
 
   render: function(){
@@ -27,13 +27,15 @@ var Studio= React.createClass({
             <div className="parallax">
               <img  className="parallax-img" src="./images/recital-pic.jpg"/>
             </div>
-            <div id="social-icons-pane"className="col l8 offset-l3 m10 offset-m1 s10">
-              <ul id="social-icons" className="col l1 m1 s1 pull-right">
+            <div id="social-pane" className="col l10 offset-l1 m10 offset-m1 s12 ">
+              <div id="social-icons">
+              <ul id="icons">
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://twitter.com/erangagnt" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.youtube.com/user/esgoonetilleke" target="_blank"><i className="fa fa-youtube-play" aria-hidden="true"></i></a></li>
               </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -44,8 +46,8 @@ var Studio= React.createClass({
               <h1>Studio Eranga</h1>
             </div>
             <div id="slider-pane" className="row hidden-xs">
-              <div className="slider">
-                <ul id="slides" className="slides">
+              <div  className="slider">
+                <ul className="slides">
                   <li>
                     <img src="./images/finley-2.jpg"/>
                     <div className="caption center-align">
@@ -67,7 +69,9 @@ var Studio= React.createClass({
                 </ul>
               </div>
             </div>{/*end slider-pane*/}
-            <Reviews/>
+            <div className="hello">
+              <Reviews/>
+            </div>
             <section id="about" className="row">
               <article id="about-description" className="col l10 offset-l1">
                 <div id="about-par"className="col l5">
@@ -90,7 +94,10 @@ var Studio= React.createClass({
                   <p id="primary-text">It is a universal language that connects us all to each other and develops our personality and spirituality.
                   It gives me great joy to help students discover and develop their gifts by providing them with healthy technique, tools to be a better performer, performing opportunities and inspiration!
                   </p>
-                  <img src="./images/announcements-2.jpg"className="responsive-img"/>
+                  <div className="col l12 m12 s12">
+                        <img src="./images/announcements-2.jpg"className="responsive-img"/>
+                  </div>
+
                 </div>{/*end about-par*/}
               </article>{/*end about-right*/}
             </section>{/*end studio-pane*/}
@@ -108,7 +115,7 @@ var Studio= React.createClass({
                       <p id="secondary-text">Hope to see you all there!</p>
                   </div>
                   <div id="recital-details" className="col l6 m6 s12">
-                    <h6 id="primary-text">Goonetilleke and MacPhail Studio Recital</h6><span id="secondary-text"></span>
+                    <h6 id="primary-text">Past Recital</h6><span id="secondary-text">Goonetilleke and MacPhail Studio Recital</span>
                     <h6 id="primary-text">Date</h6><span id="secondary-text">May 18, 2017</span>
                     <h6 id="primary-text">Time</h6><span id="secondary-text">7:00pm-8:15pm</span>
                     <h6 id="primary-text">Location</h6>
@@ -166,7 +173,7 @@ var Reviews = React.createClass({
       )
     });
     return (
-      <div className="row"  id="reviews">
+      <div className="row">
         <div id="about-reviews" className="col l10 offset-l1">
           <h3 id="headings">Reviews</h3>
           <div className="divider"/>

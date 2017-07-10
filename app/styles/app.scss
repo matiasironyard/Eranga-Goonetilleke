@@ -25,7 +25,9 @@ p{
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
 }
-
+.btn-floating i{
+  background-color: #DD2C00;
+}
 #primary-text{
   line-height: 2;
   opacity: .87;
@@ -67,7 +69,7 @@ a:hover{
 /********** HEADER ****************/
 #header{
   .parallax-container{
-    height: 600px;
+    height: 800px;
   }
 }
 /******** NAV **********/
@@ -101,9 +103,19 @@ a:hover{
 
 /******** SOCIAL **********/
 
-#social-icons-pane{
-  position: relative;
-  top: 25%;
+#social-pane{
+  display: flex;
+justify-content: flex-end;
+align-items: center;
+position: relative;
+top: 25%;
+height: 400px;
+}
+#social-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   ul{
     display: flex;
     flex-direction: column;
@@ -118,6 +130,7 @@ a:hover{
     }
   }
 }
+
 /******** MAIN ***************/
 .main{
   // background-image: url('../images/background-1.jpg');
@@ -249,14 +262,11 @@ a:hover{
 
 /*SLIDER*/
 #slider-pane{
+  height: 700px;
   z-index: 0;
-  height: 450px;
   h3{
     color: #FFFFFF;
     text-shadow: 0px 1px 8px #000000;
-  }
-  #slides{
-    height: 550px;
   }
 }
 .indicators{
@@ -308,11 +318,17 @@ a:hover{
 
 /********** GALLERY ****************/
 /**ADDED when trying flex**/
+#gallery-row{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 30px;
+}
+
 .media-ul{
   display: flex;
-flex-wrap: wrap;
-    justify-content: flex-start;
-    justify-items: center;
+ flex-wrap: wrap;
+ justify-content: center;
 }
 /*********************/
 .media-li{
@@ -336,7 +352,6 @@ flex-wrap: wrap;
   #social-icons-footer{
     margin-top: 20px;
     i{
-      color: #DD2C00;
       font-size: 1.6rem;
     }
   }

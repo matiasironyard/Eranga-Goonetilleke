@@ -1,14 +1,48 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
-var ImageGallery = require ('react-image-gallery');
+
+// Import, set up AWS and import AWS configuration.
+var AWS = require( 'aws-sdk/dist/aws-sdk-react-native' );
+var s3 = new AWS.S3({
+  region: 'us-east-1',
+  credentials: {
+    "accessKeyId": "XXXX",
+    "secretAccessKey": "XXXX",
+  }
+});
+
 
 
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 var studioImages = require('../media/studioimages.js').studioImages;
+var studioImages2 = require('../media/test.js').studioImages2;
+console.log('studio2', studioImages2)
+var studioImages3 = [];
 var artistImages = require('../media/artistimages.js').artistImages;
 var youtube = require('../media/youtube.js').youtube;
+
+var params = {Bucket: 'eranga'};
+s3.listObjects(params, function(err, data){
+  console.log('hi', data)
+  var bucketContents = data.Contents;
+    for (var i = 0; i < bucketContents.length; i++){
+      var urlParams = {Bucket: 'eranga', Key: bucketContents[i].Key};
+        s3.getSignedUrl('getObject',urlParams, function(err, url){
+          console.log('the url of the image is', url);
+          var img = {
+            id: bucketContents[i].Key,
+            img: url,
+            caption: 'hi'
+          }
+          studioImages3.push(img);
+        });
+    }
+});
+console.log('this', studioImages3)
+
+
 
 
 //############ CONTAINERS #########################/
@@ -20,6 +54,7 @@ var Media= React.createClass({
     $('.slider').slider();
   },
 
+
   render: function(){
 
     return (
@@ -30,13 +65,15 @@ var Media= React.createClass({
             <div className="parallax">
               <img  className="parallax-img" src="./images/eranga-piano-2-banner.jpeg"/>
             </div>
-            <div id="social-icons-pane"className="col l8 offset-l3 m10 offset-m1 s10">
-              <ul id="social-icons" className="col l1 m1 s1 pull-right">
+            <div id="social-pane" className="col l10 offset-l1 m10 offset-m1 s12 ">
+              <div id="social-icons">
+              <ul id="icons">
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://twitter.com/erangagnt" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.youtube.com/user/esgoonetilleke" target="_blank"><i className="fa fa-youtube-play" aria-hidden="true"></i></a></li>
               </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -58,19 +95,19 @@ var Media= React.createClass({
 });
 
 var StudioGallery = React.createClass({
-
   componentDidMount: function(){
     $('.materialboxed').materialbox();
   },
-  
+
+
   render: function(){
     var self = this;
     var Images = studioImages.map(function(img){
       var imgUrl = img.img;
-      var divStyle = {backgroundImage: 'url('+ imgUrl + ')', backgroundSize: 'cover', backgroundPosition: 'center', height: '200px', width: '200px'};
+      var divStyle = {backgroundImage: 'url('+ imgUrl + ')', backgroundSize: 'cover', backgroundPosition: 'center', height: 200, width: 200};
       return(
-        <li key={img.id}>
-          <img className="materialboxed media-li" width="300" src={img.img}/>
+        <li key={img.id} className="col l4">
+          <img className="materialboxed media-li responsive-img" width="200" src={imgUrl} />
         </li>
       )
     });
@@ -79,7 +116,7 @@ var StudioGallery = React.createClass({
         <h3 id="headings">Studio Gallery</h3>
         <div className="divider"/>
           <ul className="media-ul">
-          {Images}
+            {Images}
           </ul>
         </div>
     )
@@ -105,7 +142,7 @@ var ArtistGallery = React.createClass({
         <h3 id="headings">Artist Gallery</h3>
         <div className="divider"/>
         <ul className="media-ul">
-        {artist}
+          {artist}
         </ul>
       </div>
     )
@@ -129,7 +166,7 @@ var YoutubeGallery = React.createClass({
     var self = this;
     var Youtube = youtube.map(function(video){
       return(
-        <li key={video.id}  className="col l4 m6 s12">
+        <li key={video.id}  className="col l6 m6 s6">
             <div className="video-container media-li">
               <iframe width="853" height="480" src={video.url} frameBorder="0" allowFullScreen></iframe>
             </div>
@@ -150,13 +187,13 @@ var YoutubeGallery = React.createClass({
 
 
 var MediaContainer = React.createClass({
-    render: function() {
-        return (
-          <NavFooter>
-            <Media/>
-          </NavFooter>
-        );
-    }
+  render: function() {
+      return (
+        <NavFooter>
+          <Media/>
+        </NavFooter>
+      );
+  }
 });
 
 module.exports = {

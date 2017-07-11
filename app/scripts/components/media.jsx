@@ -18,11 +18,11 @@ var s3 = new AWS.S3({
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 var studioImages = require('../media/studioimages.js').studioImages;
 var studioImages2 = require('../media/test.js').studioImages2;
-console.log('studio2', studioImages2)
 var studioImages3 = [];
 var artistImages = require('../media/artistimages.js').artistImages;
 var youtube = require('../media/youtube.js').youtube;
 
+/*
 var params = {Bucket: 'eranga'};
 s3.listObjects(params, function(err, data){
   console.log('hi', data)
@@ -41,6 +41,7 @@ s3.listObjects(params, function(err, data){
     }
 });
 console.log('this', studioImages3)
+*/
 
 
 
@@ -48,6 +49,24 @@ console.log('this', studioImages3)
 //############ CONTAINERS #########################/
 
 var Media= React.createClass({
+  getInitialState: function(){
+    return {
+      studioPics: []
+    }
+  },
+  componentWillMount: function(){
+    var studioPics = this.props.studioPics;
+    this.setState({
+      studioPics: studioPics
+    })
+  },
+
+  componentWillReceiveProps: function(nextProps){
+    this.setState({
+      studioPics: nextProps.studioPics
+    })
+  },
+
   componentDidMount(){
     $('.parallax').parallax();
     $('.collapsible').collapsible();
@@ -56,10 +75,10 @@ var Media= React.createClass({
 
 
   render: function(){
-
+    var self = this;
+    var studioPics = self.state.studioPics
     return (
       <section id="pages" className="studio-page">{/*wrapper div*/}
-
         <section id="header" className="row">
           <div className="parallax-container">
             <div className="parallax">
@@ -85,7 +104,7 @@ var Media= React.createClass({
             </div>
             <ArtistGallery />
             <YoutubeGallery/>
-            <StudioGallery/>
+            <StudioGallery studioPics={studioPics}/>
           </div>{/*end content*/}
         </section>{/*end main*/}
       </section>
@@ -102,12 +121,12 @@ var StudioGallery = React.createClass({
 
   render: function(){
     var self = this;
-    var Images = studioImages.map(function(img){
-      var imgUrl = img.img;
-      var divStyle = {backgroundImage: 'url('+ imgUrl + ')', backgroundSize: 'cover', backgroundPosition: 'center', height: 200, width: 200};
+    var pics = self.props.studioPics;
+    var Images = pics.map(function(imgUrl){
+      var divStyle = {backgroundImage: 'url('+ imgUrl + ')', backgroundSize: 'cover', backgroundPosition: 'center', height: '200', width: '200'};
       return(
-        <li key={img.id} className="col l4">
-          <img className="materialboxed media-li responsive-img" width="200" src={imgUrl} />
+        <li key={imgUrl}>
+          <img className="materialboxed media-li" width="300" src={imgUrl} />
         </li>
       )
     });
@@ -187,10 +206,42 @@ var YoutubeGallery = React.createClass({
 
 
 var MediaContainer = React.createClass({
+  getInitialState: function(){
+    return {
+      studioPics: [],
+    };
+  },
+
+  componentWillMount: function(){
+    var self = this;
+    var studioPics = [];
+    $.ajax({
+    url:"https://s3.amazonaws.com/aws_s3_lo_2/",
+    dataType: "xml",
+       success: function(xml) {
+         $(xml).find('Contents').each(function(){
+           var key = $(this).find('Key').text()
+           var url = "https://s3.amazonaws.com/studioerangastudio/"+key;
+           studioPics.push(url);
+           console.log("log", studioPics)
+           self.setState({
+             studioPics: studioPics
+           })
+         });
+       },
+    error: function () {
+        console.log('errors')
+    },
+});
+console.log(this.state)
+return false;
+  },
+
   render: function() {
+    var studioPics = this.state.studioPics;
       return (
         <NavFooter>
-          <Media/>
+          <Media studioPics={studioPics}/>
         </NavFooter>
       );
   }

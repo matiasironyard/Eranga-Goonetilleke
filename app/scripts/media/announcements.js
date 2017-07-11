@@ -1,5 +1,5 @@
 var announcements = [{
-  img: './images/kate.jpg',
+  img: './images/kate_2.jpg',
   name: 'Cate Seegars',
   subheading: 'Congratulatons, Cate!',
   caption: 'Congratulations to Cate for getting into the 2017 summer discovery program for music and voice at "The South Carolina Governor\'s School For The Arts And Humanities." Cate also received two MacCraken Middle School awards for 2016-2017; Most Musical Award and The MacCraken Honr M Award. ',

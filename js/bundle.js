@@ -142,6 +142,7 @@ module.exports = {
 "use strict";
 var React = require('react');
 var ReactDOM = require('react-dom');
+var $ = require('jquery');
 
 
 
@@ -413,7 +414,7 @@ var MediaContainer = React.createClass({displayName: "MediaContainer",
 module.exports = {
   MediaContainer: MediaContainer
 }
-},{"../media/artistimages.js":6,"../media/studioimages.js":8,"../media/test.js":9,"../media/youtube.js":10,"../templates/nav-footer.jsx":12,"react":172,"react-dom":43}],3:[function(require,module,exports){
+},{"../media/artistimages.js":6,"../media/studioimages.js":8,"../media/test.js":9,"../media/youtube.js":10,"../templates/nav-footer.jsx":12,"jquery":41,"react":172,"react-dom":43}],3:[function(require,module,exports){
 "use strict";
 var React = require('react');
 var ReactDOM = require('react-dom');

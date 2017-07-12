@@ -267,12 +267,10 @@ var MediaContainer = React.createClass({
     //s3 test
     var params = {Bucket: 'studioerangastudio'};
     s3.listObjects(params, function(err, data){
-      console.log('hi', data)
       var bucketContents = data.Contents;
         for (var i = 0; i < bucketContents.length; i++){
           var urlParams = {Bucket: 'studioerangastudio', Key: bucketContents[i].Key};
             s3.getSignedUrl('getObject',urlParams, function(err, url){
-              console.log('the url of the image is', url);
               var img = {
                 id: bucketContents[i].Key,
                 img: url,
@@ -285,14 +283,12 @@ var MediaContainer = React.createClass({
     self.setState({
       s3Pics: studioImages3
     })
-    console.log('this', studioImages3)
   },
 
   render: function() {
     var studioPics = this.state.studioPics;
     var artistPics = this.state.artistPics;
     var s3Pics = this.state.s3Pics;
-    console.log('s3', s3Pics)
 
       return (
         <NavFooter>

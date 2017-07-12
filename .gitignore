@@ -5,3 +5,5 @@ node_modules
 dist/
 env.js
 .env
+process.env['API_KEY'] ="AKIAIE54TVGXJO4PQKIA"
+process.env['API_SECRET']="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"

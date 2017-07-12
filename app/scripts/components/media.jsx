@@ -1,17 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var $ = require('jquery');
-require('./env')
 
-// Import, set up AWS and import AWS configuration.
-var AWS = require( 'aws-sdk/dist/aws-sdk-react-native' );
-var s3 = new AWS.S3({
-  region: 'us-east-1',
-  credentials: {
-    "accessKeyId": process.env.API_KEY,
-    "secretAccessKey": process.env.API_SECRET,
-  }
-});
 
 
 
@@ -264,31 +253,11 @@ var MediaContainer = React.createClass({
         console.log('errors')
       },
     });
-    //s3 test
-    var params = {Bucket: 'studioerangastudio'};
-    s3.listObjects(params, function(err, data){
-      var bucketContents = data.Contents;
-        for (var i = 0; i < bucketContents.length; i++){
-          var urlParams = {Bucket: 'studioerangastudio', Key: bucketContents[i].Key};
-            s3.getSignedUrl('getObject',urlParams, function(err, url){
-              var img = {
-                id: bucketContents[i].Key,
-                img: url,
-                caption: 'hi'
-              }
-              studioImages3.push(img);
-            });
-        }
-    });
-    self.setState({
-      s3Pics: studioImages3
-    })
-  },
+
 
   render: function() {
     var studioPics = this.state.studioPics;
     var artistPics = this.state.artistPics;
-    var s3Pics = this.state.s3Pics;
 
       return (
         <NavFooter>

@@ -253,11 +253,12 @@ var MediaContainer = React.createClass({
         console.log('errors')
       },
     });
-
+  },
 
   render: function() {
     var studioPics = this.state.studioPics;
     var artistPics = this.state.artistPics;
+    var s3Pics = this.state.s3Pics;
 
       return (
         <NavFooter>

@@ -191,7 +191,6 @@ var Announcements = React.createClass({
   render: function(){
     var self = this;
     var myAnnouncements = announcements.map(function(announcement){
-      console.log(announcement);
       return (
         <div className="col l6 ">
           <div key={announcement.name} id="announcement-card " className="card">

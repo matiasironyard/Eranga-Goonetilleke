@@ -15,7 +15,7 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 //********* GENERAL ***************/
 
 body{
-  background-image: url('../images/background-3.jpg');
+  //background-image: url('../images/background-3.jpg');
   //background: linear-gradient(135deg, rgba(137,230,225,1) 0%, rgba(217,217,104,1) 60%, rgba(123,210,160,1) 84%, rgba(60,205,198,1) 100%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -320,15 +320,15 @@ height: 400px;
 /**ADDED when trying flex**/
 #gallery-row{
   display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 30px;
+  flex-wrap: wrap;
+  margin: 30px;
+  justify-content: flex-start;
 }
 
 .media-ul{
   display: flex;
- flex-wrap: wrap;
- justify-content: center;
+  flex-wrap: wrap;
+  align-content:  space-around;
 }
 /*********************/
 .media-li{
@@ -355,4 +355,18 @@ height: 400px;
       font-size: 1.6rem;
     }
   }
+}
+/*****************loader**************/
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

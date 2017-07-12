@@ -71,6 +71,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.82.0",
+    "dotenv": "^4.0.0",
     "fb": "^2.0.0",
     "fb-node": "^1.0.0",
     "fbgraph": "^1.4.1",

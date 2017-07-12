@@ -1,14 +1,16 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
+require('./env.js')
+console.log('env', process.env.API_KEY)
 
 // Import, set up AWS and import AWS configuration.
 var AWS = require( 'aws-sdk/dist/aws-sdk-react-native' );
 var s3 = new AWS.S3({
   region: 'us-east-1',
   credentials: {
-    "accessKeyId": "XXXX",
-    "secretAccessKey": "XXXX",
+    "accessKeyId": process.env.API_KEY,
+    "secretAccessKey": process.env.API_SECRET,
   }
 });
 
@@ -18,30 +20,12 @@ var s3 = new AWS.S3({
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 var studioImages = require('../media/studioimages.js').studioImages;
 var studioImages2 = require('../media/test.js').studioImages2;
-var studioImages3 = [];
 var artistImages = require('../media/artistimages.js').artistImages;
 var youtube = require('../media/youtube.js').youtube;
 
-/*
-var params = {Bucket: 'studioerangastudio'};
-s3.listObjects(params, function(err, data){
-  console.log('hi', data)
-  var bucketContents = data.Contents;
-    for (var i = 0; i < bucketContents.length; i++){
-      var urlParams = {Bucket: 'eranga', Key: bucketContents[i].Key};
-        s3.getSignedUrl('getObject',urlParams, function(err, url){
-          console.log('the url of the image is', url);
-          var img = {
-            id: bucketContents[i].Key,
-            img: url,
-            caption: 'hi'
-          }
-          studioImages3.push(img);
-        });
-    }
-});
-console.log('this', studioImages3)
-*/
+
+
+
 
 
 
@@ -232,6 +216,7 @@ var MediaContainer = React.createClass({
     return {
       studioPics: [],
       artistPics: [],
+      s3Pics: [],
       artistLoading: <div className="loader"></div>,
       studioLoading: <div className="loader"></div>
     };
@@ -241,6 +226,7 @@ var MediaContainer = React.createClass({
     var self = this;
     //Studio Ajax Call
     var studioPics = [];
+    var studioImages3 = [];
     $.ajax({
       url: "https://s3.amazonaws.com/studioerangastudio/",
       dataType: "xml",
@@ -279,11 +265,35 @@ var MediaContainer = React.createClass({
         console.log('errors')
       },
     });
+    //s3 test
+    var params = {Bucket: 'studioerangastudio'};
+    s3.listObjects(params, function(err, data){
+      console.log('hi', data)
+      var bucketContents = data.Contents;
+        for (var i = 0; i < bucketContents.length; i++){
+          var urlParams = {Bucket: 'studioerangastudio', Key: bucketContents[i].Key};
+            s3.getSignedUrl('getObject',urlParams, function(err, url){
+              console.log('the url of the image is', url);
+              var img = {
+                id: bucketContents[i].Key,
+                img: url,
+                caption: 'hi'
+              }
+              studioImages3.push(img);
+            });
+        }
+    });
+    self.setState({
+      s3Pics: studioImages3
+    })
+    console.log('this', studioImages3)
   },
 
   render: function() {
     var studioPics = this.state.studioPics;
     var artistPics = this.state.artistPics;
+    var s3Pics = this.state.s3Pics;
+    console.log('s3', s3Pics)
 
       return (
         <NavFooter>

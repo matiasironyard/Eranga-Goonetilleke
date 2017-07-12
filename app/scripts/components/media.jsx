@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
-require('./env.js')
+require('./env')
 
 // Import, set up AWS and import AWS configuration.
 var AWS = require( 'aws-sdk/dist/aws-sdk-react-native' );

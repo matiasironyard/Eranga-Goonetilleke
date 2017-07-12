@@ -5,4 +5,4 @@ node_modules
 dist/
 env.js
 .env
-app/scripts/components/media.jsx
+app/scripts/components/env

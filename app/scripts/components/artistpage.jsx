@@ -65,7 +65,7 @@ var HeaderContainer = React.createClass({
                     <p id="secondary-text">Upcoming performances by Eranga Gooneteilleke.</p>
                   </div>
                   <div className="card-action">
-                    <a href="#studio/performances" className="red-text text-darken-2">Schedule</a>
+                    <a href="#studio/performances" className="blue-text text-darken-2">Schedule</a>
                   </div>
                 </div>
               </div>
@@ -80,7 +80,7 @@ var HeaderContainer = React.createClass({
                     <p id="secondary-text">Weekly lessons in voice, piano, audition preparation and music theory.</p>
                   </div>
                   <div className="card-action">
-                    <a href="#studio/" className="red-text text-darken-2">Learn More</a>
+                    <a href="#studio/" className="blue-text text-darken-2">Learn More</a>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@ var HeaderContainer = React.createClass({
                     <p id="secondary-text">The latest student recitals, competitions and more!</p>
                   </div>
                   <div className="card-action">
-                    <a href="#studio/announcements" className="red-text text-darken-2">See Announcements</a>
+                    <a href="#studio/announcements" className="blue-text text-darken-2">See Announcements</a>
                   </div>
                 </div>
               </div>

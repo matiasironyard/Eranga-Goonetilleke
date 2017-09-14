@@ -104,7 +104,7 @@ var Studio= React.createClass({
                   It gives me great joy to help students discover and develop their gifts by providing them with healthy technique, tools to be a better performer, performing opportunities and inspiration!
                   </p>
                   <div className="col l12 m12 s12">
-                        <img src="./images/announcements-2.jpg"className="responsive-img"/>
+                        <img src="./images/inspire.jpg"className="responsive-img" style={{"width": "100%"}}/>
                   </div>
 
                 </div>{/*end about-par*/}
@@ -115,7 +115,7 @@ var Studio= React.createClass({
               <div className="col l10 offset-l1 m12 s12">
 
                 <section id="performances" className="row section performances scrollspy " >
-                  <h3 id="headings">Recitals</h3>
+                  <h3 id="headings">Performances</h3>
                   <div className="divider"/>
                   <div id="recital-img" className= "col l6 m6">
                     <img src="./images/nooneisalone.jpg" style={{"width": "100%"}} className="responsive-img"/>

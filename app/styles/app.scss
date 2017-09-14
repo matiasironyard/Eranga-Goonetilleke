@@ -26,10 +26,10 @@ p{
   font-size: 16px;
 }
 .btn-floating i{
-  background-color: #DD2C00;
+  background-color: rgb(36, 69, 170);
 }
 #primary-text{
-  line-height: 2;
+  line-height: 1.5;
   opacity: .87;
   font-size: 120%;
 }
@@ -40,11 +40,15 @@ p{
 }
 #headings{
   font-family: 'Raleway', sans-serif;
-  color: #DD2C00;
+  color: #2445aa,
 }
 #subheadings{
   font-family: 'Raleway', sans-serif;
   color: grey;
+}
+
+h1{
+  color: #2445aa;
 }
 
 a:hover{
@@ -79,14 +83,14 @@ a:hover{
     color: #000;
     font-family: 'Great Vibes', cursive;
     padding-left: 15px;
-    color: #DD2C00;
+    color: #2445aa;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
   }
   a{
     color: #000;
   }
   li:hover{
-    background-color: #DD2C00;
+    background-color: rgb(95, 120, 250);
     position: relative;
     bottom: 2px;
     border-bottom: 2px solid #FFD600;
@@ -347,7 +351,7 @@ height: 400px;
 .page-footer{
   color: #000;
   a{
-    color: #DD2C00;
+    color: #2445aa;
   }
   #social-icons-footer{
     margin-top: 20px;

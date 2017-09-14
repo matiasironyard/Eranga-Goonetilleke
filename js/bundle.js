@@ -14,6 +14,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
   componentDidMount(){
     $('.parallax').parallax();
   },
+
   render: function(){
     return (
       React.createElement("section", {id: "pages", className: "artist-page"}, /*wrapper div*/
@@ -49,19 +50,6 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
               )/*end about-par*/
             ), /*end about*/
 
-            React.createElement("div", {className: "divider hide-on-small-only "}), 
-
-            React.createElement("section", {id: "perfomance-imgs", className: "row"}, 
-              React.createElement("ul", {className: "performance-imgs-ul hide-on-small-only"}, 
-                React.createElement("li", {className: "performance-cards left-side"}
-                ), 
-                React.createElement("li", {className: "performance-cards middle-side"}
-                ), 
-                React.createElement("li", {className: "performance-cards right-side"}
-                )
-              )
-            ), 
-
             React.createElement("section", {id: "artist-video", className: "row"}, 
               React.createElement("div", {className: "video-container"}, 
                 React.createElement("iframe", {width: "853", height: "480", src: "https://www.youtube.com/embed/B9FiiY2Xkuk", frameBorder: "0", allowFullScreen: true})
@@ -73,13 +61,13 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                 React.createElement("div", {className: "card medium hoverable"}, 
                   React.createElement("div", {className: "card-image"}, 
                     React.createElement("img", {src: "./images/performing-1.jpg"}), 
-                    React.createElement("span", {className: "card-title"}, "Resume")
+                    React.createElement("span", {className: "card-title"}, "Performances")
                   ), 
                   React.createElement("div", {className: "card-content"}, 
-                    React.createElement("p", {id: "secondary-text"}, "Learn about Eranga's roles, concerts and more.")
+                    React.createElement("p", {id: "secondary-text"}, "Upcoming performances by Eranga Gooneteilleke.")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
-                    React.createElement("a", {href: "#", className: "red-text text-darken-2"}, "Learn More")
+                    React.createElement("a", {href: "#studio/performances", className: "blue-text text-darken-2"}, "Schedule")
                   )
                 )
               ), 
@@ -94,7 +82,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                     React.createElement("p", {id: "secondary-text"}, "Weekly lessons in voice, piano, audition preparation and music theory.")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
-                    React.createElement("a", {href: "#studio/", className: "red-text text-darken-2"}, "Learn More")
+                    React.createElement("a", {href: "#studio/", className: "blue-text text-darken-2"}, "Learn More")
                   )
                 )
               ), 
@@ -109,7 +97,7 @@ var HeaderContainer = React.createClass({displayName: "HeaderContainer",
                     React.createElement("p", {id: "secondary-text"}, "The latest student recitals, competitions and more!")
                   ), 
                   React.createElement("div", {className: "card-action"}, 
-                    React.createElement("a", {href: "#studio/", className: "red-text text-darken-2"}, "Learn More")
+                    React.createElement("a", {href: "#studio/announcements", className: "blue-text text-darken-2"}, "See Announcements")
                   )
                 )
               )
@@ -211,7 +199,7 @@ var Media= React.createClass({displayName: "Media",
         React.createElement("section", {id: "header", className: "row"}, 
           React.createElement("div", {className: "parallax-container"}, 
             React.createElement("div", {className: "parallax"}, 
-              React.createElement("img", {className: "parallax-img", src: "./images/eranga-piano-2-banner.jpeg"})
+              React.createElement("img", {className: "parallax-img", src: "./images/troyades.jpg"})
             ), 
             React.createElement("div", {id: "social-pane", className: "col l10 offset-l1 m10 offset-m1 s12 "}, 
               React.createElement("div", {id: "social-icons"}, 
@@ -251,8 +239,9 @@ var StudioGallery = React.createClass({displayName: "StudioGallery",
     var self = this;
     var pics = self.props.studioPics;
     var Images = pics.map(function(imgUrl){
+      var key = Math.random()
       return(
-        React.createElement("li", {key: imgUrl, className: "col l4"}, 
+        React.createElement("li", {key: key, className: "col l4"}, 
           React.createElement("img", {className: "materialboxed media-li responsive-img", height: "300", src: imgUrl})
         )
       )
@@ -282,8 +271,9 @@ var ArtistGallery = React.createClass({displayName: "ArtistGallery",
     var self = this;
     var pics = self.props.artistPics;
     var artist = pics.map(function(imgUrl){
+      var key = Math.random();
       return(
-        React.createElement("li", {key: imgUrl, className: "col l4"}, 
+        React.createElement("li", {key: key, className: "col l4"}, 
           React.createElement("img", {className: "materialboxed media-li img-responsive", height: "300", src: imgUrl})
         )
       )
@@ -321,8 +311,9 @@ var YoutubeGallery = React.createClass({displayName: "YoutubeGallery",
   render: function(){
     var self = this;
     var Youtube = youtube.map(function(video){
+      var key = Math.random();
       return(
-        React.createElement("li", {key: video.id, className: "col l6 m6 s12"}, 
+        React.createElement("li", {key: key, className: "col l6 m6 s12"}, 
             React.createElement("div", {className: "video-container media-li"}, 
               React.createElement("iframe", {width: "853", height: "480", src: video.url, frameBorder: "0", allowFullScreen: true})
             )
@@ -429,10 +420,19 @@ var announcements = require('../media/announcements.js').announcements;
 //############ CONTAINERS #########################/
 
 var Studio= React.createClass({displayName: "Studio",
+
+
   componentDidMount(){
     $('.parallax').parallax();
     $('.collapsible').collapsible();
     $('.slider').slider({height: '700px'});
+    if(window.location.hash === '#studio/performances'){
+      document.getElementById('performances').scrollIntoView();
+    } else if (window.location.hash === '#studio/announcements'){
+      document.getElementById('announcements').scrollIntoView();
+    } else {
+      document.getElementById('header').scrollIntoView()
+    }
   },
 
   render: function(){
@@ -513,7 +513,7 @@ var Studio= React.createClass({displayName: "Studio",
                   "It gives me great joy to help students discover and develop their gifts by providing them with healthy technique, tools to be a better performer, performing opportunities and inspiration!"
                   ), 
                   React.createElement("div", {className: "col l12 m12 s12"}, 
-                        React.createElement("img", {src: "./images/announcements-2.jpg", className: "responsive-img"})
+                        React.createElement("img", {src: "./images/inspire.jpg", className: "responsive-img", style: {"width": "100%"}})
                   )
 
                 )/*end about-par*/
@@ -523,28 +523,30 @@ var Studio= React.createClass({displayName: "Studio",
             React.createElement("section", {id: "announcements-pane", className: "row"}, 
               React.createElement("div", {className: "col l10 offset-l1 m12 s12"}, 
 
-                React.createElement("section", {id: "section", className: "row"}, 
-                  React.createElement("h3", {id: "headings"}, "Recitals"), 
+                React.createElement("section", {id: "performances", className: "row section performances scrollspy "}, 
+                  React.createElement("h3", {id: "headings"}, "Performances"), 
                   React.createElement("div", {className: "divider"}), 
                   React.createElement("div", {id: "recital-img", className: "col l6 m6"}, 
-                    React.createElement("img", {src: "./images/announcements-2.jpg", className: "responsive-img"}), 
-                      React.createElement("h6", {id: "primary-text"}, "About The Recital"), 
-                      React.createElement("p", {id: "secondary-text"}, "Come out for a wonderful evening of music performed by mine and Dr. Valerie MacPhail's talented students. They have worked hard throughout the semester and are ready to entertain you with their tunes!"), 
+                    React.createElement("img", {src: "./images/nooneisalone.jpg", style: {"width": "100%"}, className: "responsive-img"}), 
+                      React.createElement("h5", {id: "headings"}, "About The Recital"), 
+                      React.createElement("p", {id: "secondary-text"}, "Aimee Gans, mezzo-soprano & Eranga Goonetilleke, soprano, with Mildred Roche, piano."), 
+                      React.createElement("p", null, "We share some of the most beautiful, painful, hilarious, and precious moments of life with our families. Join us for a recital celebrating these relationships, with songs that will make you laugh, cry and remember that truly, no one is alone."), 
                       React.createElement("p", {id: "secondary-text"}, "Hope to see you all there!")
                   ), 
                   React.createElement("div", {id: "recital-details", className: "col l6 m6 s12"}, 
-                    React.createElement("h6", {id: "primary-text"}, "Past Recital"), React.createElement("span", {id: "secondary-text"}, "Goonetilleke and MacPhail Studio Recital"), 
-                    React.createElement("h6", {id: "primary-text"}, "Date"), React.createElement("span", {id: "secondary-text"}, "May 18, 2017"), 
-                    React.createElement("h6", {id: "primary-text"}, "Time"), React.createElement("span", {id: "secondary-text"}, "7:00pm-8:15pm"), 
+                    React.createElement("h6", {id: "primary-text"}, "Upcoming Recital"), 
+                    React.createElement("h4", {id: "headings"}, "No One Is Alone"), 
+                    React.createElement("h6", {id: "primary-text"}, "Date"), React.createElement("span", {id: "secondary-text"}, "Saturday, September 4th"), 
+                    React.createElement("h6", {id: "primary-text"}, "Time"), React.createElement("span", {id: "secondary-text"}, "4 P.M "), 
                     React.createElement("h6", {id: "primary-text"}, "Location"), 
                     React.createElement("p", {id: "secondary-text"}, "Daniel Recital Hall (Blackman music building), Converse College"), 
                     React.createElement("h6", {id: "primary-text"}, "Address"), 
                     React.createElement("p", {id: "secondary-text"}, React.createElement("a", {href: "https://goo.gl/maps/gWXjkR4yGfK2", target: "_blank"}, "580 E Main St, Spartanburg, SC 29302")), 
-                    React.createElement("iframe", {className: "location-map col l12 m12", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.017200099404!2d-81.9208842847609!3d34.956177580369776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8857758530859ce5%3A0xd21a2373b2e741f6!2sConverse+College!5e0!3m2!1sen!2sus!4v1494083872113", height: "300", frameBorder: "0", style: {border: 0}, allowfullscreen: true})
+                    React.createElement("iframe", {className: "location-map col l12 m12", src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.017200099404!2d-81.9208842847609!3d34.956177580369776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8857758530859ce5%3A0xd21a2373b2e741f6!2sConverse+College!5e0!3m2!1sen!2sus!4v1494083872113", height: "300", frameBorder: "0", style: {border: 0}, allowFullScreen: true})
                   )
                 ), /*end recital section row*/
 
-                React.createElement("section", {id: "section", className: "row"}, 
+                React.createElement("section", {id: "announcements", className: "row"}, 
                   React.createElement("h3", {id: "headings", className: "announcement"}, "Announcements"), 
                   React.createElement("div", {className: "divider"}), 
                   React.createElement("div", {id: "recital-details", className: "col l12"}, 
@@ -609,8 +611,9 @@ var Announcements = React.createClass({displayName: "Announcements",
   render: function(){
     var self = this;
     var myAnnouncements = announcements.map(function(announcement){
+      var key = Math.random();
       return (
-        React.createElement("div", {className: "col l6 "}, 
+        React.createElement("div", {className: "col l6 ", key: key}, 
           React.createElement("div", {key: announcement.name, id: "announcement-card ", className: "card"}, 
             React.createElement("div", {className: "card-image waves-effect waves-block waves-light"}, 
               React.createElement("img", {src: announcement.img, alt: "Cate Seegars", className: "activator"})
@@ -1007,9 +1010,12 @@ var AppRouter = Backbone.Router.extend({
   routes: {
     '': 'home',
     'studio/': 'studio',
+    'studio/performances': 'performances',
+    'studio/announcements': 'announcements',
     'media/': 'media',
     'contact/': 'contact'
   },
+
 
   home: function(){
   // console.log('hi index');
@@ -1020,7 +1026,20 @@ var AppRouter = Backbone.Router.extend({
 },
 
 studio: function(){
-console.log('hi studio');
+ReactDOM.render(
+  React.createElement(StudioContainer, {router: this}),
+  document.getElementById('app')
+  );
+},
+
+performances: function(){
+ReactDOM.render(
+  React.createElement(StudioContainer, {router: this}),
+  document.getElementById('app')
+  );
+},
+
+announcements: function(){
 ReactDOM.render(
   React.createElement(StudioContainer, {router: this}),
   document.getElementById('app')
@@ -1028,7 +1047,6 @@ ReactDOM.render(
 },
 
 media: function(){
-console.log('hi studio');
 ReactDOM.render(
   React.createElement(MediaContainer, {router: this}),
   document.getElementById('app')

@@ -5764,7 +5764,6 @@ button.close {
   box-sizing: border-box; }
 
 body {
-  background-image: url("../images/background-3.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -5773,10 +5772,10 @@ p {
   font-size: 16px; }
 
 .btn-floating i {
-  background-color: #DD2C00; }
+  background-color: #2445aa; }
 
 #primary-text {
-  line-height: 2;
+  line-height: 1.5;
   opacity: .87;
   font-size: 120%; }
 
@@ -5787,11 +5786,14 @@ p {
 
 #headings {
   font-family: 'Raleway', sans-serif;
-  color: #DD2C00; }
+  color: #2445aa; }
 
 #subheadings {
   font-family: 'Raleway', sans-serif;
   color: grey; }
+
+h1 {
+  color: #2445aa; }
 
 a:hover {
   text-decoration: none;
@@ -5823,12 +5825,12 @@ a:hover {
   color: #000;
   font-family: 'Great Vibes', cursive;
   padding-left: 15px;
-  color: #DD2C00;
+  color: #2445aa;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29); }
 .nav-wrapper a {
   color: #000; }
 .nav-wrapper li:hover {
-  background-color: #DD2C00;
+  background-color: #5f78fa;
   position: relative;
   bottom: 2px;
   border-bottom: 2px solid #FFD600;
@@ -6016,10 +6018,10 @@ a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 30px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 30px; }
+          justify-content: flex-start; }
 
 .media-ul {
   display: -webkit-box;
@@ -6027,9 +6029,8 @@ a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  -ms-flex-line-pack: distribute;
+      align-content: space-around; }
 
 /*********************/
 .media-li {
@@ -6044,9 +6045,38 @@ a:hover {
 .page-footer {
   color: #000; }
   .page-footer a {
-    color: #DD2C00; }
+    color: #2445aa; }
   .page-footer #social-icons-footer {
     margin-top: 20px; }
     .page-footer #social-icons-footer i {
       font-size: 1.6rem; }
+
+/*****************loader**************/
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
 /*# sourceMappingURL=app.css.map */

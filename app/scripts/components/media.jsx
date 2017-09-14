@@ -109,8 +109,9 @@ var StudioGallery = React.createClass({
     var self = this;
     var pics = self.props.studioPics;
     var Images = pics.map(function(imgUrl){
+      var key = Math.random()
       return(
-        <li key={imgUrl} className="col l4">
+        <li key={key} className="col l4">
           <img className="materialboxed media-li responsive-img" height="300" src={imgUrl} />
         </li>
       )
@@ -140,8 +141,9 @@ var ArtistGallery = React.createClass({
     var self = this;
     var pics = self.props.artistPics;
     var artist = pics.map(function(imgUrl){
+      var key = Math.random();
       return(
-        <li key={imgUrl} className="col l4">
+        <li key={key} className="col l4">
           <img className="materialboxed media-li img-responsive" height="300" src={imgUrl}/>
         </li>
       )
@@ -179,8 +181,9 @@ var YoutubeGallery = React.createClass({
   render: function(){
     var self = this;
     var Youtube = youtube.map(function(video){
+      var key = Math.random();
       return(
-        <li key={video.id}  className="col l6 m6 s12">
+        <li key={key}  className="col l6 m6 s12">
             <div className="video-container media-li">
               <iframe width="853" height="480" src={video.url} frameBorder="0" allowFullScreen></iframe>
             </div>

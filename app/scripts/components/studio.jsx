@@ -11,10 +11,19 @@ var announcements = require('../media/announcements.js').announcements;
 //############ CONTAINERS #########################/
 
 var Studio= React.createClass({
+
+
   componentDidMount(){
     $('.parallax').parallax();
     $('.collapsible').collapsible();
     $('.slider').slider({height: '700px'});
+    if(window.location.hash === '#studio/performances'){
+      document.getElementById('performances').scrollIntoView();
+    } else if (window.location.hash === '#studio/announcements'){
+      document.getElementById('announcements').scrollIntoView();
+    } else {
+      document.getElementById('header').scrollIntoView()
+    }
   },
 
   render: function(){
@@ -105,29 +114,30 @@ var Studio= React.createClass({
             <section id="announcements-pane" className="row">
               <div className="col l10 offset-l1 m12 s12">
 
-                <section id="section" className="row">
+                <section id="performances" className="row section performances scrollspy " >
                   <h3 id="headings">Recitals</h3>
                   <div className="divider"/>
                   <div id="recital-img" className= "col l6 m6">
-                    <img src="./images/nooneisalone.jpg" className="responsive-img"/>
-                      <h6 id="primary-text">About The Recital</h6>
+                    <img src="./images/nooneisalone.jpg" style={{"width": "100%"}} className="responsive-img"/>
+                      <h5 id="headings">About The Recital</h5>
                       <p id="secondary-text">Aimee Gans, mezzo-soprano & Eranga Goonetilleke, soprano, with Mildred Roche, piano.</p>
                       <p>We share some of the most beautiful, painful, hilarious, and precious moments of life with our families. Join us for a recital celebrating these relationships, with songs that will make you laugh, cry and remember that truly, no one is alone.</p>
                       <p id="secondary-text">Hope to see you all there!</p>
                   </div>
-                  <div id="recital-details" className="col l6 m6 s12">
-                    <h6 id="primary-text">Upcoming Recital</h6><span id="secondary-text">No One Is Alone</span>
+                  <div id="recital-details" className="col l6 m6 s12" >
+                    <h6 id="primary-text">Upcoming Recital</h6>
+                    <h4 id="headings">No One Is Alone</h4>
                     <h6 id="primary-text">Date</h6><span id="secondary-text">Saturday, September 4th</span>
                     <h6 id="primary-text">Time</h6><span id="secondary-text">4 P.M </span>
                     <h6 id="primary-text">Location</h6>
                     <p id="secondary-text">Daniel Recital Hall (Blackman music building), Converse College</p>
                     <h6 id="primary-text">Address</h6>
                     <p id="secondary-text"><a href="https://goo.gl/maps/gWXjkR4yGfK2" target="_blank">580 E Main St, Spartanburg, SC 29302</a></p>
-                    <iframe className= "location-map col l12 m12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.017200099404!2d-81.9208842847609!3d34.956177580369776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8857758530859ce5%3A0xd21a2373b2e741f6!2sConverse+College!5e0!3m2!1sen!2sus!4v1494083872113"  height="300" frameBorder="0" style={{border: 0 }} allowfullscreen></iframe>
+                    <iframe className= "location-map col l12 m12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.017200099404!2d-81.9208842847609!3d34.956177580369776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8857758530859ce5%3A0xd21a2373b2e741f6!2sConverse+College!5e0!3m2!1sen!2sus!4v1494083872113"  height="300" frameBorder="0" style={{border: 0 }} allowFullScreen></iframe>
                   </div>
                 </section>{/*end recital section row*/}
 
-                <section id="section" className="row">
+                <section id="announcements" className="row">
                   <h3 id="headings" className="announcement">Announcements</h3>
                   <div className="divider"/>
                   <div id="recital-details" className="col l12">
@@ -192,8 +202,9 @@ var Announcements = React.createClass({
   render: function(){
     var self = this;
     var myAnnouncements = announcements.map(function(announcement){
+      var key = Math.random();
       return (
-        <div className="col l6 ">
+        <div className="col l6 " key={key}>
           <div key={announcement.name} id="announcement-card " className="card">
             <div className="card-image waves-effect waves-block waves-light">
               <img src={announcement.img} alt="Cate Seegars" className="activator" />

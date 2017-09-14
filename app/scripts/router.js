@@ -16,9 +16,12 @@ var AppRouter = Backbone.Router.extend({
   routes: {
     '': 'home',
     'studio/': 'studio',
+    'studio/performances': 'performances',
+    'studio/announcements': 'announcements',
     'media/': 'media',
     'contact/': 'contact'
   },
+
 
   home: function(){
   // console.log('hi index');
@@ -29,7 +32,20 @@ var AppRouter = Backbone.Router.extend({
 },
 
 studio: function(){
-console.log('hi studio');
+ReactDOM.render(
+  React.createElement(StudioContainer, {router: this}),
+  document.getElementById('app')
+  );
+},
+
+performances: function(){
+ReactDOM.render(
+  React.createElement(StudioContainer, {router: this}),
+  document.getElementById('app')
+  );
+},
+
+announcements: function(){
 ReactDOM.render(
   React.createElement(StudioContainer, {router: this}),
   document.getElementById('app')
@@ -37,7 +53,6 @@ ReactDOM.render(
 },
 
 media: function(){
-console.log('hi studio');
 ReactDOM.render(
   React.createElement(MediaContainer, {router: this}),
   document.getElementById('app')

@@ -12,6 +12,7 @@ var HeaderContainer = React.createClass({
   componentDidMount(){
     $('.parallax').parallax();
   },
+
   render: function(){
     return (
       <section  id="pages" className="artist-page">{/*wrapper div*/}
@@ -47,19 +48,6 @@ var HeaderContainer = React.createClass({
               </article>{/*end about-par*/}
             </section>{/*end about*/}
 
-            <div className="divider hide-on-small-only "/>
-
-            <section id="perfomance-imgs" className="row">
-              <ul className="performance-imgs-ul hide-on-small-only">
-                <li className="performance-cards left-side">
-                </li>
-                <li className="performance-cards middle-side">
-                </li>
-                <li  className="performance-cards right-side">
-                </li>
-              </ul>
-            </section>
-
             <section id="artist-video" className="row">
               <div className="video-container">
                 <iframe width="853" height="480" src="https://www.youtube.com/embed/B9FiiY2Xkuk" frameBorder="0" allowFullScreen></iframe>
@@ -71,13 +59,13 @@ var HeaderContainer = React.createClass({
                 <div className="card medium hoverable">
                   <div className="card-image">
                     <img src="./images/performing-1.jpg"/>
-                    <span className="card-title">Resume</span>
+                    <span className="card-title">Performances</span>
                   </div>
                   <div className="card-content">
-                    <p id="secondary-text">Learn about Eranga's roles, concerts and more.</p>
+                    <p id="secondary-text">Upcoming performances by Eranga Gooneteilleke.</p>
                   </div>
                   <div className="card-action">
-                    <a href="#" className="red-text text-darken-2">Learn More</a>
+                    <a href="#studio/performances" className="red-text text-darken-2">Schedule</a>
                   </div>
                 </div>
               </div>
@@ -107,7 +95,7 @@ var HeaderContainer = React.createClass({
                     <p id="secondary-text">The latest student recitals, competitions and more!</p>
                   </div>
                   <div className="card-action">
-                    <a href="#studio/" className="red-text text-darken-2">Learn More</a>
+                    <a href="#studio/announcements" className="red-text text-darken-2">See Announcements</a>
                   </div>
                 </div>
               </div>

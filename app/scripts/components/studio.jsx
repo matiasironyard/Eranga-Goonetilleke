@@ -109,15 +109,16 @@ var Studio= React.createClass({
                   <h3 id="headings">Recitals</h3>
                   <div className="divider"/>
                   <div id="recital-img" className= "col l6 m6">
-                    <img src="./images/announcements-2.jpg" className="responsive-img"/>
+                    <img src="./images/nooneisalone.jpg" className="responsive-img"/>
                       <h6 id="primary-text">About The Recital</h6>
-                      <p id="secondary-text">Come out for a wonderful evening of music performed by mine and Dr. Valerie MacPhail's talented students. They have worked hard throughout the semester and are ready to entertain you with their tunes!</p>
+                      <p id="secondary-text">Aimee Gans, mezzo-soprano & Eranga Goonetilleke, soprano, with Mildred Roche, piano.</p>
+                      <p>We share some of the most beautiful, painful, hilarious, and precious moments of life with our families. Join us for a recital celebrating these relationships, with songs that will make you laugh, cry and remember that truly, no one is alone.</p>
                       <p id="secondary-text">Hope to see you all there!</p>
                   </div>
                   <div id="recital-details" className="col l6 m6 s12">
-                    <h6 id="primary-text">Past Recital</h6><span id="secondary-text">Goonetilleke and MacPhail Studio Recital</span>
-                    <h6 id="primary-text">Date</h6><span id="secondary-text">May 18, 2017</span>
-                    <h6 id="primary-text">Time</h6><span id="secondary-text">7:00pm-8:15pm</span>
+                    <h6 id="primary-text">Upcoming Recital</h6><span id="secondary-text">No One Is Alone</span>
+                    <h6 id="primary-text">Date</h6><span id="secondary-text">Saturday, September 4th</span>
+                    <h6 id="primary-text">Time</h6><span id="secondary-text">4 P.M </span>
                     <h6 id="primary-text">Location</h6>
                     <p id="secondary-text">Daniel Recital Hall (Blackman music building), Converse College</p>
                     <h6 id="primary-text">Address</h6>

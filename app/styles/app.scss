@@ -40,7 +40,7 @@ p{
 }
 #headings{
   font-family: 'Raleway', sans-serif;
-  color: #2445aa,
+  color: #2445aa;
 }
 #subheadings{
   font-family: 'Raleway', sans-serif;
@@ -49,6 +49,7 @@ p{
 
 h1{
   color: #2445aa;
+  padding: 0 0 0 30px;
 }
 
 a:hover{
@@ -85,6 +86,9 @@ a:hover{
     padding-left: 15px;
     color: #2445aa;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+    width: 100%;
+    position: relative;
+  //  left: 90%;
   }
   a{
     color: #000;
@@ -103,6 +107,20 @@ a:hover{
       color: #fff;
     }
   }
+}
+
+nav #collapse-mod {
+  float: right;
+  position: relative;
+  z-index: 1;
+  height: 56px;
+  margin: 0 18px;
+  bottom: 100%;
+}
+
+.desk-links{
+  position: relative;
+    bottom: 100%;
 }
 
 /******** SOCIAL **********/
@@ -149,15 +167,16 @@ height: 400px;
   position: relative;
   bottom: 100px;
   background-color: #fff;
+  padding: 0;
   #title{
     // text-transform: uppercase;
     // font-size: 80px;
     top: 20px;
     font-family: 'Great Vibes', cursive;
-    text-align: center;
     background-color: #fff;
     color: #DD2C00;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+    margin-top: 30px;
 
     span{
       font-size: 25px;
@@ -169,19 +188,21 @@ height: 400px;
   }
   /*ABOUT SECTION*/
   #about{
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin: 0 0 40px 0;
     #about-img{
       border-radius: 100%;
-      height: 25vw;
-      width: 25vw;
-      // height: 300px;
-      background-image: url('../images/headshot-1.jpg');
+      height: 25rem;
+      width: 25rem;
+      background-image: url(../images/headshot-1.jpg);
       background-position: top;
       background-size: cover;
-      margin-right: 35px;
-      margin-top: 80px;
-      margin-bottom: 20px;
+      margin-top: 50px;
+      /* margin-bottom: 20px; */
+      position: relative;
+      top: 50px;
+    }
+    .about-text{
+      margin: 15px;
     }
     #studio-about-img{
       border-radius: 100%;
@@ -197,7 +218,7 @@ height: 400px;
       filter: brightness(2);
     }
     #about-par{
-
+      //
     }
     #about-reviews{
       // top: -150px;
@@ -232,8 +253,10 @@ height: 400px;
   }
 /*VIDEO SECTION*/
 #artist-video{
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
+
 
   /************LINK CARDS PANE **************/
   #link-cards-pane{
@@ -319,6 +342,15 @@ height: 400px;
   }
 }
 
+.modal-overlay{
+  z-index: -1;
+}
+
+/*RECITALS*/
+#recital-details{
+  padding: 30px;
+}
+
 
 /********** GALLERY ****************/
 /**ADDED when trying flex**/
@@ -336,7 +368,7 @@ height: 400px;
 }
 /*********************/
 .media-li{
-  margin: 20px;
+  margin: 20px 0 20px 0;
 
   img{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
@@ -346,12 +378,34 @@ height: 400px;
    width: 300px;
 }
 
-/********** FOOTER ****************/
+/**********MEDIA********************/
 
-.page-footer{
+#video-row{
+  padding: 30px;
+}
+/********** FOOTER ****************/
+#footer-row{
+  margin-bottom: 0;
+  #footer-col{
+    padding-top: 50px;
+  }
+}
+.footer{
   color: #000;
+  background-color: #f1f9ff;
+  font-family: 'Raleway', sans-serif;
   a{
     color: #2445aa;
+  }
+  .footer-col{
+    position: relative;
+    bottom: 50px;
+    padding-top: 50px;
+    background-color:#f1f9ff;
+    box-shadow: 0px -6px 4px -4px rgba(0, 0, 0, 0.63);
+    .copyright{
+      padding-top: 30px;
+    }
   }
   #social-icons-footer{
     margin-top: 20px;

@@ -12,17 +12,18 @@ var announcements = require('../media/announcements.js').announcements;
 
 var Studio= React.createClass({
 
-
   componentDidMount(){
     $('.parallax').parallax();
     $('.collapsible').collapsible();
     $('.slider').slider({height: '700px'});
+    $('.modal').modal();
     if(window.location.hash === '#studio/performances'){
-      document.getElementById('performances').scrollIntoView();
+      //document.getElementById('performances').scrollIntoView(true, {passive: true});
+      //document.getElementById('performances').scrollTop = 200;
     } else if (window.location.hash === '#studio/announcements'){
-      document.getElementById('announcements').scrollIntoView();
+      //document.getElementById('announcements').scrollIntoView(true, {passive: true});
     } else {
-      document.getElementById('header').scrollIntoView()
+      //document.getElementById('header').scrollIntoView({passive: true});
     }
   },
 
@@ -159,7 +160,7 @@ var Reviews = React.createClass({
   componentDidMount: function(){
     $('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      opacity: 0, // Opacity of modal background
+    //  opacity: .5, // Opacity of modal background
       inDuration: 200, // Transition in duration
       outDuration: 200, // Transition out duration
       startingTop: '10%', // Starting top style attribute
@@ -172,8 +173,8 @@ var Reviews = React.createClass({
       var id = '#'+reviews.id;
       return (
         <li key={reviews.id} id="review-card" className="col l4 m4 s11 valign">
-          <a href={id}>
-            <p id="review-title" className="">{reviews.title}...</p>
+          <a className="modal-trigger" href={id}>
+            <p id="review-title">{reviews.title}...</p>
           </a>
             <div id={reviews.id} className="modal bottom-sheet">
               <div className="modal-content col l8 offset-l2">

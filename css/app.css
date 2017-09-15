@@ -5793,7 +5793,8 @@ p {
   color: grey; }
 
 h1 {
-  color: #2445aa; }
+  color: #2445aa;
+  padding: 0 0 0 30px; }
 
 a:hover {
   text-decoration: none;
@@ -5826,7 +5827,9 @@ a:hover {
   font-family: 'Great Vibes', cursive;
   padding-left: 15px;
   color: #2445aa;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29); }
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+  width: 100%;
+  position: relative; }
 .nav-wrapper a {
   color: #000; }
 .nav-wrapper li:hover {
@@ -5843,6 +5846,18 @@ a:hover {
     opacity: 1; } }
   .nav-wrapper li:hover a {
     color: #fff; }
+
+nav #collapse-mod {
+  float: right;
+  position: relative;
+  z-index: 1;
+  height: 56px;
+  margin: 0 18px;
+  bottom: 100%; }
+
+.desk-links {
+  position: relative;
+  bottom: 100%; }
 
 /******** SOCIAL **********/
 #social-pane {
@@ -5900,6 +5915,7 @@ a:hover {
   position: relative;
   bottom: 100px;
   background-color: #fff;
+  padding: 0;
   /*ABOUT SECTION*/
   /*PERFORMANCE PICS SECTION*/
   /*VIDEO SECTION*/
@@ -5907,10 +5923,10 @@ a:hover {
   #content #title {
     top: 20px;
     font-family: 'Great Vibes', cursive;
-    text-align: center;
     background-color: #fff;
     color: #DD2C00;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29); }
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+    margin-top: 30px; }
     #content #title span {
       font-size: 25px;
       position: relative;
@@ -5918,18 +5934,20 @@ a:hover {
       left: 130px;
       font-family: 'Raleway', sans-serif; }
   #content #about {
-    margin-top: 50px;
-    margin-bottom: 40px; }
+    margin: 0 0 40px 0; }
     #content #about #about-img {
       border-radius: 100%;
-      height: 25vw;
-      width: 25vw;
-      background-image: url("../images/headshot-1.jpg");
+      height: 25rem;
+      width: 25rem;
+      background-image: url(../images/headshot-1.jpg);
       background-position: top;
       background-size: cover;
-      margin-right: 35px;
-      margin-top: 80px;
-      margin-bottom: 20px; }
+      margin-top: 50px;
+      /* margin-bottom: 20px; */
+      position: relative;
+      top: 50px; }
+    #content #about .about-text {
+      margin: 15px; }
     #content #about #studio-about-img {
       border-radius: 100%;
       height: 25vw;
@@ -5968,7 +5986,8 @@ a:hover {
     #content #perfomance-imgs .right-side {
       background-image: url("../images/performance-3.jpg"); }
   #content #artist-video {
-    margin-top: 100px; }
+    margin-top: 50px;
+    margin-bottom: 0; }
   #content #link-cards-pane #link-cards {
     padding: 5px;
     background-size: cover;
@@ -6010,6 +6029,13 @@ a:hover {
     color: #DD2C00;
     margin-bottom: 10%; }
 
+.modal-overlay {
+  z-index: -1; }
+
+/*RECITALS*/
+#recital-details {
+  padding: 30px; }
+
 /********** GALLERY ****************/
 /**ADDED when trying flex**/
 #gallery-row {
@@ -6034,21 +6060,40 @@ a:hover {
 
 /*********************/
 .media-li {
-  margin: 20px; }
+  margin: 20px 0 20px 0; }
   .media-li img {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29); }
 
 .responsive-img {
   width: 300px; }
 
+/**********MEDIA********************/
+#video-row {
+  padding: 30px; }
+
 /********** FOOTER ****************/
-.page-footer {
-  color: #000; }
-  .page-footer a {
+#footer-row {
+  margin-bottom: 0; }
+  #footer-row #footer-col {
+    padding-top: 50px; }
+
+.footer {
+  color: #000;
+  background-color: #f1f9ff;
+  font-family: 'Raleway', sans-serif; }
+  .footer a {
     color: #2445aa; }
-  .page-footer #social-icons-footer {
+  .footer .footer-col {
+    position: relative;
+    bottom: 50px;
+    padding-top: 50px;
+    background-color: #f1f9ff;
+    box-shadow: 0px -6px 4px -4px rgba(0, 0, 0, 0.63); }
+    .footer .footer-col .copyright {
+      padding-top: 30px; }
+  .footer #social-icons-footer {
     margin-top: 20px; }
-    .page-footer #social-icons-footer i {
+    .footer #social-icons-footer i {
       font-size: 1.6rem; }
 
 /*****************loader**************/
@@ -6078,4 +6123,5 @@ a:hover {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
+
 /*# sourceMappingURL=app.css.map */

@@ -23,7 +23,10 @@ var NavFooter = React.createClass({
         <div>
           <nav className="white navbar-fixed-top">
             <div className="nav-wrapper">
-              <a href="" className="brand-logo">Eranga Goonetilleke</a>
+              <a href="" className="brand-logo">
+                <span className="brand-name">Eranga Goonetilleke</span>
+                <span className="brand-tag">Soprano</span>
+                </a>
               <a href="" data-activates="mobile-demo" className="button-collapse" id="collapse-mod"><i className="material-icons">menu</i></a>
               <ul className="right hide-on-med-and-down desk-links">
                 <li className="fill"><a href="">Artist</a></li>
@@ -31,8 +34,6 @@ var NavFooter = React.createClass({
                 <li className="fill"><a href="#media/">Media</a></li>
               </ul>
               <ul className="side-nav" id="mobile-demo">
-                <li><a href="" className="brand-logo">Eranga Goonetilleke</a></li>
-                <li><hr/></li>
                 <li><a href="">Artist</a></li>
                 <li><a href="#studio/">Studio</a></li>
                 <li><a href="#media/">Media</a></li>
@@ -48,7 +49,7 @@ var NavFooter = React.createClass({
 
         <footer className="footer row" id="footer-row">
           <div className="col l10 offset-l1 s12 footer-col" id="footer-col">
-            <div className="col l4 offset-l2 s9">
+            <div className="col m4 offset-m4 s12">
               <h5 className="grey-text text-darken-3">Contact me!</h5>
                 <div id="social-icons-footer"className="row">
                     <div className="col m2 s2"><a className="social-button" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></div>
@@ -59,14 +60,14 @@ var NavFooter = React.createClass({
                   </div>
                 </div>
             </div>
-            <div className="col l4 offset-l2 s3">
+            {/*<div className="col m4 offset-m4 s3">
               <h5 className="grey-text text-darken-3">Links</h5>
               <ul>
                 <div id="footer-links"><a className="grey-text text-darken-3" href="">Artist</a></div>
                 <div id="footer-links"><a className="grey-text text-darken-3" href="#studio/">Studio</a></div>
                 <div id="footer-links"><a className="grey-text text-darken-3" href="#media/">Media</a></div>
               </ul>
-            </div>
+            </div>*/}
             <div className="col l12 s12 copyright">
               <div className="row grey-text text-darken-2 center-align">
               © 2017 Eranga Goonetilleke

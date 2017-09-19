@@ -19,6 +19,7 @@ body{
   //background: linear-gradient(135deg, rgba(137,230,225,1) 0%, rgba(217,217,104,1) 60%, rgba(123,210,160,1) 84%, rgba(60,205,198,1) 100%);
   background-size: cover;
   background-repeat: no-repeat;
+  background: linear-gradient(45deg, #4378a7 0%,#355f8b 31%,#072d59 100%);
 }
 
 p{
@@ -74,20 +75,38 @@ a:hover{
 /********** HEADER ****************/
 #header{
   .parallax-container{
-    height: 800px;
+    height: 600px;
   }
 }
 /******** NAV **********/
 .nav-wrapper{
   // background: #fff;
+  ul{
+  //  top: 5px;
+    //position: relative;
+  }
+  .fill a{
+    border-right: 1px solid rgba(63, 81, 181, 0.52);
+    border-width: 2px;
+    line-height: 50px;
+  }
   .brand-logo{
-    color: #000;
-    font-family: 'Great Vibes', cursive;
-    padding-left: 15px;
-    color: #2445aa;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
     width: 100%;
-    position: relative;
+    .brand-name{
+      font-family: 'Great Vibes', cursive;
+      padding-left: 15px;
+      color: #2445aa;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+      position: relative;
+    }
+    .brand-tag{
+      color: red;
+      font-family: 'Raleway', sans-serif;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+      margin: 0 0 0 15px;
+      font-size: 18px;
+    }
+
   //  left: 90%;
   }
   a{
@@ -97,8 +116,9 @@ a:hover{
     background-color: rgb(95, 120, 250);
     position: relative;
     bottom: 2px;
-    border-bottom: 2px solid #FFD600;
+    border-bottom: 4px solid #FFD600;
     animation: fadein 1s;
+    padding-bottom: -5px;
     @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -115,12 +135,13 @@ nav #collapse-mod {
   z-index: 1;
   height: 56px;
   margin: 0 18px;
-  bottom: 100%;
+  //bottom: 100%;
 }
 
 .desk-links{
-  position: relative;
-    bottom: 100%;
+//  position: relative;
+ //bottom: 100%;
+ border-right: 1px solid grey;
 }
 
 /******** SOCIAL **********/
@@ -130,7 +151,7 @@ nav #collapse-mod {
 justify-content: flex-end;
 align-items: center;
 position: relative;
-top: 25%;
+top: 15%;
 height: 400px;
 }
 #social-icons{
@@ -189,20 +210,23 @@ height: 400px;
   /*ABOUT SECTION*/
   #about{
     margin: 0 0 40px 0;
+    #title{
+      text-align: center;
+    }
+    .about-text{
+      margin: 15px;
+    }
     #about-img{
       border-radius: 100%;
       height: 25rem;
       width: 25rem;
-      background-image: url(../images/headshot-1.jpg);
+      background-image: url(../images/troyades.jpg);
       background-position: top;
       background-size: cover;
-      margin-top: 50px;
+      //margin-top: 50px;
       /* margin-bottom: 20px; */
       position: relative;
-      top: 50px;
-    }
-    .about-text{
-      margin: 15px;
+      //top: 50px;
     }
     #studio-about-img{
       border-radius: 100%;
@@ -388,11 +412,12 @@ height: 400px;
   margin-bottom: 0;
   #footer-col{
     padding-top: 50px;
+    text-align: center;
   }
 }
 .footer{
   color: #000;
-  background-color: #f1f9ff;
+  background-color: #003d6a;
   font-family: 'Raleway', sans-serif;
   a{
     color: #2445aa;
@@ -401,14 +426,18 @@ height: 400px;
     position: relative;
     bottom: 50px;
     padding-top: 50px;
-    background-color:#f1f9ff;
-    box-shadow: 0px -6px 4px -4px rgba(0, 0, 0, 0.63);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px -1px 5px 0px rgba(0, 0, 0, 0.45);
     .copyright{
       padding-top: 30px;
     }
   }
   #social-icons-footer{
     margin-top: 20px;
+    display: flex;
+    .col{
+      margin: 0 auto;
+    }
     i{
       font-size: 1.6rem;
     }

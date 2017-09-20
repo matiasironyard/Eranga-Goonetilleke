@@ -83,7 +83,7 @@ var Studio= React.createClass({
               <Reviews/>
             </div>
             <section id="about" className="row">
-              <article id="about-description" className="col l10 offset-l1">
+              <article id="about-description" className="col">
                 <div id="about-par"className="col l5">
                   <div id="studio-about-img" className="col l4 hide-on-med-and-down"/>
                   <div className="col l12 m12 s12">
@@ -113,7 +113,7 @@ var Studio= React.createClass({
             </section>{/*end studio-pane*/}
 
             <section id="announcements-pane" className="row">
-              <div className="col l10 offset-l1 m12 s12">
+              <div className="col">
 
                 <section id="performances" className="row section performances scrollspy " >
                   <h3 id="headings">Performances</h3>
@@ -139,9 +139,9 @@ var Studio= React.createClass({
                 </section>{/*end recital section row*/}
 
                 <section id="announcements" className="row">
-                  <h3 id="headings" className="announcement">Announcements</h3>
+                  <h3 id="headings" className="announcement">Student Achievements</h3>
                   <div className="divider"/>
-                  <div id="recital-details" className="col l12">
+                  <div id="recital-details" className="col">
                     <Announcements/>
                   </div>
                 </section>{/*end announcement section row*/}

@@ -217,6 +217,7 @@ nav #collapse-mod {
     color: #DD2C00;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.29);
     margin-top: 30px;
+    text-align: center;
 
     span {
       font-size: 25px;
@@ -228,11 +229,9 @@ nav #collapse-mod {
   }
   /*ABOUT SECTION*/
   #about {
-    margin: 0 0 40px;
+    //margin: 0 0 40px;
+    margin-bottom: 0px;
 
-    #title {
-      text-align: center;
-    }
 
     .about-row {
       display: flex;

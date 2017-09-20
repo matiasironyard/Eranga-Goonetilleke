@@ -1,20 +1,15 @@
-
 // Bootstrap Variables
-$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-
-// Import Bootstrap
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/'; // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
 }
-
 //********* GENERAL ***************/
 
-body{
+body {
   //background-image: url('../images/background-3.jpg');
   //background: linear-gradient(135deg, rgba(137,230,225,1) 0%, rgba(217,217,104,1) 60%, rgba(123,210,160,1) 84%, rgba(60,205,198,1) 100%);
   background-size: cover;
@@ -22,97 +17,114 @@ body{
   background: linear-gradient(45deg, #4378a7 0%,#355f8b 31%,#072d59 100%);
 }
 
-p{
+p {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
 }
-.btn-floating i{
+
+.btn-floating i {
   background-color: rgb(36, 69, 170);
 }
-#primary-text{
+
+#primary-text {
   line-height: 1.5;
-  opacity: .87;
+  opacity: 0.87;
   font-size: 120%;
 }
-#secondary-text{
+
+#secondary-text {
   line-height: 1.5;
-  opacity: .54;
+  opacity: 0.54;
   font-size: 110%;
 }
-#headings{
+
+#headings {
   font-family: 'Raleway', sans-serif;
   color: #2445aa;
 }
-#subheadings{
+
+#subheadings {
   font-family: 'Raleway', sans-serif;
   color: grey;
 }
 
-h1{
+h1 {
   color: #2445aa;
   padding: 0 0 0 30px;
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
-  text-shadow: 0px 1px 1px rgba(107, 98, 98, 0.5);
+  text-shadow: 0 1px 1px rgba(107, 98, 98, 0.5);
 }
 
-.divider{
+.divider {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-#pages{
+#pages {
   animation: fadein 1s;
   @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 }
-
-
 /********** HEADER ****************/
-#header{
-  .parallax-container{
+#header {
+  .parallax-container {
     height: 600px;
   }
 }
 /******** NAV **********/
-.nav-wrapper{
+.nav-wrapper {
   // background: #fff;
-  ul{
-  //  top: 5px;
+  ul {
+    //  top: 5px;
     //position: relative;
   }
-  .fill a{
-    border-right: 1px solid rgba(63, 81, 181, 0.52);
+
+  li a {
     border-width: 2px;
     line-height: 50px;
+    border-right: 1px solid rgba(63, 81, 181, 0.52);
   }
-  .brand-logo{
-    width: 100%;
-    .brand-name{
+
+  .last-child {
+    border-right: none;
+  }
+
+  .brand-logo {
+    width: 80%;
+
+    .brand-name {
       font-family: 'Great Vibes', cursive;
       padding-left: 15px;
       color: #2445aa;
-      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.29);
       position: relative;
     }
-    .brand-tag{
+
+    .brand-tag {
       color: red;
       font-family: 'Raleway', sans-serif;
-      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+      //text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
       margin: 0 0 0 15px;
       font-size: 18px;
     }
-
-  //  left: 90%;
+    //  left: 90%;
   }
-  a{
+
+  a {
     color: #000;
   }
-  li:hover{
+
+  li:hover {
     background-color: rgb(95, 120, 250);
     position: relative;
     bottom: 2px;
@@ -120,10 +132,16 @@ a:hover{
     animation: fadein 1s;
     padding-bottom: -5px;
     @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
-    a{
+
+    a {
       color: #fff;
     }
   }
@@ -138,68 +156,69 @@ nav #collapse-mod {
   //bottom: 100%;
 }
 
-.desk-links{
-//  position: relative;
- //bottom: 100%;
- border-right: 1px solid grey;
+.desk-links {
+  position: relative;
+  top: 5px;
+  right: 30px;
 }
-
 /******** SOCIAL **********/
-
-#social-pane{
+#social-pane {
   display: flex;
-justify-content: flex-end;
-align-items: center;
-position: relative;
-top: 15%;
-height: 400px;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  top: 15%;
+  height: 400px;
 }
-#social-icons{
+
+#social-icons {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  ul{
+
+  ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    li{
+
+    li {
       color: #fff;
       font-size: 30px;
       margin-bottom: 20px;
-      a{
+
+      a {
         background-color: #DD2C00;
       }
     }
   }
 }
-
 /******** MAIN ***************/
-.main{
+.main {
   // background-image: url('../images/background-1.jpg');
   // background-size: cover;
   // background-repeat: no-repeat;
   margin-top: -20px;
 }
-
 /******** ARTIST PAGE CONTENT **********/
-#content{
+#content {
   z-index: 1;
   position: relative;
   bottom: 100px;
   background-color: #fff;
   padding: 0;
-  #title{
+
+  #title {
     // text-transform: uppercase;
     // font-size: 80px;
     top: 20px;
     font-family: 'Great Vibes', cursive;
     background-color: #fff;
     color: #DD2C00;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.29);
     margin-top: 30px;
 
-    span{
+    span {
       font-size: 25px;
       position: relative;
       bottom: 80px;
@@ -208,27 +227,40 @@ height: 400px;
     }
   }
   /*ABOUT SECTION*/
-  #about{
-    margin: 0 0 40px 0;
-    #title{
+  #about {
+    margin: 0 0 40px;
+
+    #title {
       text-align: center;
     }
-    .about-text{
-      margin: 15px;
+
+    .about-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .about-text {
+        //margin: 15px;
+        padding: 30px;
+      }
+
+      #about-img {
+        margin: 0 auto;
+        border-radius: 100%;
+        height: 25rem;
+        width: 25rem;
+        background-image: url("../images/troyades.jpg");
+        background-position: top;
+        background-size: cover;
+        //margin-top: 50px;
+        /* margin-bottom: 20px; */
+        position: relative;
+        //top: 50px;
+      }
     }
-    #about-img{
-      border-radius: 100%;
-      height: 25rem;
-      width: 25rem;
-      background-image: url(../images/troyades.jpg);
-      background-position: top;
-      background-size: cover;
-      //margin-top: 50px;
-      /* margin-bottom: 20px; */
-      position: relative;
-      //top: 50px;
-    }
-    #studio-about-img{
+
+    #studio-about-img {
       border-radius: 100%;
       height: 25vw;
       width: 25vw;
@@ -241,23 +273,34 @@ height: 400px;
       margin-bottom: 20px;
       filter: brightness(2);
     }
-    #about-par{
+
+    #about-par {
       //
     }
-    #about-reviews{
+
+    #about-reviews {
       // top: -150px;
     }
   }
+
+  /*ARTIST PERFORMANCES*/
+
+  #artist-performances{
+    padding: 15px;
+  }
+
   /*PERFORMANCE PICS SECTION*/
-  #perfomance-imgs{
+  #perfomance-imgs {
     margin-top: 30px;
     margin-bottom: 10px;
-    .performance-imgs-ul{
+
+    .performance-imgs-ul {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
     }
-    .performance-cards{
+
+    .performance-cards {
       border-radius: 100%;
       height: 20vw;
       width: 20vw;
@@ -265,31 +308,42 @@ height: 400px;
       background-size: cover;
       background-position: center;
     }
-    .left-side{
+
+    .left-side {
       background-image: url('../images/performance-2.jpg');
     }
-    .middle-side{
+
+    .middle-side {
       background-image: url('../images/performance-1.jpg');
     }
-    .right-side{
+
+    .right-side {
       background-image: url('../images/performance-3.jpg');
     }
   }
-/*VIDEO SECTION*/
-#artist-video{
-  margin-top: 50px;
-  margin-bottom: 0;
-}
+  /*VIDEO SECTION*/
 
-
+  .video-header{
+    padding: 15px;
+  }
+  #artist-video {
+    //margin-top: 50px;
+    margin-bottom: 0;
+  }
   /************LINK CARDS PANE **************/
-  #link-cards-pane{
-
-
-    #link-cards{
+  #link-cards-pane {
+    #link-cards {
       padding: 5px;
       background-size: cover;
       background-position: center top;
+    }
+
+    img {
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center;
+      height: 250px;
+      width: 100%;
     }
     // .left{
     //   background-image: url('../images/performing-1.jpg');
@@ -300,7 +354,6 @@ height: 400px;
     // .right{
     //   background-image: url('../images/studio.jpg');
     // }
-
   }
   // .video{
   //   margin-left: -30px;
@@ -308,152 +361,166 @@ height: 400px;
   //   margin-bottom: -25px;
   // }
 }
-
 /***********STUDIO PAGE**********/
-
 /*SLIDER*/
-#slider-pane{
+#slider-pane {
   height: 700px;
   z-index: 0;
-  h3{
+
+  h3 {
     color: #FFFFFF;
-    text-shadow: 0px 1px 8px #000000;
+    text-shadow: 0 1px 8px #000000;
   }
 }
-.indicators{
+
+.indicators {
   display: none;
 }
-
 /*REVIEWS*/
-#about-reviews{
-  #review-card{
+#about-reviews {
+  #review-card {
     height: 100px;
     margin-top: 20px;
-    #review-title{
+
+    #review-title {
       text-align: center;
       text-decoration: none;
       font-style: italic;
-      opacity: .8;
+      opacity: 0.8;
       color: #000;
     }
   }
-  li:nth-last-child(1){
+
+  li:nth-last-child(1) {
     //center div!
   }
 }
-
 /*NEWS*/
-#announcements-pane{
-  #section{
+#announcements-pane {
+  #section {
     margin-top: 30px;
-   .recitals{
-     background-image: url('../images/announcements-2.jpg');
-   }
-   #primary-text{
-     text-transform: uppercase;
-   }
-   #sub-headings{
-     font-weight: bold;
-     text-transform: uppercase;
-     color: #DD2C00;
-     margin-bottom: 10%;
-   }
+
+    .recitals {
+      background-image: url('../images/announcements-2.jpg');
+    }
+
+    #primary-text {
+      text-transform: uppercase;
+    }
+
+    #sub-headings {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #DD2C00;
+      margin-bottom: 10%;
+    }
   }
-  #announcement-card{
+
+  #announcement-card {
     //margin-bottom: 30px;
     //min-height: 400px;
     //max-height: 500px;
   }
 }
 
-.modal-overlay{
+.modal-overlay {
   z-index: -1;
 }
-
 /*RECITALS*/
-#recital-details{
+#recital-details {
   padding: 30px;
 }
-
-
 /********** GALLERY ****************/
 /**ADDED when trying flex**/
-#gallery-row{
+#gallery-row {
   display: flex;
   flex-wrap: wrap;
   margin: 30px;
   justify-content: flex-start;
 }
 
-.media-ul{
+.media-ul {
   display: flex;
   flex-wrap: wrap;
-  align-content:  space-around;
+  align-content: space-around;
 }
 /*********************/
-.media-li{
-  margin: 20px 0 20px 0;
+.media-li {
+  margin: 20px 0;
 
-  img{
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.29);
+  img {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.29);
   }
 }
-.responsive-img{
-   width: 300px;
+
+.responsive-img {
+  width: 300px;
 }
-
 /**********MEDIA********************/
-
-#video-row{
+#video-row {
   padding: 30px;
 }
 /********** FOOTER ****************/
-#footer-row{
+#footer-row {
   margin-bottom: 0;
-  #footer-col{
+
+  #footer-col {
     padding-top: 50px;
     text-align: center;
   }
 }
-.footer{
+
+.footer {
   color: #000;
   background-color: #003d6a;
   font-family: 'Raleway', sans-serif;
-  a{
+
+  a {
     color: #2445aa;
   }
-  .footer-col{
+
+  .footer-col {
     position: relative;
     bottom: 50px;
     padding-top: 50px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 1px -1px 5px 0px rgba(0, 0, 0, 0.45);
-    .copyright{
+    box-shadow: 1px -1px 5px 0 rgba(0, 0, 0, 0.45);
+
+    .copyright {
       padding-top: 30px;
     }
   }
-  #social-icons-footer{
+
+  #social-icons-footer {
     margin-top: 20px;
     display: flex;
-    .col{
+
+    .col {
       margin: 0 auto;
     }
-    i{
+
+    i {
       font-size: 1.6rem;
     }
   }
 }
 /*****************loader**************/
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
 }
-
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

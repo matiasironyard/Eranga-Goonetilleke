@@ -18,6 +18,7 @@ const client = contentful.createClient({
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
 var Social = require('../components/social.jsx').SocialContainer;
+var Performances = require('../components/performances.jsx').Performances;
 var reviews = require('../media/reviews.js').reviews;
 var announcements = require('../media/announcements.js').announcements;
 
@@ -27,7 +28,7 @@ var Studio= React.createClass({
 
   getInitialState(){
     return{
-      recitals: []
+      recital: []
     }
   },
 
@@ -45,11 +46,36 @@ var Studio= React.createClass({
       //document.getElementById('header').scrollIntoView({passive: true});
     }
 
-    client.getContentTypes()
-    .then((response) => this.setState({recitals: response.items}))
+    client.getEntry('1M4t1ucuD6wECkoU04WCgw')
+    .then((entry) => {
+      var img = entry.fields.media.sys.id;
+      var title = entry.fields.title;
+      var description = entry.fields.description;
+      var date = entry.fields.date;
+      var location = entry.fields.location;
+      var address = entry.fields.address;
+      var map = entry.fields.mapLocation;
+      var active = entry.fields.active;
+      client.getAsset(img)
+      .then((asset) => {
+        var recitalImg = asset.fields.file.url;
+        this.setState({recital: {
+          title: title,
+          description: description,
+          date: date,
+          location: location,
+          address: address,
+          map: map,
+          img: recitalImg,
+          active: active,
+        }})
+      })
+    //  this.setState({recitals: entry})
+    }
+  )
     .catch(console.error)
-
   },
+
 
   render: function(){
     console.log('h', this.state)
@@ -127,30 +153,9 @@ var Studio= React.createClass({
             </div>
 
             <section id="announcements-pane" className="row">
-              <div className="col">
+              <div className="col s12">
 
-                <section id="performances" className="row section performances scrollspy " >
-                  <h3 id="headings">Studio Recitals</h3>
-                  <div className="divider"/>
-                  <div id="recital-img" className= "col l6 m6">
-                    <img src="./images/nooneisalone.jpg" style={{"width": "100%"}} className="responsive-img"/>
-                      <h5 id="headings">About The Recital</h5>
-                      <p id="secondary-text">Aimee Gans, mezzo-soprano & Eranga Goonetilleke, soprano, with Mildred Roche, piano.</p>
-                      <p>We share some of the most beautiful, painful, hilarious, and precious moments of life with our families. Join us for a recital celebrating these relationships, with songs that will make you laugh, cry and remember that truly, no one is alone.</p>
-                      <p id="secondary-text">Hope to see you all there!</p>
-                  </div>
-                  <div id="recital-details" className="col l6 m6 s12" >
-                    <h6 id="primary-text">Upcoming Recital</h6>
-                    <h4 id="headings">No One Is Alone</h4>
-                    <h6 id="primary-text">Date</h6><span id="secondary-text">Saturday, September 4th</span>
-                    <h6 id="primary-text">Time</h6><span id="secondary-text">4 P.M </span>
-                    <h6 id="primary-text">Location</h6>
-                    <p id="secondary-text">Daniel Recital Hall (Blackman music building), Converse College</p>
-                    <h6 id="primary-text">Address</h6>
-                    <p id="secondary-text"><a href="https://goo.gl/maps/gWXjkR4yGfK2" target="_blank">580 E Main St, Spartanburg, SC 29302</a></p>
-                    <iframe className= "location-map col l12 m12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.017200099404!2d-81.9208842847609!3d34.956177580369776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8857758530859ce5%3A0xd21a2373b2e741f6!2sConverse+College!5e0!3m2!1sen!2sus!4v1494083872113"  height="300" frameBorder="0" style={{border: 0 }} allowFullScreen></iframe>
-                  </div>
-                </section>{/*end recital section row*/}
+                <Performances info={this.state.recital}/>
 
                 <section id="announcements" className="row">
                   <h3 id="headings" className="announcement">Student Achievements</h3>

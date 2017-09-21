@@ -1,16 +1,35 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
+var contentful = require('contentful')
+
+
+const SPACE_ID = 'u61pjc377pcf'
+const ACCESS_TOKEN = '4d0a83dc44b5eee24e4e7276b03916173004499aa1e02bca938625b5720fa18d'
+
+const client = contentful.createClient({
+  // This is the space ID. A space is like a project folder in Contentful terms
+  space: SPACE_ID,
+  // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+  accessToken: ACCESS_TOKEN
+})
 
 
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
+var Social = require('../components/social.jsx').SocialContainer;
 var reviews = require('../media/reviews.js').reviews;
 var announcements = require('../media/announcements.js').announcements;
 
 //############ CONTAINERS #########################/
 
 var Studio= React.createClass({
+
+  getInitialState(){
+    return{
+      recitals: []
+    }
+  },
 
   componentDidMount(){
     $('.parallax').parallax();
@@ -25,9 +44,15 @@ var Studio= React.createClass({
     } else {
       //document.getElementById('header').scrollIntoView({passive: true});
     }
+
+    client.getContentTypes()
+    .then((response) => this.setState({recitals: response.items}))
+    .catch(console.error)
+
   },
 
   render: function(){
+    console.log('h', this.state)
 
     return (
       <section  id="pages" className="studio-page">{/*wrapper div*/}
@@ -35,18 +60,9 @@ var Studio= React.createClass({
         <section id="header" className="row">
           <div className="parallax-container">
             <div className="parallax">
-              <img  className="parallax-img" src="./images/recital-pic.jpg"/>
+              <img  className="parallax-img" src="./images/studiochristmas.jpg"/>
             </div>
-            <div id="social-pane" className="col l10 offset-l1 m10 offset-m1 s12 ">
-              <div id="social-icons">
-              <ul id="icons">
-                <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://twitter.com/erangagnt" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank"><i className="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.youtube.com/user/esgoonetilleke" target="_blank"><i className="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-              </ul>
-              </div>
-            </div>
+            <Social/>
           </div>
         </section>
 
@@ -55,33 +71,27 @@ var Studio= React.createClass({
             <div id="title" className="row">
               <h1>Studio Eranga</h1>
             </div>
-            <div id="slider-pane" className="row hidden-xs">
-              <div  className="slider">
-                <ul className="slides">
-                  <li>
-                    <img src="./images/finley-2.jpg"/>
-                    <div className="caption center-align">
-                      <h3 id="headings">Dream</h3>
-                    </div>
-                  </li>
-                  <li>
-                    <img src="./images/carson.jpg"/>
-                    <div className="caption left-align">
-                      <h3 id="headings">Perform</h3>
-                    </div>
-                  </li>
-                  <li>
-                    <img src="./images/inspire.jpg"/>
-                    <div className="caption right-align">
-                      <h3>Inspire</h3>
-                    </div>
-                  </li>
-                </ul>
+            <div className="row studio-header">
+              <div className="col s12 m4">
+                <div className="card-panel teal dream background-props">
+                  <h3 className="header">Dream</h3>
+                </div>
               </div>
-            </div>{/*end slider-pane*/}
-            <div className="hello">
-              <Reviews/>
+
+              <div className="col s12 m4">
+                <div className="card-panel teal perform background-props">
+                  <h3 className="header">Perform</h3>
+                </div>
+              </div>
+
+              <div className="col s12 m4">
+                <div className="card-panel teal inspire background-props">
+                  <h3 className="header">Inspire</h3>
+                </div>
+              </div>
+
             </div>
+
             <section id="about" className="row">
               <article id="about-description" className="col">
                 <div id="about-par"className="col l5">
@@ -112,11 +122,15 @@ var Studio= React.createClass({
               </article>{/*end about-right*/}
             </section>{/*end studio-pane*/}
 
+            <div className="hello">
+              <Reviews/>
+            </div>
+
             <section id="announcements-pane" className="row">
               <div className="col">
 
                 <section id="performances" className="row section performances scrollspy " >
-                  <h3 id="headings">Performances</h3>
+                  <h3 id="headings">Studio Recitals</h3>
                   <div className="divider"/>
                   <div id="recital-img" className= "col l6 m6">
                     <img src="./images/nooneisalone.jpg" style={{"width": "100%"}} className="responsive-img"/>

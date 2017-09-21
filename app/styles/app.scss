@@ -79,6 +79,8 @@ a:hover {
 #header {
   .parallax-container {
     height: 600px;
+    vertical-align: middle;
+
   }
 }
 /******** NAV **********/
@@ -362,18 +364,29 @@ nav #collapse-mod {
 }
 /***********STUDIO PAGE**********/
 /*SLIDER*/
-#slider-pane {
-  height: 700px;
-  z-index: 0;
-
-  h3 {
-    color: #FFFFFF;
-    text-shadow: 0 1px 8px #000000;
+.studio-header{
+  .background-props{
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    text-align: center;
+    color: white;
   }
-}
+  h3{
+    position: relative;
+    top: 200px;
+  }
+  .dream{
+    background-image: url('../images/finley.jpg');
 
-.indicators {
-  display: none;
+  }
+  .perform{
+    background-image: url('../images/carson.jpg');
+
+  }
+  .inspire{
+    background-image: url('../images/inspire.jpg');
+  }
 }
 /*REVIEWS*/
 #about-reviews {

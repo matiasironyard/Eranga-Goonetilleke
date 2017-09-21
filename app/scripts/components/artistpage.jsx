@@ -2,8 +2,10 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
 
+
 //############ COMPONENT IMPORTS ###################/
 var NavFooter = require('../templates/nav-footer.jsx').NavFooter;
+var Social = require('../components/social.jsx').SocialContainer;
 
 //############ CONTAINERS #########################/
 
@@ -18,32 +20,8 @@ var HeaderContainer = React.createClass({
         <section id="header" className="row">
           <div className="parallax-container">
             <div className="parallax"><img className="parallax-img" align='bottom' src="./images/troyades.jpg"/></div>
-            <div id="social-pane" className="col l10 offset-l1 m10 offset-m1 s12 ">
-              <div id="social-icons">
-                <ul id="icons">
-                  <li>
-                    <a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.facebook.com/studioEranga/?fref=ts" target="_blank">
-                      <i className="fa fa-facebook" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://twitter.com/erangagnt" target="_blank">
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.linkedin.com/in/eranga-goonetilleke-mariani-9763a215" target="_blank">
-                      <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a className="btn-floating btn-large waves-effect waves-light hoverable" href="https://www.youtube.com/user/esgoonetilleke" target="_blank">
-                      <i className="fa fa-youtube-play" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            //social pane
+            <Social/>
           </div>
         </section>
 

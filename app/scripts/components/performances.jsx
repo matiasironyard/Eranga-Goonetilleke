@@ -4,12 +4,13 @@ var ReactMarkdown = require('react-markdown');
 
 var Performances = React.createClass({
   getInitialState() {
-    return {location: '', media: ''}
+    return {location: '', media: '', description: ''}
   },
   componentWillReceiveProps(nextProps) {
     this.setState({
       location: nextProps.info.mapLocation,
-      media: nextProps.info.media.fields.file.url
+      media: nextProps.info.media.fields.file.url,
+      description: nextProps.info.description
     })
   },
   render: function() {
@@ -39,7 +40,7 @@ var Performances = React.createClass({
           </p>
         </div>
         <div id="recital-details" className="col s12">
-          <ReactMarkdown source={this.props.info.description}/>
+          <ReactMarkdown source={this.state.description} containerProps={{"id": "primary-text"}}/>
         </div>
 
       </section>

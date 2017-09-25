@@ -4,9 +4,17 @@ var ReactMarkdown = require('react-markdown');
 
 
 var aboutStudio = React.createClass({
+  getInitialState(){
+    return{
+      about: ''
+    }
+  },
+  componentWillReceiveProps(nextState){
+    this.setState({about:nextState.info.description})
+  },
   render: function(){
     return(
-      <ReactMarkdown source={this.props.info.description} />
+      <ReactMarkdown source={this.state.about} containerProps={{"id": "primary-text"}}/>
     )
   }
 })

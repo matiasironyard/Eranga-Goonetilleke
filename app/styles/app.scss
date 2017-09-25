@@ -80,7 +80,6 @@ a:hover {
   .parallax-container {
     height: 600px;
     vertical-align: middle;
-
   }
 }
 /******** NAV **********/
@@ -232,8 +231,7 @@ nav #collapse-mod {
   /*ABOUT SECTION*/
   #about {
     //margin: 0 0 40px;
-    margin-bottom: 0px;
-
+    margin-bottom: 0;
 
     .about-row {
       display: flex;
@@ -283,13 +281,10 @@ nav #collapse-mod {
       // top: -150px;
     }
   }
-
   /*ARTIST PERFORMANCES*/
-
-  #artist-performances{
+  #artist-performances {
     padding: 15px;
   }
-
   /*PERFORMANCE PICS SECTION*/
   #perfomance-imgs {
     margin-top: 30px;
@@ -323,10 +318,10 @@ nav #collapse-mod {
     }
   }
   /*VIDEO SECTION*/
-
-  .video-header{
+  .video-header {
     padding: 15px;
   }
+
   #artist-video {
     //margin-top: 50px;
     margin-bottom: 0;
@@ -364,27 +359,29 @@ nav #collapse-mod {
 }
 /***********STUDIO PAGE**********/
 /*SLIDER*/
-.studio-header{
-  .background-props{
+.studio-header {
+  .background-props {
     background-size: cover;
     background-position: center;
     height: 350px;
     text-align: center;
     color: white;
   }
-  h3{
+
+  h3 {
     position: relative;
     top: 200px;
   }
-  .dream{
+
+  .dream {
     background-image: url('../images/finley.jpg');
-
   }
-  .perform{
+
+  .perform {
     background-image: url('../images/carson.jpg');
-
   }
-  .inspire{
+
+  .inspire {
     background-image: url('../images/inspire.jpg');
   }
 }
@@ -446,28 +443,22 @@ nav #collapse-mod {
 /**ADDED when trying flex**/
 #gallery-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
   margin: 30px;
-  justify-content: flex-start;
 }
 
-.media-ul {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-}
+.media-ul {}
 /*********************/
 .media-li {
-  margin: 20px 0;
-
-  img {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.29);
-  }
+  margin: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.29);
+  object-position: center;
+  height: auto;
+  width: 100%;
 }
 
-.responsive-img {
-  width: 300px;
-}
+
 /**********MEDIA********************/
 #video-row {
   padding: 30px;

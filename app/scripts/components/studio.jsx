@@ -47,7 +47,6 @@ var Studio = React.createClass({
     }
 
     client.getEntries().then((response) => {
-      console.log('res', response)
       var achievements = response.items.filter(item => item.sys.contentType.sys.id === 'studentAchievement');
       var aboutStudio = response.items.filter(item => item.sys.contentType.sys.id === 'studioInfo');
       var studioPhilosophy = response.items.filter(item => item.sys.contentType.sys.id === 'studioPhilosophy');
@@ -63,7 +62,6 @@ var Studio = React.createClass({
 
 
   render: function() {
-    console.log('state', this.state)
 
     return (
       <section id="pages" className="studio-page">{/*wrapper div*/}

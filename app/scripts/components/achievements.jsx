@@ -12,7 +12,6 @@ var studentAchievements = React.createClass({
   },
 
   componentWillReceiveProps(nextProps){
-    console.log('n', nextProps)
     this.setState({achievements: nextProps.info})
   },
   render: function() {
@@ -29,7 +28,7 @@ var studentAchievements = React.createClass({
         var description = announcement.fields.description;
         var img = announcement.fields.media;
         if(img === undefined){
-          <p>no</p>
+          img = "./images/nooneisalone.jpg"
         } else if (img !== undefined){
           img = img.fields.file.url;
         }
@@ -49,7 +48,7 @@ var studentAchievements = React.createClass({
               <div className="card-content">
                 <h4 id="headings">{title}</h4>
                 <h5 id="subheadings">{subheading}</h5>
-                <ReactMarkdown source={description} id="secondary-text"/>
+                <ReactMarkdown source={description} containerProps={{"id": "secondary-text"}}/>
               </div>
             </div>
           </div>

@@ -35,43 +35,21 @@ var HeaderContainer = React.createClass({
   componentDidMount() {
     $('.parallax').parallax();
 
-    client.getEntry('5eBeMER8X6k4AYEEyqUMmi')
-    .then((entry) => this.setState({bio: entry.fields.description}))
-    .catch(console.error)
-
-    client.getEntry('15z6K8RTcqGm8S262A4Ook')
-    .then((entry) => {
-      console.log('dad', entry)
-      var img = entry.fields.media.sys.id;
-      var title = entry.fields.title;
-      var description = entry.fields.description;
-      var date = moment(entry.fields.date).format("MMM Do YY");
-      var time = moment(entry.fields.date).format('h:mm:ss a');
-      var location = entry.fields.location;
-      var address = entry.fields.address;
-      var map = entry.fields.mapLocation;
-      var active = entry.fields.active;
-      client.getAsset(img)
-      .then((asset) => {
-        var recitalImg = asset.fields.file.url;
-        this.setState({recital: {
-          title: title,
-          description: description,
-          date: date,
-          time: time,
-          location: location,
-          address: address,
-          map: map,
-          img: recitalImg,
-          active: active,
-        }})
+    client.getEntries().then((response) => {
+      var achievements = response.items.filter(item => item.sys.contentType.sys.id === 'studentAchievement');
+      var bio = response.items.filter(item => item.sys.contentType.sys.id === 'artistBio');
+      var artistRecital = response.items.filter(item => item.sys.contentType.sys.id === 'artistPerformance');
+      this.setState({
+        bio: bio[0].fields,
+        recital: artistRecital[0].fields,
       })
-    }
-  )
-    .catch(console.error)
+    }).catch(console.error)
+
+
   },
 
   render: function() {
+    console.log('state', this.state)
     return (
       <section id="pages" className="artist-page">{/*wrapper div*/}
         <section id="header" className="row">
@@ -94,7 +72,7 @@ var HeaderContainer = React.createClass({
                     <div id="about-img" className="responsive-img"/>
                   </div>
                   <div className="col l6 m12 s12 about-text">
-                    <Bio id="primary-text" info={this.state.bio}/>
+                    <Bio info={this.state.bio}/>
                   </div>
 
                 </div>

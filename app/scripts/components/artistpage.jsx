@@ -28,7 +28,8 @@ var HeaderContainer = React.createClass({
   getInitialState(){
     return{
       recital: [],
-      bio: ''
+      bio: '',
+      pic: './images/kate_2.jpg',
     }
   },
 
@@ -42,6 +43,7 @@ var HeaderContainer = React.createClass({
       this.setState({
         bio: bio[0].fields,
         recital: artistRecital[0].fields,
+        pic: bio[0].fields.media.fields.file.url,
       })
     }).catch(console.error)
 
@@ -50,6 +52,11 @@ var HeaderContainer = React.createClass({
 
   render: function() {
     console.log('state', this.state)
+    var url = this.state.pic;
+    console.log('u', url)
+    var imgStyle = {
+      backgroundImage: "url("+{url}+")"
+    };
     return (
       <section id="pages" className="artist-page">{/*wrapper div*/}
         <section id="header" className="row">
@@ -69,7 +76,7 @@ var HeaderContainer = React.createClass({
                 </div>
                 <div className="row about-row">
                   <div className="col l6 m12 s12">
-                    <div id="about-img" className="responsive-img"/>
+                    <img  id="about-img" src={this.state.pic} alt=""/>
                   </div>
                   <div className="col l6 m12 s12 about-text">
                     <Bio info={this.state.bio}/>

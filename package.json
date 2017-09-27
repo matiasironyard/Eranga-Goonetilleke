@@ -88,6 +88,7 @@
     "react-image-gallery": "^0.8.0",
     "react-images": "^0.5.2",
     "react-markdown": "^2.5.0",
+    "react-materialize": "^1.0.14",
     "react-youtube": "^7.3.0"
   }
 }

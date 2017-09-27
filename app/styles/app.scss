@@ -17,6 +17,11 @@ body {
   background: linear-gradient(45deg, #4378a7 0%,#355f8b 31%,#072d59 100%);
 }
 
+hr{
+  width: 80%;
+  padding: 30px 0;
+}
+
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
@@ -46,6 +51,12 @@ p {
 #subheadings {
   font-family: 'Raleway', sans-serif;
   color: grey;
+}
+
+#secondary-subheadings {
+  font-family: 'Raleway', sans-serif;
+  color: grey;
+  opacity: 0.54;
 }
 
 h1 {
@@ -79,7 +90,14 @@ a:hover {
 #header {
   .parallax-container {
     height: 600px;
-    vertical-align: middle;
+    .parallax img{
+      position: relative;
+left: 50%;
+/* top: 10px; */
+bottom: 100%;
+min-width: 100%;
+min-height: 100%;
+    }
   }
 }
 /******** NAV **********/
@@ -203,7 +221,7 @@ nav #collapse-mod {
 }
 /******** ARTIST PAGE CONTENT **********/
 #content {
-  z-index: 1;
+  z-index: 0;
   position: relative;
   bottom: 100px;
   background-color: #fff;
@@ -247,15 +265,13 @@ nav #collapse-mod {
       #about-img {
         margin: 0 auto;
         border-radius: 100%;
+        object-fit: cover;
         height: 25rem;
         width: 25rem;
-        background-image: url("../images/troyades.jpg");
-        background-position: top;
-        background-size: cover;
-        //margin-top: 50px;
-        /* margin-bottom: 20px; */
-        position: relative;
-        //top: 50px;
+        /* background-position: top; */
+        /* background-size: cover; */
+        margin-bottom: 20px;
+        /* position: relative; */
       }
     }
 
@@ -273,12 +289,29 @@ nav #collapse-mod {
       filter: brightness(2);
     }
 
-    #about-par {
-      //
+
+
+  .about-par {
+      text-align: center;
     }
 
     #about-reviews {
       // top: -150px;
+    }
+  }
+
+  .reviews-img{
+    margin: 30px 0;
+    background-image: url('../images/inspire.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 450px;
+    .review-link{
+      height: 100%;
+          padding: 200px 30px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.80);
+
     }
   }
   /*ARTIST PERFORMANCES*/
@@ -360,6 +393,8 @@ nav #collapse-mod {
 /***********STUDIO PAGE**********/
 /*SLIDER*/
 .studio-header {
+  padding-bottom: 50px;
+
   .background-props {
     background-size: cover;
     background-position: center;
@@ -370,7 +405,8 @@ nav #collapse-mod {
 
   h3 {
     position: relative;
-    top: 200px;
+    top: 250px;
+    font-family: 'Great Vibes', cursive;
   }
 
   .dream {
@@ -430,6 +466,20 @@ nav #collapse-mod {
     //min-height: 400px;
     //max-height: 500px;
   }
+}
+.modal{
+  display: none;
+position: fixed;
+left: 0;
+right: 0;
+/* background-color: #fafafa; */
+padding: 0;
+max-height: 70%;
+width: 55%;
+margin: auto;
+overflow-y: auto;
+/* border-radius: 2px; */
+will-change: top, opacity;
 }
 
 .modal-overlay {

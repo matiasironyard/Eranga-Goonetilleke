@@ -7,6 +7,7 @@ var ReactDOM = require('react-dom');
 //######## IMPORT COMPONENTS ################/
 var ArtistContainer = require('./components/artistpage.jsx').ArtistContainer;
 var StudioContainer = require('./components/studio.jsx').StudioContainer;
+var ReviewsContainer= require('./components/studio-reviews.jsx').ReviewsContainer;
 var MediaContainer = require('./components/media.jsx').MediaContainer;
 
 
@@ -18,6 +19,7 @@ var AppRouter = Backbone.Router.extend({
     'studio/': 'studio',
     'studio/performances': 'performances',
     'studio/announcements': 'announcements',
+    'studio/reviews': 'studioReviews',
     'media/': 'media',
     'contact/': 'contact'
   },
@@ -48,6 +50,13 @@ ReactDOM.render(
 announcements: function(){
 ReactDOM.render(
   React.createElement(StudioContainer, {router: this}),
+  document.getElementById('app')
+  );
+},
+
+studioReviews: function(){
+ReactDOM.render(
+  React.createElement(ReviewsContainer, {router: this}),
   document.getElementById('app')
   );
 },

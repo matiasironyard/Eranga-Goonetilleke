@@ -2,7 +2,9 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var contentful = require('contentful');
-var moment = require('moment');
+var Button = require('react-materialize');
+var Modal = require('react-materialize');
+var Icon = require('react-materialize');
 
 const SPACE_ID = 'u61pjc377pcf'
 const ACCESS_TOKEN = '4d0a83dc44b5eee24e4e7276b03916173004499aa1e02bca938625b5720fa18d'
@@ -23,6 +25,7 @@ var announcements = require('../media/announcements.js').announcements;
 var StudioPhilosophy = require('../components/studioPhilosophy.jsx').studioPhilosophy;
 var About = require('../components/aboutStudio.jsx').aboutStudio;
 var Achievements = require('../components/achievements.jsx').achievements;
+var StudioReviews = require('../components/studio-reviews.jsx').StudioReviews;
 
 //############ CONTAINERS #########################/
 
@@ -36,7 +39,6 @@ var Studio = React.createClass({
     $('.parallax').parallax();
     $('.collapsible').collapsible();
     $('.slider').slider({height: '700px'});
-    $('.modal').modal();
     if (window.location.hash === '#studio/performances') {
       //document.getElementById('performances').scrollIntoView(true, {passive: true});
       //document.getElementById('performances').scrollTop = 200;
@@ -58,6 +60,17 @@ var Studio = React.createClass({
         recital: studioRecital[0].fields,
       })
     }).catch(console.error)
+    this.setState({
+      modal:                       <div id="modal1" className="modal">
+                              <div className="modal-content">
+                              <h4>Modal Header</h4>
+                              <p>A bunch of text</p>
+                            </div>
+                            <div className="modal-footer">
+                              <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                            </div>
+                            </div>
+    })
   },
 
 
@@ -103,33 +116,36 @@ var Studio = React.createClass({
 
             <section id="about" className="row">
               <article id="about-description" className="col">
-                <div id="about-par" className="col l5">
-                  <div id="studio-about-img" className="col l4 hide-on-med-and-down"/>
+                <div className="col l5  about-par">
+                  <div id="studio-about-img" className="col offset-l1 hide-on-med-and-down"/>
                   <div className="col l12 m12 s12">
                     <h3 id="headings">About the Studio</h3>
                     <div className="divider"/>
                     <About info={this.state.aboutStudio}/>
                   </div>
                 </div>{/*end about-par*/}
-                <div id="about-par" className="col l7">
+                <div className="col l7 about-par">
                   <h3 id="headings">Studio Phylosophy</h3>
                   <div className="divider"/>
 
                   <StudioPhilosophy info={this.state.philosophy}/>
 
-                  <div className="col l12 m12 s12">
-                    <img src="./images/inspire.jpg" className="responsive-img" style={{
-                      "width": "100%"
-                    }}/>
-                  </div>
-
                 </div>{/*end about-par*/}
               </article>{/*end about-right*/}
-            </section>{/*end studio-pane*/}
 
-            <div className="hello">
-              <Reviews/>
+            </section>{/*end studio-pane*/}
+            <div className="row reviews-img">
+              <div className="col m5 offset-m7 review-link">
+                  <p className="secondary-text ">"Eranga is an extraordinary music teacher and person. I have had many voice teachers, and she has been the best I've had..."</p>
+                  <p className="secondary-text">
+                    <a href="#studio/reviews">
+                      Reviews
+                    </a>
+                  </p>
+              </div>
             </div>
+
+            <hr/>
 
             <section id="announcements-pane" className="row">
               <div className="col s12">
@@ -155,51 +171,7 @@ var Studio = React.createClass({
   }
 });
 
-var Reviews = React.createClass({
-  componentDidMount: function() {
-    $('.modal').modal({
-      dismissible: true, // Modal can be dismissed by clicking outside of the modal
-      //  opacity: .5, // Opacity of modal background
-      inDuration: 200, // Transition in duration
-      outDuration: 200, // Transition out duration
-      startingTop: '10%', // Starting top style attribute
-      endingTop: '10%', // Ending top style attribute
-    });
-  },
-  render: function() {
-    var self = this;
-    var myReviews = reviews.map(function(reviews) {
-      var id = '#' + reviews.id;
-      return (
-        <li key={reviews.id} id="review-card" className="col l4 m4 s11 valign">
-          <a className="modal-trigger" href={id}>
-            <p id="review-title">{reviews.title}...</p>
-          </a>
-          <div id={reviews.id} className="modal bottom-sheet">
-            <div className="modal-content col l8 offset-l2">
-              <p id="review-text">{reviews.review}
-                <br></br>
-                <span className="pull-right">~ {reviews.reviewer}</span>
-              </p>
-            </div>
-          </div>
-        </li>
-      )
-    });
-    return (
-      <div className="row">
-        <div id="about-reviews" className="col l10 offset-l1">
-          <h3 id="headings">Reviews</h3>
-          <div className="divider"/>
-          <ul>
-            {myReviews}
-          </ul>
-          <div className="divider"/>
-        </div>
-      </div>
-    )
-  }
-});
+
 
 
 var StudioContainer = React.createClass({

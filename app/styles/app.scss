@@ -17,7 +17,7 @@ body {
   background: linear-gradient(45deg, #4378a7 0%,#355f8b 31%,#072d59 100%);
 }
 
-hr{
+hr {
   width: 80%;
   padding: 30px 0;
 }
@@ -90,13 +90,14 @@ a:hover {
 #header {
   .parallax-container {
     height: 600px;
-    .parallax img{
+
+    .parallax img {
       position: relative;
-left: 50%;
-/* top: 10px; */
-bottom: 100%;
-min-width: 100%;
-min-height: 100%;
+      left: 50%;
+      /* top: 10px; */
+      bottom: 100%;
+      min-width: 100%;
+      min-height: 100%;
     }
   }
 }
@@ -289,10 +290,9 @@ nav #collapse-mod {
       filter: brightness(2);
     }
 
-
-
-  .about-par {
+    .about-par {
       text-align: center;
+      padding: 0 30px;
     }
 
     #about-reviews {
@@ -300,18 +300,36 @@ nav #collapse-mod {
     }
   }
 
-  .reviews-img{
+  .reviews-img {
     margin: 30px 0;
     background-image: url('../images/inspire.jpg');
     background-size: cover;
     background-position: bottom;
     height: 450px;
-    .review-link{
-      height: 100%;
-          padding: 200px 30px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.80);
 
+    .review-link {
+
+      height: 100%;
+      padding: 120px 30px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.80);
+      p{
+        position: relative;
+        z-index: 100;
+      }
+    }
+  }
+  /*REVIEWS SLIDER*/
+  #slider {
+    position: relative;
+    height: 100px;
+
+    #slides {
+      background-color: rgba(255, 255, 255, 0);
+      height: 100px;
+    }
+    .indicators{
+      display: none;
     }
   }
   /*ARTIST PERFORMANCES*/
@@ -467,19 +485,20 @@ nav #collapse-mod {
     //max-height: 500px;
   }
 }
-.modal{
+
+.modal {
   display: none;
-position: fixed;
-left: 0;
-right: 0;
-/* background-color: #fafafa; */
-padding: 0;
-max-height: 70%;
-width: 55%;
-margin: auto;
-overflow-y: auto;
-/* border-radius: 2px; */
-will-change: top, opacity;
+  position: fixed;
+  left: 0;
+  right: 0;
+  /* background-color: #fafafa; */
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  /* border-radius: 2px; */
+  will-change: top, opacity;
 }
 
 .modal-overlay {
@@ -507,8 +526,6 @@ will-change: top, opacity;
   height: auto;
   width: 100%;
 }
-
-
 /**********MEDIA********************/
 #video-row {
   padding: 30px;

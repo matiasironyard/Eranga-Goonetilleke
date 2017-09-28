@@ -2,9 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var $ = require('jquery');
 var contentful = require('contentful');
-var Button = require('react-materialize');
-var Modal = require('react-materialize');
-var Icon = require('react-materialize');
+
 
 const SPACE_ID = 'u61pjc377pcf'
 const ACCESS_TOKEN = '4d0a83dc44b5eee24e4e7276b03916173004499aa1e02bca938625b5720fa18d'
@@ -26,6 +24,7 @@ var StudioPhilosophy = require('../components/studioPhilosophy.jsx').studioPhilo
 var About = require('../components/aboutStudio.jsx').aboutStudio;
 var Achievements = require('../components/achievements.jsx').achievements;
 var StudioReviews = require('../components/studio-reviews.jsx').StudioReviews;
+var ReviewsSlider = require('../components/reviews-slider.jsx').ReviewsSlider;
 
 //############ CONTAINERS #########################/
 
@@ -60,17 +59,6 @@ var Studio = React.createClass({
         recital: studioRecital[0].fields,
       })
     }).catch(console.error)
-    this.setState({
-      modal:                       <div id="modal1" className="modal">
-                              <div className="modal-content">
-                              <h4>Modal Header</h4>
-                              <p>A bunch of text</p>
-                            </div>
-                            <div className="modal-footer">
-                              <a href="#!" className="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                            </div>
-                            </div>
-    })
   },
 
 
@@ -117,14 +105,14 @@ var Studio = React.createClass({
             <section id="about" className="row">
               <article id="about-description" className="col">
                 <div className="col l5  about-par">
-                  <div id="studio-about-img" className="col offset-l1 hide-on-med-and-down"/>
+                  {/*<div id="studio-about-img" className="col offset-l1 hide-on-med-and-down"/>*/}
                   <div className="col l12 m12 s12">
                     <h3 id="headings">About the Studio</h3>
                     <div className="divider"/>
                     <About info={this.state.aboutStudio}/>
                   </div>
                 </div>{/*end about-par*/}
-                <div className="col l7 about-par">
+                <div className="col l6 offset-l1 about-par">
                   <h3 id="headings">Studio Phylosophy</h3>
                   <div className="divider"/>
 
@@ -136,16 +124,15 @@ var Studio = React.createClass({
             </section>{/*end studio-pane*/}
             <div className="row reviews-img">
               <div className="col m5 offset-m7 review-link">
-                  <p className="secondary-text ">"Eranga is an extraordinary music teacher and person. I have had many voice teachers, and she has been the best I've had..."</p>
+                <h4 id="headings">Reviews</h4>
+                  <ReviewsSlider/>
                   <p className="secondary-text">
                     <a href="#studio/reviews">
-                      Reviews
+                      Read More
                     </a>
                   </p>
               </div>
             </div>
-
-            <hr/>
 
             <section id="announcements-pane" className="row">
               <div className="col s12">

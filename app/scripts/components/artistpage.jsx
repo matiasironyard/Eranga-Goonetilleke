@@ -75,11 +75,11 @@ var HeaderContainer = React.createClass({
                   <h1>Eranga Goonetilleke</h1>
                 </div>
                 <div className="row about-row">
-                  <div className="col l6 m12 s12">
-                    <img  id="about-img" src={this.state.pic} alt=""/>
-                  </div>
                   <div className="col l6 m12 s12 about-text">
                     <Bio info={this.state.bio}/>
+                  </div>
+                  <div className="col l6 m12 s12">
+                    <img  id="about-img" src={this.state.pic} alt=""/>
                   </div>
 
                 </div>

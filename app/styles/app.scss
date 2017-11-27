@@ -10,11 +10,11 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/'; //
 //********* GENERAL ***************/
 
 body {
-  //background-image: url('../images/background-3.jpg');
+  background-image: url('../images/blue-textured-background-3.jpg');
   //background: linear-gradient(135deg, rgba(137,230,225,1) 0%, rgba(217,217,104,1) 60%, rgba(123,210,160,1) 84%, rgba(60,205,198,1) 100%);
   background-size: cover;
-  background-repeat: no-repeat;
-  background: linear-gradient(45deg, #4378a7 0%,#355f8b 31%,#072d59 100%);
+  background-repeat: repeat;
+  // background: linear-gradient(45deg, #4378a7 0%,#355f8b 31%,#072d59 100%);
 }
 
 hr {
@@ -45,7 +45,8 @@ p {
 
 #headings {
   font-family: 'Raleway', sans-serif;
-  color: #2445aa;
+  //color: #2445aa;
+  color: #039be5;
 }
 
 #subheadings {
@@ -98,6 +99,14 @@ a:hover {
       bottom: 100%;
       min-width: 100%;
       min-height: 100%;
+    }
+    .studio-parallax{
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
     }
   }
 }
@@ -265,10 +274,11 @@ nav #collapse-mod {
 
       #about-img {
         margin: 0 auto;
-        border-radius: 100%;
+        //border-radius: 100%;
         object-fit: cover;
-        height: 25rem;
-        width: 25rem;
+        height: 40vw;
+        //: 25rem;
+        //width: 25rem;
         /* background-position: top; */
         /* background-size: cover; */
         margin-bottom: 20px;
@@ -302,17 +312,17 @@ nav #collapse-mod {
 
   .reviews-img {
     margin: 30px 0;
-    background-image: url('../images/inspire.jpg');
+    background-image: url('../images/blue-textured-background-3.jpg');
     background-size: cover;
     background-position: bottom;
-    height: 450px;
+    //height: 450px;
 
     .review-link {
 
-      height: 100%;
-      padding: 120px 30px;
+      //height: 100%;
+      padding: 80px 30px;
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.80);
+      background-color: rgba(0, 0, 51, 0.65);
       p{
         position: relative;
         z-index: 100;
@@ -323,6 +333,7 @@ nav #collapse-mod {
   #slider {
     position: relative;
     height: 100px;
+    color: #ffffff;
 
     #slides {
       background-color: rgba(255, 255, 255, 0);
@@ -476,6 +487,14 @@ nav #collapse-mod {
       text-transform: uppercase;
       color: #DD2C00;
       margin-bottom: 10%;
+    }
+    .announcements{
+      .announcements-header{
+        margin: 30px 0;
+        background-image: url('../images/blue-textured-background-3.jpg');
+        background-size: cover;
+        background-position: bottom;
+      }
     }
   }
 

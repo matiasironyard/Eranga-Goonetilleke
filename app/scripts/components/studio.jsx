@@ -69,7 +69,7 @@ var Studio = React.createClass({
 
         <section id="header" className="row">
           <div className="parallax-container">
-            <div className="parallax">
+            <div className="parallax studio-parallax">
               <img className="parallax-img" src="./images/studiochristmas.jpg"/>
             </div>
             <Social/>
@@ -123,7 +123,7 @@ var Studio = React.createClass({
 
             </section>{/*end studio-pane*/}
             <div className="row reviews-img">
-              <div className="col m5 offset-m7 review-link">
+              <div className="col l12 review-link">
                 <h4 id="headings">Reviews</h4>
                   <ReviewsSlider/>
                   <p className="secondary-text">
@@ -135,14 +135,15 @@ var Studio = React.createClass({
             </div>
 
             <section id="announcements-pane" className="row">
-              <div className="col s12">
+              <div className="row">
 
                 <Performances info={this.state.recital}/>
 
                 <section id="announcements" className="row">
+                  <div  className="announcements-header">
+                      <h3 id="headings" className="announcement">Student Achievements</h3>
+                  </div>
 
-                  <h3 id="headings" className="announcement">Student Achievements</h3>
-                  <div className="divider"/>
                   <div id="recital-details" className="col">
                     <Achievements info={this.state.achievements}></Achievements>
                   </div>

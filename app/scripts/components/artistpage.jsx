@@ -70,7 +70,7 @@ var HeaderContainer = React.createClass({
         <section className="main row">
           <div id="content" className="col l10 offset-l1 m10 offset-m1 s12 z-depth-4">
             <section id="about" className="row">
-              <article id="about-par" className="col l10 offset-l1 m12 s12">
+              <article id="about-par" className="col l12 m12 s12">
                 <div id="title" className="row">
                   <h1>Eranga Goonetilleke</h1>
                 </div>
@@ -78,8 +78,8 @@ var HeaderContainer = React.createClass({
                   <div className="col l6 m12 s12 about-text">
                     <Bio info={this.state.bio}/>
                   </div>
-                  <div className="col l6 m12 s12">
-                    <img  id="about-img" src={this.state.pic} alt=""/>
+                  <div className="col l6 hide-on-med-and-down">
+                    <img  className="responsive-img" id="about-img" src={this.state.pic} alt=""/>
                   </div>
 
                 </div>
